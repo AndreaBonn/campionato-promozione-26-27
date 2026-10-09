@@ -12,6 +12,7 @@ dependencies = [
 fip-calendar = "fip_calendar.cli:main"
 fip-calendar-stamp-sw = "fip_calendar.appversion:main"
 fip-calendar-check-aliases = "fip_calendar.aliascheck:main"
+fip-calendar-coverage-badge = "fip_calendar.coveragebadge:main"
 
 [dependency-groups]
 dev = [

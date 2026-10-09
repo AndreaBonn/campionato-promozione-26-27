@@ -92,3 +92,22 @@ test("standings: one zone label row opens the playoff zone, a cut line under the
   assert.equal([...html.matchAll(/class="[^"]*\bcut\b/g)].length, 1);
   assert.doesNotMatch(html, /playout/);
 });
+
+test("round table: a provisional result carries its tag, a suspended one as an alert", () => {
+  const games = [fipGame(1, "A", "B", { status: "ufficioso" }), fipGame(2, "C", "D", { status: "sospesa", time: "20:00" })];
+
+  const html = renderRoundTable({ games }, CUS, {});
+
+  assert.match(html, /70-60<small class="prov">ufficioso<\/small>/);
+  assert.match(html, /70-60<small class="prov alert">omologazione sospesa<\/small>/);
+});
+
+test("round table: FIP's printable round linked only from backend.fip.it", () => {
+  const pdf = "https://backend.fip.it/api/v1/giornata.pdf?g=1&x=2";
+
+  const linked = renderRoundTable({ games: [], pdf_url: pdf }, CUS, {});
+  const foreign = renderRoundTable({ games: [], pdf_url: "https://evil.example/giornata.pdf" }, CUS, {});
+
+  assert.match(linked, /<a href="https:\/\/backend\.fip\.it\/api\/v1\/giornata\.pdf\?g=1&amp;x=2" target="_blank" rel="noopener">Giornata nel PDF ufficiale FIP<\/a>/);
+  assert.doesNotMatch(foreign, /PDF ufficiale/);
+});

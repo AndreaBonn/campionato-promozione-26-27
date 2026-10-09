@@ -41,11 +41,15 @@ def test_parse_header_unplayed_returns_teams_without_score() -> None:
     ],
 )
 def test_parse_header_malformed_title_raises_parse_error(html: str) -> None:
+    with pytest.raises(expected_exception=PlaybasketParseError):
+        parse_header(html)
+
+
+def test_parse_header_minimal_title_returns_teams() -> None:
+    # the smallest well-formed title: each malformed case above drops one part of it
     assert parse_header(html="<title>A - B [3 Ott]</title>") == PbHeader(
         home="A", away="B", score=None
     )
-    with pytest.raises(expected_exception=PlaybasketParseError):
-        parse_header(html)
 
 
 def test_parse_header_hyphenated_names_preserves_punctuation() -> None:

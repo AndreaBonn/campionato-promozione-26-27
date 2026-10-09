@@ -133,3 +133,109 @@ test("card: a date set later shows the placeholder as «data da definire»", () 
   assert.match(html, /Prima: <del>data da definire<\/del>/);
   assert.doesNotMatch(html, /giugno/);
 });
+
+// A league round as fip.it lists it: the opponent's results, the source of its record on the card
+const leagueGame = (n, date, home, away, score) => ({ n, date, time: "18:00", home, away, score, status: "omologata" });
+
+test("card: an upcoming game shows the opponent's record and standing", () => {
+  const rounds = [{ games: [
+    leagueGame(90, "2026-10-03", "AVVERSARIO 2", "X", { home: 70, away: 60 }),
+    leagueGame(91, "2026-10-05", "Y", "AVVERSARIO 2", { home: 80, away: 61 }),
+  ] }];
+  const standings = [{ team: "AVVERSARIO 2", position: 3, played: 2 }];
+
+  const html = renderCard(game(2, "2026-10-11"), context([], { rounds, standings }));
+
+  assert.match(html, /<span class="c">3ª in classifica<\/span><span class="c">1 vinta, 1 persa<\/span><span class="c">65,5 fatti, 70,0 subiti di media<\/span><span class="badge win"[^>]*>V<\/span><span class="badge loss"/);
+});
+
+test("card: no standing for the opponent before the standings exist, no record for a played game", () => {
+  const rounds = [{ games: [leagueGame(90, "2026-10-03", "AVVERSARIO 2", "X", { home: 70, away: 60 })] }];
+
+  const upcoming = renderCard(game(2, "2026-10-11"), context([], { rounds }));
+  const done = renderCard(played(2, "2026-10-11", 70, 60), context([], { rounds }));
+
+  assert.match(upcoming, /<span class="lead">Avversario<\/span><span class="c">1 vinta, 0 perse<\/span>/);
+  assert.doesNotMatch(done, /oppchips/);
+});
+
+test("card: an away game puts the team second, in bold, with the crests on the right side", () => {
+  const logos = { [CUS]: { file: "logos/cus.png" }, "AVVERSARIO 4": { file: "logos/avv.png" } };
+  const m = game(4, "2026-10-11", { is_home: false, home: "Avversario 4", away: "CUS Cagliari" });
+
+  const html = renderCard(m, context([], { logos }));
+
+  assert.match(html, /<span class="tag">Trasferta<\/span>/);
+  assert.match(html, /<span><img class="crest " src="logos\/avv\.png"[^>]*>Avversario 4<\/span><em>-<\/em><span><strong>CUS Cagliari<\/strong><img class="crest away" src="logos\/cus\.png"/);
+});
+
+test("card: Giudice Sportivo sanctions listed on the game, escaped", () => {
+  const html = renderCard(played(1, "2026-10-03", 70, 60, { sanctions: ["Ammenda <50 €>"] }), context([]));
+
+  assert.match(html, /<div class="sanc-card"><strong>Provvedimenti del Giudice Sportivo su questa gara<\/strong><ul><li>Ammenda &lt;50 €&gt;<\/li><\/ul><\/div>/);
+});
+
+test("card: a result not yet homologated carries its tag, a suspended one as an alert", () => {
+  const unofficial = renderCard(played(1, "2026-10-03", 70, 60, { status: "ufficioso" }), context([]));
+  const suspended = renderCard(played(2, "2026-10-03", 70, 60, { status: "sospesa" }), context([]));
+
+  assert.match(unofficial, /<span class="tag prov">ufficioso<\/span>/);
+  assert.match(suspended, /<span class="tag prov alert">omologazione sospesa<\/span>/);
+});
+
+test("card: referees by name, or a note when designated but not published yet", () => {
+  const named = renderCard(game(1, "2026-10-11", { status: "designata", referees: ["ROSSI MARIO", "BIANCHI LUCA"] }), context([]));
+  const hidden = renderCard(game(2, "2026-10-11", { status: "designata-nonvisibile" }), context([]));
+
+  assert.match(named, /<div class="ref">Arbitri: ROSSI MARIO; BIANCHI LUCA<\/div>/);
+  assert.match(hidden, /<div class="ref pend">Arbitri designati; i nomi non sono ancora stati pubblicati\.<\/div>/);
+  assert.match(hidden, /<div class="meta">Gara n\. 2<\/div>/);
+});
+
+test("card: a return game recalls the first-leg result against the same opponent", () => {
+  const first = played(1, "2026-10-03", 70, 60, { away: "Avversario X" });
+  const second = game(14, "2027-01-10", { round: "R1", away: "Avversario X" });
+
+  const html = renderCard(second, context([first, second]));
+
+  assert.match(html, /<div class="leg">All'andata: CUS Cagliari - Avversario X 70-60<\/div>/);
+});
+
+test("card: a game before today is marked past", () => {
+  assert.match(renderCard(played(1, "2026-10-03", 70, 60), context([])), /<article class="g home past played">/);
+  assert.match(renderCard(game(2, "2026-10-11"), context([])), /<article class="g home  ">/);
+});
+
+test("list: a break between two games appears in its place, under its month", () => {
+  const ctx = context([game(2, "2026-10-11"), game(3, "2026-11-08"), game(4, "2026-11-15")], { breaks: [["2026-11-01", "Sosta del campionato"]] });
+
+  const html = renderList(ctx, "all", "all");
+
+  assert.match(html, /Gara n\. 2.*<h2>novembre 2026<\/h2><p class="sosta">Sosta del campionato<\/p>.*Gara n\. 3/s);
+});
+
+test("hero: «Stagione regolare conclusa» when no game is left to play", () => {
+  assert.equal(renderNext(context([played(1, "2026-10-03", 70, 60)])), "<div class='m'>Stagione regolare conclusa</div>");
+});
+
+test("hero: referees and the FIP change against the comunicato", () => {
+  const m = game(2, "2026-10-11", { referees: ["ROSSI MARIO"], changes: ["venue"], venue: { name: "PALAZZETTO NUOVO", address: "Via X" } });
+
+  const html = renderNext(context([m]));
+
+  assert.match(html, /<small>Spostata dalla FIP\. Campo prima: <del>PALACUS<\/del><\/small><small>Arbitri: ROSSI MARIO<\/small>/);
+  assert.match(html, /<small>tra<\/small><b>3 giorni<\/b>/);
+});
+
+test("last result: a provisional result carries its tag", () => {
+  const html = renderLast(context([played(1, "2026-10-03", 70, 60, { status: "ufficioso" })]));
+
+  assert.match(html, /<div class="res">70-60<small class="prov">ufficioso<\/small><\/div>/);
+});
+
+test("form strip: «Ultime N» counts the games shown, wins as V", () => {
+  const html = renderForm(formSummary([played(1, "2026-10-03", 70, 60), played(2, "2026-10-05", 55, 62)]));
+
+  assert.match(html, /Ultime 2: <span class="badge win" title="Vittoria">V<\/span><span class="badge loss"/);
+  assert.match(html, /<span class="meta">In casa 1-1<\/span>/);
+});

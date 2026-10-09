@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Basket Assemini Black, calendario Divisione Regionale 2 2026/27</title>
+<meta name="theme-color" content="#221c18" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171311" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Assemini Black">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div role="status">
+<div class="update-notice" id="update-notice" hidden>
+<p>È disponibile una nuova versione della pagina.</p>
+<div class="acts"><button class="apply" id="update-apply">Aggiorna</button><button class="later" id="update-later">Più tardi</button></div>
+</div>
+</div>
+<div class="wrap">
+<header class="brand">
+<img src="logo-assemini.png" alt="Stemma dell'A.S.D. Basket Assemini" width="48" height="48" onerror="this.remove()">
+<div><h1>Basket Assemini Black</h1><p class="sub">Divisione Regionale 2 Sardegna 2026/27 · Girone Sud A, 12 squadre, 22 partite</p></div>
+</header>
+<p class="note fresh" id="checked" hidden></p>
+<div class="offline" id="offline" role="status" hidden></div>
+<nav class="secnav" aria-label="Sezioni della pagina"><a href="#partite">Partite</a><a href="#standings">Classifica</a><a href="#league">Girone</a><a href="#scorers">Marcatori</a><a href="#team-players">Giocatori</a></nav>
+<div class="next" id="next" hidden></div>
+<div class="last" id="last" hidden></div>
+<div class="strip" id="form" hidden></div>
+<details class="subwrap">
+<summary class="add">Aggiungi al tuo calendario</summary>
+<section class="subbox" aria-labelledby="sub-title">
+<p><strong id="sub-title">Calendario sempre aggiornato.</strong> Aggiungi le partite al tuo calendario come abbonamento: gli spostamenti decisi dalla FIP, gli arbitri e i risultati arrivano da soli.</p>
+<div class="copy"><input id="icsurl" readonly aria-label="Indirizzo del calendario in abbonamento"><button id="copy">Copia indirizzo</button></div>
+<p class="note" id="copied" aria-live="polite"></p>
+<div class="ptabs" role="tablist" aria-label="App del calendario">
+<button type="button" role="tab" id="tab-google" aria-selected="true" aria-controls="pane-google">Google Calendar</button>
+<button type="button" role="tab" id="tab-apple" aria-selected="false" aria-controls="pane-apple" tabindex="-1">iPhone, Mac e Outlook</button>
+<button type="button" role="tab" id="tab-file" aria-selected="false" aria-controls="pane-file" tabindex="-1">File da importare</button>
+</div>
+<div role="tabpanel" id="pane-google" aria-labelledby="tab-google"><ol class="psteps"><li>Da computer apri Google Calendar.</li><li>Accanto ad «Altri calendari» premi il pulsante +, poi «Da URL».</li><li>Incolla l'indirizzo copiato qui sopra.</li></ol><p class="note">Il calendario compare anche sul telefono.</p></div>
+<div role="tabpanel" id="pane-apple" aria-labelledby="tab-apple" hidden><p><a id="webcal" href="calendario.ics">Apri nell'app Calendario</a>.</p></div>
+<div role="tabpanel" id="pane-file" aria-labelledby="tab-file" hidden><p><a href="calendario.ics" download>Scarica il file .ics</a> e importalo una volta. Gli eventi importati non seguono le variazioni della FIP: per restare aggiornato usa l'abbonamento.</p></div>
+<p class="note">Ogni app aggiorna gli abbonamenti con i propri tempi: possono passare alcune ore.</p>
+</section>
+</details>
+<section id="partite" aria-label="Partite dell'Assemini Black">
+<div class="bar" role="group" aria-label="Filtro partite">
+<span class="seg" role="group" aria-label="Quali partite"><button data-mode="upcoming" aria-pressed="true">Prossime</button><button data-mode="played" aria-pressed="false">Giocate</button><button data-mode="all" aria-pressed="false">Tutte</button></span>
+<span class="seg" role="group" aria-label="Casa o trasferta"><button data-f="all" aria-pressed="true">Casa e trasferta</button><button data-f="home" aria-pressed="false">Casa</button><button data-f="away" aria-pressed="false">Trasferta</button></span>
+</div>
+<div id="list"></div>
+</section>
+<section class="box" id="standings" hidden></section>
+<section class="box" id="league" hidden></section>
+<section class="box" id="scorers" hidden></section>
+<section class="box" id="team-players" hidden></section>
+<section class="box">
+<h2>Dopo la stagione regolare</h2>
+<div id="notices"></div>
+<p>La fase di qualificazione termina il 21 marzo 2027, salvo le gare ancora senza data. Nel 2025/26 la DR2 Sud era un girone unico: le prime quattro classificate hanno disputato i playoff, semifinali e finale al meglio delle tre gare, per la promozione in Divisione Regionale 1. Non c'erano playout.</p>
+<p class="warn">La formula descritta è quella della stagione 2025/26, quando il girone Sud era uno solo. Nel 2026/27 i gironi Sud sono due (A e B) e la formula non compare nel comunicato: al 9 ottobre 2026 la FIP Sardegna non l'ha ancora resa nota.</p>
+</section>
+<footer><strong>Fonti</strong>
+<ul class="srcs">
+<li>Calendario: <a href="https://sardegna.fip.it/wp-content/uploads/2026/10/11-DR2-calendario-definitivo-Sud-A.pdf" target="_blank" rel="noopener">Comunicato Ufficiale n. 11</a> del 5 ottobre 2026, Comitato Regionale FIP Sardegna, calendario definitivo del Girone Sud A.</li>
+<li>Orari, campi, arbitri, risultati e classifica: <a id="fiplink" href="https://fip.it/risultati/" target="_blank" rel="noopener">fip.it</a>, controllato ogni 4 ore e ogni ora dalle 17 a mezzanotte<span id="upd"></span>.</li>
+<li>Tabellini: utenti di <a href="https://www.playbasket.it/sardegna/" target="_blank" rel="noopener">playbasket.it</a>, riprodotti senza modifiche per uso non commerciale (<a href="https://www.playbasket.it/terms.php" target="_blank" rel="noopener">termini d'uso</a>).</li>
+<li>Comunicazioni ufficiali: <a href="https://sardegna.fip.it/calendari-definitivi-stagione-sportiva-2026-27/" target="_blank" rel="noopener">Comitato Regionale FIP Sardegna</a>. Giorno e orario delle gare possono cambiare nel corso della stagione.</li>
+</ul>
+<p class="repo">Pagina non ufficiale · <a href="https://github.com/AndreaBonn/campionato-promozione-26-27" target="_blank" rel="noopener">Codice su GitHub</a></p></footer>
+</div>
+<script type="module">
+import {noticeHeadline,noticePrefix} from "./notice-rules.js";
+import {esc,roundLabel as label,place,formSummary,pickRound,isFipNoticeLink} from "./page-rules.js";
+import {relativeAge} from "./view-rules.js";
+import {renderStandings,renderRoundTable} from "./tables-view.js";
+import {fmtWhen,nextGame,renderList,renderNext,renderLast,renderForm} from "./games-view.js";
+import {renderScorers,loadBoxscores} from "./boxscores.js";
+import {renderTeamPlayers} from "./team-stats.js";
+const FIP_TEAM="BASKET ASSEMINI BLACK";
+// Weekends with no games in the whole league: [first day with no games, text]
+const S=[
+["2026-12-23","<b>Sosta per le festività.</b> Nessuna partita del girone dal 23 dicembre al 7 gennaio."]];
+const SLOW_LOAD_MS=15000, CLOCK_TICK_MS=60000;
+const today=new Date(); today.setHours(0,0,0,0);
+let R=[], checkedAt=null, side="all", mode="upcoming", scorersOnly=null;
+const ctx={games:[],rounds:[],standings:[],logos:{},boxscores:{},today,fipTeam:FIP_TEAM,breaks:S};
+const $=id=>document.getElementById(id);
+
+const refresh=()=>{if(ctx.games.length) $("list").innerHTML=renderList(ctx,side,mode)};
+async function shareGame(m){
+ const text=`${m.home} - ${m.away}, ${fmtWhen(m.date,m.time)}, ${place(m)}`, url=location.href.split("#")[0], out=$("shared");
+ if(navigator.share){
+  try{await navigator.share({title:"Prossima partita dell'Assemini Black",text,url})}
+  catch(err){if(err.name!=="AbortError") out.textContent="Condivisione non riuscita."}
+  return;
+ }
+ try{await navigator.clipboard.writeText(text+" "+url);out.textContent="Dettagli copiati: incollali nella chat."}
+ catch{out.textContent="Copia non riuscita."}
+}
+function showNext(){
+ const el=$("next"), m=nextGame(ctx);
+ el.hidden=false;
+ el.innerHTML=renderNext(ctx);
+ if(m) $("share").onclick=()=>shareGame(m);
+}
+function showLast(){
+ const el=$("last"), html=renderLast(ctx);
+ el.hidden=!html;
+ el.innerHTML=html;
+}
+function showForm(){
+ const el=$("form"), f=formSummary(ctx.games);
+ el.hidden=!f;
+ if(f) el.innerHTML=renderForm(f);
+}
+function renderStandingsBox(rows){
+ const el=$("standings");
+ el.hidden=false;
+ el.innerHTML=renderStandings(rows,FIP_TEAM,ctx.logos);
+}
+function setRound(i){
+ const sel=$("round-select");
+ sel.value=String(i);
+ $("round-table").innerHTML=renderRoundTable(R[i],FIP_TEAM,ctx.boxscores);
+ $("round-prev").disabled=i===0; $("round-next").disabled=i===R.length-1;
+}
+function renderLeague(rounds){
+ const el=$("league");
+ if(!rounds||!rounds.length){el.hidden=true;return}
+ const pick=pickRound(rounds,today);
+ const opts=rounds.map((r,i)=>`<option value="${i}">${label(r)}</option>`).join("");
+ el.hidden=false;
+ el.innerHTML=`<h2>Risultati del girone</h2><div class="round-pick"><button type="button" class="navbtn" id="round-prev" aria-label="Giornata precedente">‹</button><label for="round-select">Giornata</label><select id="round-select">${opts}</select><button type="button" class="navbtn" id="round-next" aria-label="Giornata successiva">›</button></div><div id="round-table"></div>
+ <details class="howto"><summary>Come leggere i risultati</summary><p>Tutte le gare della giornata, con i nomi registrati dalla FIP. Tocca «Tabellino» o «Arbitri» per gli arbitri designati e i punti dei giocatori. Senza risultato è indicato l'orario d'inizio; un risultato non ancora omologato dal Giudice Sportivo è segnalato sotto il punteggio.</p></details>`;
+ $("round-select").onchange=e=>setRound(+e.target.value);
+ $("round-prev").onclick=()=>setRound(+$("round-select").value-1);
+ $("round-next").onclick=()=>setRound(+$("round-select").value+1);
+ setRound(pick);
+}
+function renderNotices(list){
+ const el=$("notices");
+ list=(list||[]).filter(n=>isFipNoticeLink(n.link));
+ if(!list.length){el.innerHTML="";return}
+ const items=list.map(n=>`<li>${esc(noticePrefix(n.kind))}<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a> (${esc(new Date(n.date+"T12:00:00").toLocaleDateString("it-IT",{day:"numeric",month:"long",year:"numeric"}))})</li>`).join("");
+ const h=noticeHeadline(list);
+ el.innerHTML=`<div class="notice"><strong>${esc(h.title)}</strong>${h.hint?" "+esc(h.hint):""}<ul>${items}</ul></div>`;
+}
+function setupSubscription(){
+ const url=new URL("calendario.ics",location.href).href, input=$("icsurl");
+ input.value=url;
+ $("webcal").href=url.replace(/^https?:/,"webcal:");
+ $("copy").onclick=async()=>{
+  const out=$("copied");
+  try{await navigator.clipboard.writeText(url);out.textContent="Indirizzo copiato."}
+  catch{input.select();out.textContent="Copia non riuscita: l'indirizzo è selezionato, copialo con Ctrl+C."}
+ };
+ const tabs=[...document.querySelectorAll(".ptabs [role=tab]")];
+ const select=t=>tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;$(x.getAttribute("aria-controls")).hidden=!on});
+ tabs.forEach((t,i)=>{
+  t.onclick=()=>select(t);
+  // arrow keys move between tabs, as in the WAI-ARIA tabs pattern
+  t.onkeydown=e=>{const d={ArrowRight:1,ArrowLeft:-1}[e.key];if(!d) return;const n=tabs[(i+d+tabs.length)%tabs.length];select(n);n.focus()};
+ });
+}
+function showError(err){
+ const cause=err instanceof TypeError?"Connessione non riuscita: controlla la rete e riprova.":esc(err.message)+".";
+ const local=location.protocol==="file:"?" La pagina è aperta come file locale e il browser blocca la lettura dei dati: aprila dal sito pubblicato o tramite un server locale.":"";
+ $("list").innerHTML=`<div class="state err"><p><strong>Impossibile caricare i dati delle partite.</strong> ${cause}${local}</p><button class="retry" id="retry">Riprova</button></div>`;
+ $("retry").onclick=reload;
+}
+function renderChecked(){
+ const el=$("checked");
+ if(!checkedAt) return;
+ el.textContent="Dati FIP controllati "+relativeAge(checkedAt,new Date());
+ el.title="Ultimo controllo riuscito su fip.it: "+new Date(checkedAt).toLocaleString("it-IT",{dateStyle:"long",timeStyle:"short"});
+ el.hidden=false;
+}
+function renderOffline(){
+ const el=$("offline");
+ el.hidden=navigator.onLine;
+ if(!navigator.onLine) el.textContent="Sei offline: stai vedendo i dati della tua ultima visita"+(checkedAt?`, controllati su fip.it ${relativeAge(checkedAt,new Date())}`:"")+".";
+}
+async function loadStatus(){
+ // optional: without status.json (local run, first deploy) the line stays hidden
+ try{
+  const r=await fetch("status.json",{cache:"no-cache"});
+  if(!r.ok) return;
+  const s=await r.json();
+  if(!s.checked_at) return;
+  checkedAt=s.checked_at; renderChecked(); renderOffline();
+ }catch(err){console.warn("status.json non disponibile",err)}
+}
+// focus: the control that triggered a re-render gets it back, or keyboard users land on <body>
+function renderScorersBox(focus=null){
+ const el=$("scorers");
+ el.hidden=false;
+ el.innerHTML=renderScorers(ctx.boxscores,R,FIP_TEAM,scorersOnly);
+ if(focus) el.querySelector(focus)?.focus();
+}
+function applyBoxscores(boxscores){
+ // data.json failed: the page shows its error, box score sections stay hidden
+ if(!R.length) return;
+ ctx.boxscores=boxscores;
+ const select=$("round-select");
+ if(select) setRound(+select.value);
+ refresh(); showLast(); renderScorersBox();
+ const teamPlayersEl=$("team-players");
+ teamPlayersEl.hidden=false;
+ teamPlayersEl.innerHTML=renderTeamPlayers(ctx.boxscores,R,FIP_TEAM);
+ syncNav();
+}
+const skeleton='<div class="loading"><span class="sr-only">Caricamento dei dati FIP in corso…</span>'+'<div class="skel" aria-hidden="true"><i></i><div><i></i><i></i><i></i></div></div>'.repeat(3)+'</div>';
+async function load(){
+ loadStatus();
+ $("list").innerHTML=skeleton;
+ const slow=setTimeout(()=>{const el=document.querySelector("#list .loading");if(el) el.insertAdjacentHTML("afterbegin",'<p class="note">Ci sta mettendo più del previsto: la rete è lenta.</p>')},SLOW_LOAD_MS);
+ try{
+  const r=await fetch("data.json",{cache:"no-cache"});
+  if(!r.ok) throw new Error("Il server ha risposto con il codice "+r.status);
+  const data=await r.json();
+  // chronological order: a rescheduled game moves to its new date
+  ctx.games=[...data.games].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+  R=ctx.rounds=data.rounds||[]; ctx.standings=data.standings||[]; ctx.logos=data.logos||{};
+  if(data.fip_url) $("fiplink").href=data.fip_url;
+  if(data.updated_at) $("upd").textContent=" (ultima variazione rilevata il "+new Date(data.updated_at).toLocaleString("it-IT",{dateStyle:"long",timeStyle:"short"})+")";
+  showNext(); showLast(); refresh();
+  showForm(); renderStandingsBox(data.standings); renderLeague(data.rounds); renderNotices(data.notices);
+  syncNav();
+ }catch(err){showError(err)}
+ finally{clearTimeout(slow)}
+}
+const reload=()=>load().then(()=>loadBoxscores(applyBoxscores));
+// section links: hidden while their section is, the one on screen marked as current
+const navLinks=[...document.querySelectorAll(".secnav a")];
+function syncNav(){navLinks.forEach(a=>{a.hidden=document.querySelector(a.getAttribute("href")).hidden})}
+const spy=new IntersectionObserver(entries=>entries.forEach(e=>{
+ if(!e.isIntersecting) return;
+ navLinks.forEach(a=>a.toggleAttribute("aria-current",a.getAttribute("href")==="#"+e.target.id));
+}),{rootMargin:"-30% 0px -60% 0px"});
+navLinks.forEach(a=>spy.observe(document.querySelector(a.getAttribute("href"))));
+const pressOnly=(attr,value)=>document.querySelectorAll(`.bar button[${attr}]`).forEach(x=>x.setAttribute("aria-pressed",x.getAttribute(attr)===value));
+document.querySelectorAll(".bar button[data-f]").forEach(b=>b.onclick=()=>{side=b.dataset.f;pressOnly("data-f",side);refresh()});
+document.querySelectorAll(".bar button[data-mode]").forEach(b=>b.onclick=()=>{mode=b.dataset.mode;pressOnly("data-mode",mode);refresh()});
+// rendered markup: disclosure rows (round table, team players) and the scorers filter
+document.addEventListener("click",e=>{
+ const t=e.target.closest(".tbx,.pl-btn");
+ if(t){const open=t.getAttribute("aria-expanded")!=="true";t.setAttribute("aria-expanded",open);$(t.getAttribute("aria-controls")).hidden=!open;return}
+ const f=e.target.closest("[data-scorers]");
+ if(f){scorersOnly=f.dataset.scorers||null;renderScorersBox(`[data-scorers="${CSS.escape(f.dataset.scorers)}"]`)}
+});
+document.addEventListener("change",e=>{if(e.target.matches("[data-scorers-team]")){scorersOnly=e.target.value||null;renderScorersBox("[data-scorers-team]")}});
+addEventListener("offline",renderOffline);
+addEventListener("online",()=>{renderOffline();reload()});
+setInterval(renderChecked,CLOCK_TICK_MS);
+setupSubscription();
+renderOffline();
+reload();
+</script>
+<script type="module" src="update.js"></script>
+</body>
+</html>

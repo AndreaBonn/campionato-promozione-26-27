@@ -1,0 +1,47 @@
+[project]
+name = "fip-calendar"
+version = "0.1.0"
+description = "Keeps the Basket Assemini Black Divisione Regionale 2 2026/27 calendar in sync with fip.it"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.13",
+    "pillow>=11",
+]
+
+[project.scripts]
+fip-calendar = "fip_calendar.cli:main"
+fip-calendar-stamp-sw = "fip_calendar.appversion:main"
+fip-calendar-check-aliases = "fip_calendar.aliascheck:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "pytest-cov>=7.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
+# standalone PEP 723 script with its own Pillow environment, type-checked there (see CLAUDE.md)
+exclude = ["^scripts/make_icons\\.py$"]
+
+[tool.coverage.run]
+branch = true
+source = ["fip_calendar"]
+
+[tool.coverage.report]
+show_missing = true
+# the entry-point guard only calls main(), which the tests call directly
+exclude_also = ['if __name__ == "__main__":']

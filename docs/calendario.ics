@@ -1,0 +1,268 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//campionato-promozione-26-27//Basket Assemini Black//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Basket Assemini Black
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+X-PUBLISHED-TTL:PT4H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:assemini-black-gara838@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261017T180000
+DTEND;TZID=Europe/Rome:20261017T200000
+SUMMARY:Basket Assemini Black - Pol. Madas Siliqua
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 2ª giornata di andata\,
+  gara n. 838\nAggiornamenti: https://andreabonn.github.io/campionato-promo
+ zione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara846@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261024T180000
+DTEND;TZID=Europe/Rome:20261024T200000
+SUMMARY:Basket Assemini Black - Basket Settimo 2023
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 3ª giornata di andata\,
+  gara n. 846\nAggiornamenti: https://andreabonn.github.io/campionato-promo
+ zione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara850@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261030T203000
+DTEND;TZID=Europe/Rome:20261030T223000
+SUMMARY:Basket Iglesias - Basket Assemini Black
+LOCATION:Palazzetto dello Sport\, VIA ENRICO TOTI 09016 IGLESIAS (SU)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 4ª giornata di andata\,
+  gara n. 850\nAggiornamenti: https://andreabonn.github.io/campionato-promo
+ zione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara856@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261107T180000
+DTEND;TZID=Europe/Rome:20261107T200000
+SUMMARY:Basket Assemini Black - Calasetta Basket
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 5ª giornata di andata\,
+  gara n. 856\nAggiornamenti: https://andreabonn.github.io/campionato-promo
+ zione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara862@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261116T203000
+DTEND;TZID=Europe/Rome:20261116T223000
+SUMMARY:Scuola Basket Carbonia - Basket Assemini Black
+LOCATION:Cupola Geodetica\, Via Deffenu 09013 CARBONIA (SU)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 6ª giornata di andata\,
+  gara n. 862\nAggiornamenti: https://andreabonn.github.io/campionato-promo
+ zione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara872@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261121T180000
+DTEND;TZID=Europe/Rome:20261121T200000
+SUMMARY:Basket Assemini Black - Sinnai Basket
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 7ª giornata di andata\,
+  gara n. 872\nAggiornamenti: https://andreabonn.github.io/campionato-promo
+ zione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara874@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261128T190000
+DTEND;TZID=Europe/Rome:20261128T210000
+SUMMARY:Basket Sulcispes - Basket Assemini Black
+LOCATION:Palasport\, Lungomare C. Colombo 09017 SANT'ANTIOCO (SU)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 8ª giornata di andata\,
+  gara n. 874\nModificata dalla FIP rispetto al comunicato ufficiale\nAggio
+ rnamenti: https://andreabonn.github.io/campionato-promozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara884@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261206T183000
+DTEND;TZID=Europe/Rome:20261206T203000
+SUMMARY:Basket Assemini Black - C.G.P. Carloforte
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 9ª giornata di andata\,
+  gara n. 884\nAggiornamenti: https://andreabonn.github.io/campionato-promo
+ zione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara888@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261212T204500
+DTEND;TZID=Europe/Rome:20261212T224500
+SUMMARY:Cagliari Basket - Basket Assemini Black
+LOCATION:Palestra Esperia\, Via Pessagno snc 09126 CAGLIARI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 10ª giornata di andata\
+ , gara n. 888\nAggiornamenti: https://andreabonn.github.io/campionato-prom
+ ozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara894@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20261219T180000
+DTEND;TZID=Europe/Rome:20261219T200000
+SUMMARY:Basket Assemini Black - Basket Assemini White
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 11ª giornata di andata\
+ , gara n. 894\nAggiornamenti: https://andreabonn.github.io/campionato-prom
+ ozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara898@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270109T180000
+DTEND;TZID=Europe/Rome:20270109T200000
+SUMMARY:Basket Assemini Black - A.S.D. Beta
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 1ª giornata di ritorno\
+ , gara n. 898\nAggiornamenti: https://andreabonn.github.io/campionato-prom
+ ozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara904@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270119T203000
+DTEND;TZID=Europe/Rome:20270119T223000
+SUMMARY:Pol. Madas Siliqua - Basket Assemini Black
+LOCATION:Palestra Scuola Elementare\, Via Quasimodo 09010 SILIQUA (SU)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 2ª giornata di ritorno\
+ , gara n. 904\nModificata dalla FIP rispetto al comunicato ufficiale\nAggi
+ ornamenti: https://andreabonn.github.io/campionato-promozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara910@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270124T180000
+DTEND;TZID=Europe/Rome:20270124T200000
+SUMMARY:Basket Settimo 2023 - Basket Assemini Black
+LOCATION:Palazzetto dello Sport\, VIA 1° MAGGIO 09040 SETTIMO SAN PIETRO (
+ CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 3ª giornata di ritorno\
+ , gara n. 910\nModificata dalla FIP rispetto al comunicato ufficiale\nAggi
+ ornamenti: https://andreabonn.github.io/campionato-promozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara916@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270130T180000
+DTEND;TZID=Europe/Rome:20270130T200000
+SUMMARY:Basket Assemini Black - Basket Iglesias
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 4ª giornata di ritorno\
+ , gara n. 916\nAggiornamenti: https://andreabonn.github.io/campionato-prom
+ ozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara925@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270207T183000
+DTEND;TZID=Europe/Rome:20270207T203000
+SUMMARY:Calasetta Basket - Basket Assemini Black
+LOCATION:PalAversano\, Loc. Sciamain 09011 CALASETTA (SU)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 5ª giornata di ritorno\
+ , gara n. 925\nAggiornamenti: https://andreabonn.github.io/campionato-prom
+ ozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara927@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270214T183000
+DTEND;TZID=Europe/Rome:20270214T203000
+SUMMARY:Basket Assemini Black - Scuola Basket Carbonia
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 6ª giornata di ritorno\
+ , gara n. 927\nModificata dalla FIP rispetto al comunicato ufficiale\nAggi
+ ornamenti: https://andreabonn.github.io/campionato-promozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara937@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270219T210000
+DTEND;TZID=Europe/Rome:20270219T230000
+SUMMARY:Sinnai Basket - Basket Assemini Black
+LOCATION:Palestra Scuole Elementari\, Via Perra 09048 SINNAI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 7ª giornata di ritorno\
+ , gara n. 937\nAggiornamenti: https://andreabonn.github.io/campionato-prom
+ ozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara947@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270306T190000
+DTEND;TZID=Europe/Rome:20270306T210000
+SUMMARY:C.G.P. Carloforte - Basket Assemini Black
+LOCATION:Palestra scuole medie\, Salita S. Cristina 09014 CARLOFORTE (SU)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 9ª giornata di ritorno\
+ , gara n. 947\nAggiornamenti: https://andreabonn.github.io/campionato-prom
+ ozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara953@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270313T180000
+DTEND;TZID=Europe/Rome:20270313T200000
+SUMMARY:Basket Assemini Black - Cagliari Basket
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 10ª giornata di ritorno
+ \, gara n. 953\nAggiornamenti: https://andreabonn.github.io/campionato-pro
+ mozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:assemini-black-gara960@campionato-promozione-26-27
+DTSTAMP:20261009T110607Z
+DTSTART;TZID=Europe/Rome:20270318T210000
+DTEND;TZID=Europe/Rome:20270318T230000
+SUMMARY:Basket Assemini White - Basket Assemini Black
+LOCATION:Palestra Comunale\, Via Cagliari\, 239 09032 ASSEMINI (CA)
+DESCRIPTION:Divisione Regionale 2\, Girone Sud A\, 11ª giornata di ritorno
+ \, gara n. 960\nAggiornamenti: https://andreabonn.github.io/campionato-pro
+ mozione-26-27/
+URL:https://andreabonn.github.io/campionato-promozione-26-27/
+END:VEVENT
+END:VCALENDAR

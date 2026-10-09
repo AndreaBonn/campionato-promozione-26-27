@@ -1,0 +1,2348 @@
+{
+  "games": [
+    {
+      "round": "A1",
+      "n": 834,
+      "home": "A.S.D. Beta",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2027-06-30",
+      "time": "20:45",
+      "venue": {
+        "name": "Palestra I.T.I.S. \"Giua\"",
+        "address": "Via Montecassino 09134 CAGLIARI (CA)"
+      },
+      "official": {
+        "date": "2027-06-30",
+        "time": "20:45",
+        "venue": {
+          "name": "Palestra I.T.I.S. \"Giua\"",
+          "address": "Via Montecassino, Cagliari"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "A.S.D. BETA"
+    },
+    {
+      "round": "A2",
+      "n": 838,
+      "home": "Basket Assemini Black",
+      "away": "Pol. Madas Siliqua",
+      "is_home": true,
+      "date": "2026-10-17",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2026-10-17",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "POL. MADAS SILIQUA"
+    },
+    {
+      "round": "A3",
+      "n": 846,
+      "home": "Basket Assemini Black",
+      "away": "Basket Settimo 2023",
+      "is_home": true,
+      "date": "2026-10-24",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2026-10-24",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET SETTIMO 2023"
+    },
+    {
+      "round": "A4",
+      "n": 850,
+      "home": "Basket Iglesias",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2026-10-30",
+      "time": "20:30",
+      "venue": {
+        "name": "Palazzetto dello Sport",
+        "address": "VIA ENRICO TOTI 09016 IGLESIAS (SU)"
+      },
+      "official": {
+        "date": "2026-10-30",
+        "time": "20:30",
+        "venue": {
+          "name": "Palazzetto dello Sport",
+          "address": "Via Enrico Toti, Iglesias"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET IGLESIAS"
+    },
+    {
+      "round": "A5",
+      "n": 856,
+      "home": "Basket Assemini Black",
+      "away": "Calasetta Basket",
+      "is_home": true,
+      "date": "2026-11-07",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2026-11-07",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "CALASETTA BASKET"
+    },
+    {
+      "round": "A6",
+      "n": 862,
+      "home": "Scuola Basket Carbonia",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2026-11-16",
+      "time": "20:30",
+      "venue": {
+        "name": "Cupola Geodetica",
+        "address": "Via Deffenu 09013 CARBONIA (SU)"
+      },
+      "official": {
+        "date": "2026-11-16",
+        "time": "20:30",
+        "venue": {
+          "name": "Cupola Geodetica",
+          "address": "Via Deffenu, Carbonia"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "SCUOLA BASKET CARBONIA"
+    },
+    {
+      "round": "A7",
+      "n": 872,
+      "home": "Basket Assemini Black",
+      "away": "Sinnai Basket",
+      "is_home": true,
+      "date": "2026-11-21",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2026-11-21",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "SINNAI BASKET"
+    },
+    {
+      "round": "A8",
+      "n": 874,
+      "home": "Basket Sulcispes",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2026-11-28",
+      "time": "19:00",
+      "venue": {
+        "name": "Palasport",
+        "address": "Lungomare C. Colombo 09017 SANT'ANTIOCO (SU)"
+      },
+      "official": {
+        "date": "2026-11-29",
+        "time": "18:30",
+        "venue": {
+          "name": "Palasport",
+          "address": "Lungomare C. Colombo, Sant'Antioco"
+        }
+      },
+      "changes": [
+        "date",
+        "time"
+      ],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET SULCISPES"
+    },
+    {
+      "round": "A9",
+      "n": 884,
+      "home": "Basket Assemini Black",
+      "away": "C.G.P. Carloforte",
+      "is_home": true,
+      "date": "2026-12-06",
+      "time": "18:30",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2026-12-06",
+        "time": "18:30",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "C.G.P. CARLOFORTE"
+    },
+    {
+      "round": "A10",
+      "n": 888,
+      "home": "Cagliari Basket",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2026-12-12",
+      "time": "20:45",
+      "venue": {
+        "name": "Palestra Esperia",
+        "address": "Via Pessagno snc 09126 CAGLIARI (CA)"
+      },
+      "official": {
+        "date": "2026-12-12",
+        "time": "20:45",
+        "venue": {
+          "name": "Palestra Esperia",
+          "address": "Via Pessagno snc, Cagliari"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "CAGLIARI BASKET"
+    },
+    {
+      "round": "A11",
+      "n": 894,
+      "home": "Basket Assemini Black",
+      "away": "Basket Assemini White",
+      "is_home": true,
+      "date": "2026-12-19",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2026-12-19",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET ASSEMINI WHITE"
+    },
+    {
+      "round": "R1",
+      "n": 898,
+      "home": "Basket Assemini Black",
+      "away": "A.S.D. Beta",
+      "is_home": true,
+      "date": "2027-01-09",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2027-01-09",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "A.S.D. BETA"
+    },
+    {
+      "round": "R2",
+      "n": 904,
+      "home": "Pol. Madas Siliqua",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2027-01-19",
+      "time": "20:30",
+      "venue": {
+        "name": "Palestra Scuola Elementare",
+        "address": "Via Quasimodo 09010 SILIQUA (SU)"
+      },
+      "official": {
+        "date": "2027-01-15",
+        "time": "20:30",
+        "venue": {
+          "name": "Palestra Scuola Elementare",
+          "address": "Via Quasimodo, Siliqua"
+        }
+      },
+      "changes": [
+        "date"
+      ],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "POL. MADAS SILIQUA"
+    },
+    {
+      "round": "R3",
+      "n": 910,
+      "home": "Basket Settimo 2023",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2027-01-24",
+      "time": "18:00",
+      "venue": {
+        "name": "Palazzetto dello Sport",
+        "address": "VIA 1° MAGGIO 09040 SETTIMO SAN PIETRO (CA)"
+      },
+      "official": {
+        "date": "2027-01-23",
+        "time": "18:30",
+        "venue": {
+          "name": "Palazzetto dello Sport",
+          "address": "Via 1° Maggio, Settimo San Pietro"
+        }
+      },
+      "changes": [
+        "date",
+        "time"
+      ],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET SETTIMO 2023"
+    },
+    {
+      "round": "R4",
+      "n": 916,
+      "home": "Basket Assemini Black",
+      "away": "Basket Iglesias",
+      "is_home": true,
+      "date": "2027-01-30",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2027-01-30",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET IGLESIAS"
+    },
+    {
+      "round": "R5",
+      "n": 925,
+      "home": "Calasetta Basket",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2027-02-07",
+      "time": "18:30",
+      "venue": {
+        "name": "PalAversano",
+        "address": "Loc. Sciamain 09011 CALASETTA (SU)"
+      },
+      "official": {
+        "date": "2027-02-07",
+        "time": "18:30",
+        "venue": {
+          "name": "PalAversano",
+          "address": "Loc. Sciamain, Calasetta"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "CALASETTA BASKET"
+    },
+    {
+      "round": "R6",
+      "n": 927,
+      "home": "Basket Assemini Black",
+      "away": "Scuola Basket Carbonia",
+      "is_home": true,
+      "date": "2027-02-14",
+      "time": "18:30",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2027-02-28",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [
+        "date",
+        "time"
+      ],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "SCUOLA BASKET CARBONIA"
+    },
+    {
+      "round": "R7",
+      "n": 937,
+      "home": "Sinnai Basket",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2027-02-19",
+      "time": "21:00",
+      "venue": {
+        "name": "Palestra Scuole Elementari",
+        "address": "Via Perra 09048 SINNAI (CA)"
+      },
+      "official": {
+        "date": "2027-02-19",
+        "time": "21:00",
+        "venue": {
+          "name": "Palestra Scuole Elementari",
+          "address": "Via Perra, Sinnai"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "SINNAI BASKET"
+    },
+    {
+      "round": "R8",
+      "n": 944,
+      "home": "Basket Assemini Black",
+      "away": "Basket Sulcispes",
+      "is_home": true,
+      "date": "2027-06-30",
+      "time": "18:30",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2027-06-30",
+        "time": "18:30",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET SULCISPES"
+    },
+    {
+      "round": "R9",
+      "n": 947,
+      "home": "C.G.P. Carloforte",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2027-03-06",
+      "time": "19:00",
+      "venue": {
+        "name": "Palestra scuole medie",
+        "address": "Salita S. Cristina 09014 CARLOFORTE (SU)"
+      },
+      "official": {
+        "date": "2027-03-06",
+        "time": "19:00",
+        "venue": {
+          "name": "Palestra scuole medie",
+          "address": "Salita S. Cristina, Carloforte"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "C.G.P. CARLOFORTE"
+    },
+    {
+      "round": "R10",
+      "n": 953,
+      "home": "Basket Assemini Black",
+      "away": "Cagliari Basket",
+      "is_home": true,
+      "date": "2027-03-13",
+      "time": "18:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2027-03-13",
+        "time": "18:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "CAGLIARI BASKET"
+    },
+    {
+      "round": "R11",
+      "n": 960,
+      "home": "Basket Assemini White",
+      "away": "Basket Assemini Black",
+      "is_home": false,
+      "date": "2027-03-18",
+      "time": "21:00",
+      "venue": {
+        "name": "Palestra Comunale",
+        "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
+      },
+      "official": {
+        "date": "2027-03-18",
+        "time": "21:00",
+        "venue": {
+          "name": "Palestra Comunale",
+          "address": "Via Cagliari 239, Assemini"
+        }
+      },
+      "changes": [],
+      "status": "non-designata",
+      "status_text": "Gara non ancora designata",
+      "referees": [],
+      "score": null,
+      "sanctions": [],
+      "fip_opponent": "BASKET ASSEMINI WHITE"
+    }
+  ],
+  "rounds": [
+    {
+      "round": "A1",
+      "games": [
+        {
+          "n": 831,
+          "home": "BASKET SULCISPES",
+          "away": "CALASETTA BASKET",
+          "date": "2027-01-10",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 832,
+          "home": "POL. MADAS SILIQUA",
+          "away": "SINNAI BASKET",
+          "date": "2026-12-18",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 833,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2026-10-10",
+          "time": "18:00",
+          "status": "designata",
+          "score": null,
+          "referees": [
+            "CARRUS FABIO di SELARGIUS (CA)"
+          ],
+          "sanctions": []
+        },
+        {
+          "n": 834,
+          "home": "A.S.D. BETA",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2027-06-30",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 835,
+          "home": "CAGLIARI BASKET",
+          "away": "BASKET IGLESIAS",
+          "date": "2026-10-11",
+          "time": "17:30",
+          "status": "designata",
+          "score": null,
+          "referees": [
+            "LACONI MARCO di VILLASIMIUS (SU)",
+            "PUTZULU ALBERTO di QUARTU SANT'ELENA (CA)"
+          ],
+          "sanctions": []
+        },
+        {
+          "n": 836,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2027-01-11",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=1"
+    },
+    {
+      "round": "A2",
+      "games": [
+        {
+          "n": 837,
+          "home": "BASKET IGLESIAS",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2026-10-16",
+          "time": "19:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 838,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2026-10-17",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 839,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "CAGLIARI BASKET",
+          "date": "2026-10-19",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 840,
+          "home": "CALASETTA BASKET",
+          "away": "A.S.D. BETA",
+          "date": "2026-10-18",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 841,
+          "home": "BASKET SETTIMO 2023",
+          "away": "BASKET SULCISPES",
+          "date": "2026-11-17",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 842,
+          "home": "SINNAI BASKET",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2026-10-16",
+          "time": "21:00",
+          "status": "designata-nonvisibile",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=2"
+    },
+    {
+      "round": "A3",
+      "games": [
+        {
+          "n": 843,
+          "home": "POL. MADAS SILIQUA",
+          "away": "CALASETTA BASKET",
+          "date": "2026-10-22",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 844,
+          "home": "CAGLIARI BASKET",
+          "away": "SINNAI BASKET",
+          "date": "2026-10-25",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 845,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2026-10-24",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 846,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2026-10-24",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 847,
+          "home": "BASKET IGLESIAS",
+          "away": "A.S.D. BETA",
+          "date": "2026-10-23",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 848,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "BASKET SULCISPES",
+          "date": "2026-10-26",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=3"
+    },
+    {
+      "round": "A4",
+      "games": [
+        {
+          "n": 849,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "A.S.D. BETA",
+          "date": "2026-11-02",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 850,
+          "home": "BASKET IGLESIAS",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2026-10-30",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 851,
+          "home": "BASKET SETTIMO 2023",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2026-11-01",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 852,
+          "home": "SINNAI BASKET",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2027-01-06",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 853,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "BASKET SULCISPES",
+          "date": "2026-10-29",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 854,
+          "home": "CALASETTA BASKET",
+          "away": "CAGLIARI BASKET",
+          "date": "2026-11-01",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=4"
+    },
+    {
+      "round": "A5",
+      "games": [
+        {
+          "n": 855,
+          "home": "POL. MADAS SILIQUA",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2026-11-09",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 856,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "CALASETTA BASKET",
+          "date": "2026-11-07",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 857,
+          "home": "BASKET IGLESIAS",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2026-11-06",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 858,
+          "home": "BASKET SULCISPES",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2026-11-08",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 859,
+          "home": "CAGLIARI BASKET",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2026-11-08",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 860,
+          "home": "SINNAI BASKET",
+          "away": "A.S.D. BETA",
+          "date": "2026-10-28",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=5"
+    },
+    {
+      "round": "A6",
+      "games": [
+        {
+          "n": 861,
+          "home": "BASKET SETTIMO 2023",
+          "away": "A.S.D. BETA",
+          "date": "2026-11-14",
+          "time": "19:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 862,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2026-11-16",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 863,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2026-11-12",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 864,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "CAGLIARI BASKET",
+          "date": "2026-11-14",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 865,
+          "home": "SINNAI BASKET",
+          "away": "BASKET SULCISPES",
+          "date": "2026-11-13",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 866,
+          "home": "CALASETTA BASKET",
+          "away": "BASKET IGLESIAS",
+          "date": "2026-11-16",
+          "time": "19:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=6"
+    },
+    {
+      "round": "A7",
+      "games": [
+        {
+          "n": 867,
+          "home": "BASKET IGLESIAS",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2026-11-23",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 868,
+          "home": "POL. MADAS SILIQUA",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2026-11-21",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 869,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "A.S.D. BETA",
+          "date": "2026-11-19",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 870,
+          "home": "CAGLIARI BASKET",
+          "away": "BASKET SULCISPES",
+          "date": "2026-11-22",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 871,
+          "home": "CALASETTA BASKET",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2026-11-22",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 872,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "SINNAI BASKET",
+          "date": "2026-11-21",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=7"
+    },
+    {
+      "round": "A8",
+      "games": [
+        {
+          "n": 873,
+          "home": "SINNAI BASKET",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2026-11-27",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 874,
+          "home": "BASKET SULCISPES",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2026-11-28",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 875,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "A.S.D. BETA",
+          "date": "2026-11-28",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 876,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "CALASETTA BASKET",
+          "date": "2026-11-30",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 877,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "BASKET IGLESIAS",
+          "date": "2026-11-26",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 878,
+          "home": "CAGLIARI BASKET",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2026-11-29",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=8"
+    },
+    {
+      "round": "A9",
+      "games": [
+        {
+          "n": 879,
+          "home": "POL. MADAS SILIQUA",
+          "away": "BASKET SULCISPES",
+          "date": "2026-12-04",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 880,
+          "home": "CALASETTA BASKET",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2026-12-06",
+          "time": "19:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 881,
+          "home": "BASKET SETTIMO 2023",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2026-12-07",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 882,
+          "home": "BASKET IGLESIAS",
+          "away": "SINNAI BASKET",
+          "date": "2026-12-04",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 883,
+          "home": "A.S.D. BETA",
+          "away": "CAGLIARI BASKET",
+          "date": "2026-12-03",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 884,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2026-12-06",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=9"
+    },
+    {
+      "round": "A10",
+      "games": [
+        {
+          "n": 885,
+          "home": "SINNAI BASKET",
+          "away": "CALASETTA BASKET",
+          "date": "2026-12-11",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 886,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2026-12-10",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 887,
+          "home": "BASKET SULCISPES",
+          "away": "A.S.D. BETA",
+          "date": "2026-12-13",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 888,
+          "home": "CAGLIARI BASKET",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2026-12-12",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 889,
+          "home": "POL. MADAS SILIQUA",
+          "away": "BASKET IGLESIAS",
+          "date": "2026-12-11",
+          "time": "20:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 890,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2026-12-16",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=10"
+    },
+    {
+      "round": "A11",
+      "games": [
+        {
+          "n": 891,
+          "home": "A.S.D. BETA",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2026-12-22",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 892,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "SINNAI BASKET",
+          "date": "2026-12-21",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 893,
+          "home": "BASKET SETTIMO 2023",
+          "away": "CAGLIARI BASKET",
+          "date": "2026-12-20",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 894,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2026-12-19",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 895,
+          "home": "CALASETTA BASKET",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2026-12-20",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 896,
+          "home": "BASKET IGLESIAS",
+          "away": "BASKET SULCISPES",
+          "date": "2026-12-18",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=11"
+    },
+    {
+      "round": "R1",
+      "games": [
+        {
+          "n": 897,
+          "home": "BASKET IGLESIAS",
+          "away": "CAGLIARI BASKET",
+          "date": "2027-01-08",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 898,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "A.S.D. BETA",
+          "date": "2027-01-09",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 899,
+          "home": "BASKET SETTIMO 2023",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2027-01-09",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 900,
+          "home": "CALASETTA BASKET",
+          "away": "BASKET SULCISPES",
+          "date": "2026-12-10",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 901,
+          "home": "SINNAI BASKET",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2027-01-13",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 902,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2027-01-21",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=1"
+    },
+    {
+      "round": "R2",
+      "games": [
+        {
+          "n": 903,
+          "home": "A.S.D. BETA",
+          "away": "CALASETTA BASKET",
+          "date": "2027-01-14",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 904,
+          "home": "POL. MADAS SILIQUA",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2027-01-19",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 905,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "SINNAI BASKET",
+          "date": "2027-01-14",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 906,
+          "home": "BASKET SULCISPES",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2027-01-16",
+          "time": "19:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 907,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "BASKET IGLESIAS",
+          "date": "2027-01-16",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 908,
+          "home": "CAGLIARI BASKET",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2027-01-17",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=2"
+    },
+    {
+      "round": "R3",
+      "games": [
+        {
+          "n": 909,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2027-01-24",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 910,
+          "home": "BASKET SETTIMO 2023",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2027-01-24",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 911,
+          "home": "BASKET SULCISPES",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2027-01-24",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 912,
+          "home": "CALASETTA BASKET",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2027-01-24",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 913,
+          "home": "A.S.D. BETA",
+          "away": "BASKET IGLESIAS",
+          "date": "2027-01-23",
+          "time": "18:15",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 914,
+          "home": "SINNAI BASKET",
+          "away": "CAGLIARI BASKET",
+          "date": "2027-01-22",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=3"
+    },
+    {
+      "round": "R4",
+      "games": [
+        {
+          "n": 915,
+          "home": "A.S.D. BETA",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2027-02-02",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 916,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "BASKET IGLESIAS",
+          "date": "2027-01-30",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 917,
+          "home": "CAGLIARI BASKET",
+          "away": "CALASETTA BASKET",
+          "date": "2027-01-31",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 918,
+          "home": "BASKET SULCISPES",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2027-01-31",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 919,
+          "home": "POL. MADAS SILIQUA",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2027-01-29",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 920,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "SINNAI BASKET",
+          "date": "2027-01-30",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=4"
+    },
+    {
+      "round": "R5",
+      "games": [
+        {
+          "n": 921,
+          "home": "BASKET SETTIMO 2023",
+          "away": "BASKET IGLESIAS",
+          "date": "2027-02-06",
+          "time": "20:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 922,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "CAGLIARI BASKET",
+          "date": "2027-02-04",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 923,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "BASKET SULCISPES",
+          "date": "2027-02-06",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 924,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2027-02-08",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 925,
+          "home": "CALASETTA BASKET",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2027-02-07",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 926,
+          "home": "A.S.D. BETA",
+          "away": "SINNAI BASKET",
+          "date": "2027-01-28",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=5"
+    },
+    {
+      "round": "R6",
+      "games": [
+        {
+          "n": 927,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2027-02-14",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 928,
+          "home": "CAGLIARI BASKET",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2027-02-13",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 929,
+          "home": "POL. MADAS SILIQUA",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2027-02-12",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 930,
+          "home": "BASKET IGLESIAS",
+          "away": "CALASETTA BASKET",
+          "date": "2027-02-12",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 931,
+          "home": "A.S.D. BETA",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2027-02-11",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 932,
+          "home": "BASKET SULCISPES",
+          "away": "SINNAI BASKET",
+          "date": "2027-02-14",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=6"
+    },
+    {
+      "round": "R7",
+      "games": [
+        {
+          "n": 933,
+          "home": "BASKET SULCISPES",
+          "away": "CAGLIARI BASKET",
+          "date": "2027-02-21",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 934,
+          "home": "A.S.D. BETA",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2027-02-18",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 935,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "BASKET IGLESIAS",
+          "date": "2027-02-22",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 936,
+          "home": "BASKET SETTIMO 2023",
+          "away": "CALASETTA BASKET",
+          "date": "2027-02-21",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 937,
+          "home": "SINNAI BASKET",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2027-02-19",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 938,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2027-02-20",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=7"
+    },
+    {
+      "round": "R8",
+      "games": [
+        {
+          "n": 939,
+          "home": "BASKET SETTIMO 2023",
+          "away": "SINNAI BASKET",
+          "date": "2027-02-27",
+          "time": "19:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 940,
+          "home": "A.S.D. BETA",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2027-02-27",
+          "time": "18:15",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 941,
+          "home": "POL. MADAS SILIQUA",
+          "away": "CAGLIARI BASKET",
+          "date": "2027-02-26",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 942,
+          "home": "CALASETTA BASKET",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2027-03-04",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 943,
+          "home": "BASKET IGLESIAS",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2027-02-26",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 944,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "BASKET SULCISPES",
+          "date": "2027-06-30",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=8"
+    },
+    {
+      "round": "R9",
+      "games": [
+        {
+          "n": 945,
+          "home": "SINNAI BASKET",
+          "away": "BASKET IGLESIAS",
+          "date": "2027-03-05",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 946,
+          "home": "BASKET SULCISPES",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2027-03-07",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 947,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2027-03-06",
+          "time": "19:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 948,
+          "home": "CAGLIARI BASKET",
+          "away": "A.S.D. BETA",
+          "date": "2027-03-07",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 949,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2027-03-08",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 950,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "CALASETTA BASKET",
+          "date": "2027-03-07",
+          "time": "19:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=9"
+    },
+    {
+      "round": "R10",
+      "games": [
+        {
+          "n": 951,
+          "home": "BASKET IGLESIAS",
+          "away": "POL. MADAS SILIQUA",
+          "date": "2027-03-12",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 952,
+          "home": "A.S.D. BETA",
+          "away": "BASKET SULCISPES",
+          "date": "2027-03-11",
+          "time": "20:45",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 953,
+          "home": "BASKET ASSEMINI BLACK",
+          "away": "CAGLIARI BASKET",
+          "date": "2027-03-13",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 954,
+          "home": "BASKET SETTIMO 2023",
+          "away": "BASKET ASSEMINI WHITE",
+          "date": "2027-03-13",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 955,
+          "home": "SCUOLA BASKET CARBONIA",
+          "away": "C.G.P. CARLOFORTE",
+          "date": "2027-03-10",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 956,
+          "home": "CALASETTA BASKET",
+          "away": "SINNAI BASKET",
+          "date": "2027-03-18",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=10"
+    },
+    {
+      "round": "R11",
+      "games": [
+        {
+          "n": 957,
+          "home": "CAGLIARI BASKET",
+          "away": "BASKET SETTIMO 2023",
+          "date": "2027-03-21",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 958,
+          "home": "BASKET SULCISPES",
+          "away": "BASKET IGLESIAS",
+          "date": "2027-03-21",
+          "time": "18:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 959,
+          "home": "C.G.P. CARLOFORTE",
+          "away": "CALASETTA BASKET",
+          "date": "2027-03-21",
+          "time": "18:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 960,
+          "home": "BASKET ASSEMINI WHITE",
+          "away": "BASKET ASSEMINI BLACK",
+          "date": "2027-03-18",
+          "time": "21:00",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 961,
+          "home": "SINNAI BASKET",
+          "away": "SCUOLA BASKET CARBONIA",
+          "date": "2027-03-23",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        },
+        {
+          "n": 962,
+          "home": "POL. MADAS SILIQUA",
+          "away": "A.S.D. BETA",
+          "date": "2027-03-19",
+          "time": "20:30",
+          "status": "non-designata",
+          "score": null,
+          "referees": [],
+          "sanctions": []
+        }
+      ],
+      "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=0&giornata=11"
+    }
+  ],
+  "standings": [
+    {
+      "position": 1,
+      "team": "SCUOLA BASKET CARBONIA",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 2,
+      "team": "BASKET ASSEMINI BLACK",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 3,
+      "team": "BASKET ASSEMINI WHITE",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 4,
+      "team": "CALASETTA BASKET",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 5,
+      "team": "A.S.D. BETA",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 6,
+      "team": "BASKET IGLESIAS",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 7,
+      "team": "BASKET SULCISPES",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 8,
+      "team": "CAGLIARI BASKET",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 9,
+      "team": "SINNAI BASKET",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 10,
+      "team": "BASKET SETTIMO 2023",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 11,
+      "team": "POL. MADAS SILIQUA",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
+      "position": 12,
+      "team": "C.G.P. CARLOFORTE",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    }
+  ],
+  "notices": [],
+  "logos": {},
+  "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
+  "updated_at": "2026-10-09T10:35:05+00:00"
+}

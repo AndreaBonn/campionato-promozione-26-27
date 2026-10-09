@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "Basket Assemini Black, Divisione Regionale 2 2026/27",
+  "short_name": "Assemini Black",
+  "description": "Calendario, risultati e classifica del Basket Assemini Black in Divisione Regionale 2 2026/27, aggiornati da fip.it.",
+  "lang": "it",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f1ed",
+  "theme_color": "#221c18",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

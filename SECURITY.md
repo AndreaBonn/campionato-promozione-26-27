@@ -1,47 +1,50 @@
-# Sicurezza
+**English** | [Italiano](./SECURITY.it.md)
 
-## Versioni supportate
+# Security
 
-Il progetto non ha release numerate. Le correzioni di sicurezza si applicano all'ultimo commit su `main`, che è anche la versione pubblicata su GitHub Pages.
+## Supported Versions
 
-## Segnalare una vulnerabilità
+The project has no numbered releases. Security fixes are applied to the latest commit on `main`, which is also the version published on GitHub Pages.
 
-Per segnalare una vulnerabilità usa [GitHub Security Advisories](https://github.com/AndreaBonn/campionato-promozione-26-27/security/advisories/new), non una issue pubblica.
+## Reporting a Vulnerability
 
-Includi:
+To report a vulnerability, use [GitHub Security Advisories](https://github.com/AndreaBonn/campionato-promozione-26-27/security/advisories/new), not a public issue.
 
-- descrizione del problema;
-- passi per riprodurlo;
-- comportamento atteso e comportamento osservato;
-- cosa potrebbe ottenere chi lo sfrutta.
+Please include:
 
-Tempi di risposta:
+- description of the problem;
+- steps to reproduce it;
+- expected and observed behavior;
+- what an attacker could achieve.
 
-- presa in carico entro 72 ore;
-- correzione dei problemi critici entro 30 giorni;
-- divulgazione pubblica concordata dopo la correzione.
+Response timeline:
 
-## Superficie
+- acknowledgment within 72 hours;
+- fix for critical issues within 30 days;
+- coordinated public disclosure after the fix.
 
-La pagina è statica e non ha login, form, cookie né segreti lato client. L'unico input esterno sono i dati letti da fip.it e dall'API WordPress della FIP Sardegna durante la sincronizzazione su GitHub Actions.
+## Attack Surface
 
-## Misure di sicurezza implementate
+The page is static and has no login, forms, cookies or client-side secrets. The only external input is the data read from fip.it, from the FIP Sardegna WordPress API and, once enabled, from playbasket.it, during the sync on GitHub Actions.
 
-- **Escape dell'HTML**: i testi provenienti da fip.it passano per la funzione `esc` prima di essere inseriti con `innerHTML` (`docs/index.html:180`).
-- **Filtro sui link esterni**: le comunicazioni della FIP Sardegna vengono accettate solo se il link inizia con `https://sardegna.fip.it/`, perché la pagina lo usa come `href` (`src/fip_calendar/notices.py:33`).
-- **Permessi minimi del workflow**: `contents: read` come default, `contents: write` solo per il job di sincronizzazione, `pages: write` e `id-token: write` solo per il deploy (`.github/workflows/sync-fip.yml`).
-- **Action pinnate a SHA** e checkout con `persist-credentials: false` (`.github/workflows/sync-fip.yml`).
-- **Dipendenze bloccate**: `uv.lock` versionato, installato in CI con `uv sync --frozen`.
+## Security Measures Implemented
 
-Mancano una Content-Security-Policy sulla pagina e una scansione automatica delle dipendenze (Dependabot o simili).
+- **HTML escaping**: text coming from fip.it goes through the `esc` function before being inserted with `innerHTML` (`docs/page-rules.js:19`).
+- **External link filter**: FIP Sardegna notices are accepted only if their link starts with `https://sardegna.fip.it/`, because the page uses it as an `href` (`src/fip_calendar/notices.py:52`).
+- **Crest download limits**: crests are downloaded only from `https://backend.fip.it/`, the final URL after redirects is checked again, bodies over 8 MB are refused (`src/fip_calendar/fetch.py:67`), and Pillow decompression bombs are caught (`src/fip_calendar/logos.py:103`).
+- **Minimal workflow permissions**: `contents: read` by default, `contents: write` only for the sync job, `pages: write` and `id-token: write` only for the deploy (`.github/workflows/sync-fip.yml`).
+- **Actions pinned to SHA** and checkout with `persist-credentials: false` (`.github/workflows/sync-fip.yml`).
+- **Locked dependencies**: `uv.lock` is versioned and installed in CI with `uv sync --frozen`.
 
-## Fuori ambito
+There is no Content-Security-Policy on the page and no automated dependency scanning (Dependabot or similar).
 
-- Errori o ritardi nei dati pubblicati dalla FIP.
-- Self-XSS, cioè attacchi che richiedono alla vittima di incollare codice nella propria console.
-- Vulnerabilità già note in dipendenze di terze parti: vanno segnalate ai rispettivi manutentori.
-- Disponibilità di GitHub Pages e GitHub Actions.
+## Out of Scope
+
+- Errors or delays in the data published by FIP.
+- Self-XSS, i.e. attacks that require the victim to paste code into their own console.
+- Already disclosed vulnerabilities in third-party dependencies: report them to their maintainers.
+- Availability of GitHub Pages and GitHub Actions.
 
 ---
 
-[Torna al README](./README.md)
+[Back to README](./README.md)

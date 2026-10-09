@@ -1,28 +1,30 @@
-# Basket Assemini Black, calendario Divisione Regionale 2 2026/27
+**English** | [Italiano](./README.it.md)
 
-Pagina web con le 22 partite del Basket Assemini Black nella Divisione Regionale 2 sarda (Girone Sud A), aggiornata in automatico dal sito della FIP.
+# Basket Assemini Black, Divisione Regionale 2 2026/27 calendar
 
-È una copia adattata di [campionato-serie-c-26-27](https://github.com/AndreaBonn/campionato-serie-c-26-27), la stessa pagina fatta per il CUS Cagliari in Serie C.
+A web page with the 22 games of Basket Assemini Black in the Sardinian Divisione Regionale 2 (Girone Sud A), kept up to date automatically from the Italian Basketball Federation (FIP) website.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Python](https://img.shields.io/badge/python-%3E%3D3.12-3776ab)
 ![Sync](https://github.com/AndreaBonn/campionato-promozione-26-27/actions/workflows/sync-fip.yml/badge.svg)
 
-La pagina è pubblicata su **https://andreabonn.github.io/campionato-promozione-26-27/** e si può installare sul telefono come app.
+The page is published at **https://andreabonn.github.io/campionato-promozione-26-27/** and can be installed on a phone as an app. Its text is in Italian.
 
-Un job di GitHub Actions legge le pagine dei risultati di fip.it ogni 4 ore, e ogni ora dalle 17 a mezzanotte: la DR2 gioca anche nei giorni feriali. A ogni lettura aggiorna:
+A GitHub Actions job reads the fip.it results pages every 4 hours, and every hour from 17:00 to midnight Italian time, because DR2 games are also played on weekday evenings. Each run updates:
 
-- giorno, ora e campo di ogni gara, segnalando cosa è cambiato rispetto al comunicato ufficiale;
-- gli arbitri, appena la FIP li pubblica;
-- risultati e classifica ufficiale, con i risultati di tutto il girone giornata per giornata;
-- il calendario in abbonamento `calendario.ics`, da aggiungere a Google Calendar o all'app Calendario;
-- le comunicazioni della FIP Sardegna sulla DR2 e sull'Assemini.
+- date, time and venue of every game, flagging what changed compared with the official calendar (Comunicato Ufficiale n. 11 of 05/10/2026);
+- referees, as soon as FIP publishes them;
+- results and the official standings, plus every game of the group round by round, each round linked to FIP's printable report;
+- disciplinary decisions (Giudice Sportivo) on homologated games;
+- the subscribable calendar `calendario.ics`, for Google Calendar or the iOS Calendar app;
+- FIP Sardegna notices about DR2 and about Assemini;
+- club crests, when clubs upload them to fip.it.
 
-La pagina mostra anche la prossima partita, le soste, i link a Google Maps e Google Calendar, l'andamento della squadra, il risultato dell'andata nelle gare di ritorno e l'orario dell'ultimo controllo riuscito su fip.it.
+The page also shows the next game with a countdown, breaks in the schedule, Google Maps and Google Calendar links, the team's recent form, the first-leg result on return games and the time of the last successful check on fip.it.
 
-## In pratica
+## In practice
 
-Ogni gara in `docs/data.json` porta i dati correnti di fip.it accanto a quelli del comunicato ufficiale. Questo è l'estratto della gara n. 874, anticipata dalla FIP di un giorno e spostata di mezz'ora:
+Every game in `docs/data.json` carries the current fip.it data next to the official calendar's. This is game 874, moved by FIP one day earlier and half an hour later:
 
 ```json
 {
@@ -38,11 +40,18 @@ Ogni gara in `docs/data.json` porta i dati correnti di fip.it accanto a quelli d
 }
 ```
 
-La pagina legge `changes` e mostra sotto la gara "Spostata dalla FIP", con data, ora e campo del comunicato.
+The page reads `changes` and shows "Spostata dalla FIP" (moved by FIP) under the game, with the official date, time and venue.
 
-Il comunicato dà a due gare (n. 834 e n. 944) la data del 30 giugno 2027, che la FIP usa quando la data non è ancora fissata. La pagina le mostra in fondo, sotto "Data da definire", e il calendario in abbonamento non le contiene finché la FIP non pubblica la data vera.
+The official calendar gives two games (834 and 944) the date 30 June 2027, which FIP uses when a date is not set yet. The page lists them last under "Data da definire" (date to be set), and the subscribable calendar leaves them out until FIP publishes the real date.
 
-## Architettura
+## Tech stack
+
+- **Sync**: Python 3.12+, `beautifulsoup4`, `pillow` for the crests, `urllib` from the standard library
+- **Page**: HTML and JavaScript ES modules, no framework and no build step, web app manifest, service worker
+- **Publishing**: GitHub Actions and GitHub Pages
+- **Development**: uv, pytest with pytest-cov, ruff, mypy in strict mode, `node --test`
+
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -51,31 +60,28 @@ flowchart LR
     posts["sardegna.fip.it (WordPress API)"] --> sync
     sync --> data["docs/data.json"]
     sync --> ics["docs/calendario.ics"]
-    data --> page["docs/index.html su GitHub Pages"]
+    sync --> logos["docs/logos/"]
+    data --> page["docs/index.html on GitHub Pages"]
     ics --> page
+    logos --> page
 ```
 
-Lo scraper gira solo dentro GitHub Actions; la pagina è statica ed è il browser a scaricare `data.json`.
+The scraper runs only inside GitHub Actions; the page is static and the browser downloads `data.json`.
 
-- Le gare si abbinano per numero di gara FIP (`n`), mai per nome della squadra: su fip.it i nomi includono gli sponsor.
-- `docs/data.json` e `docs/calendario.ics` vengono riscritti e committati solo quando il contenuto cambia, quindi la cronologia git registra ogni variazione decisa dalla FIP.
-- `docs/status.json` (ultimo controllo riuscito) non è versionato: arriva al sito solo con l'artefatto di Pages. Se una sincronizzazione fallisce, il deploy salta e la pagina continua a mostrare l'ultimo controllo andato a buon fine.
-- Se l'API della FIP Sardegna non risponde, restano le comunicazioni già note e la sincronizzazione non fallisce.
+- Games are matched by FIP game number (`n`), never by team name: fip.it names include sponsors.
+- `docs/data.json` and `docs/calendario.ics` are rewritten and committed only when their content changes, so the git history records every change FIP makes.
+- Standings come from FIP, which counts only homologated results; the page takes win-loss records from the round results and positions from the standings.
+- Crests are copied into the repository (only images served by `backend.fip.it`), cropped from FIP's scans and resized to 128 px, so the page never hotlinks fip.it. As of 2026-10-09 no club in the group has uploaded one.
+- `docs/status.json` (last successful check) is not versioned: it reaches the site only through the Pages artifact. If a sync fails, the deploy is skipped and the page keeps showing the last successful check.
+- If the FIP Sardegna API does not answer, the notices already known are kept and the sync does not fail.
 
-## Stack tecnologico
-
-- **Sincronizzazione**: Python 3.12+, `beautifulsoup4`, `urllib` della libreria standard
-- **Pagina**: HTML e JavaScript senza framework né build, web app manifest, service worker
-- **Pubblicazione**: GitHub Actions e GitHub Pages
-- **Sviluppo**: uv, pytest, ruff, mypy in modalità strict, `node --test`
-
-## Prerequisiti
+## Prerequisites
 
 - [uv](https://docs.astral.sh/uv/)
-- Python 3.12 o successivo (uv lo installa se manca)
-- Node.js, solo per i test JavaScript
+- Python 3.12 or later (uv installs it if missing)
+- Node.js, only for the JavaScript tests
 
-## Installazione
+## Installation
 
 ```bash
 git clone https://github.com/AndreaBonn/campionato-promozione-26-27.git
@@ -83,90 +89,103 @@ cd campionato-promozione-26-27
 uv sync
 ```
 
-## Esecuzione locale
+## Running locally
 
 ```bash
-uv run fip-calendar                                   # legge fip.it e aggiorna docs/data.json e docs/calendario.ics
-uv run python -m http.server 8765 --directory docs    # apri http://127.0.0.1:8765
+uv run fip-calendar                                   # reads fip.it, updates docs/data.json and docs/calendario.ics
+uv run python -m http.server 8765 --directory docs    # open http://127.0.0.1:8765
 ```
 
-`fip-calendar` fa 22 richieste a fip.it, a un secondo di distanza l'una dall'altra, più 3 ricerche sulle comunicazioni della FIP Sardegna e 2 letture della categoria "Campionati regionali" e dei comunicati.
+`fip-calendar` makes 22 requests to fip.it, one second apart, plus 3 searches on FIP Sardegna notices and 2 reads of the "Campionati regionali" category and of the comunicati.
 
-La pagina va aperta via HTTP: da file locale il browser blocca la lettura di `data.json`.
+Open the page over HTTP: from a local file the browser blocks reading `data.json`.
 
-Non c'è configurazione tramite variabili d'ambiente: girone, URL e tempi di attesa sono costanti in `src/fip_calendar/config.py`.
+There is no configuration through environment variables: group, URLs and wait times are constants in `src/fip_calendar/config.py`.
+
+### Command-line entry points
+
+| Command | What it does |
+|---|---|
+| `uv run fip-calendar` | Full sync: fip.it, FIP Sardegna notices, crests, box scores |
+| `uv run fip-calendar-stamp-sw` | Writes the app version into `docs/sw.js` (deploy only) |
+| `uv run fip-calendar-check-aliases` | Checks the playbasket.it team names against the current standings |
 
 ### Web app
 
-La pagina si installa grazie a `docs/manifest.webmanifest` e al service worker `docs/sw.js`. Il service worker lavora in modalità network first: la cache risponde solo quando la rete non c'è, così online i dati FIP non sono mai vecchi.
+The page installs thanks to `docs/manifest.webmanifest` and the service worker `docs/sw.js`. The service worker is network first: the cache answers only when the network is down, so online the FIP data is never stale.
 
-Quando esce una nuova versione della pagina compare un avviso con due scelte: "Aggiorna" ricarica tutte le schede aperte, "Più tardi" lo nasconde fino alla prossima apertura. La versione è un hash dei file di `docs/` esclusi i dati FIP, calcolato da `uv run fip-calendar-stamp-sw` durante il deploy. La copia nel repository deve mantenere `const VERSION = "dev";`: se lanci il comando in locale, ripristina il file.
+When a new version of the page is out, a notice offers two choices: "Aggiorna" (update) reloads every open tab, "Più tardi" (later) hides it until the next opening. The version is a hash of the files in `docs/` minus the FIP data, computed by `uv run fip-calendar-stamp-sw` during the deploy. The repository copy must keep `const VERSION = "dev";`: if you run the command locally, restore the file.
 
-Le icone si generano dallo stemma `docs/logo-assemini.png`, ritagliato da `assets/assemini-logo.jpeg`:
+Icons are generated from the crest `docs/logo-assemini.png`, cropped from `assets/assemini-logo.jpeg`:
 
 ```bash
 uv run --script scripts/make_icons.py
 ```
 
-## Struttura del repository
+## Repository structure
 
 ```text
 .
-├── data/                 # calendario del Comunicato Ufficiale n. 11 del 05/10/2026 (JSON trascritto e PDF originale)
-├── docs/                 # sito pubblicato: pagina, dati generati, calendario .ics, manifest, service worker, icone
-├── scripts/              # generazione delle icone (script PEP 723 con ambiente proprio)
-├── src/fip_calendar/     # lettura di fip.it, confronto con il comunicato, .ics, comunicazioni FIP Sardegna
-├── tests/                # test pytest, pagine fip.it salvate in fixtures/, test JS in js/
-└── .github/workflows/    # sincronizzazione programmata e deploy su Pages
+├── assets/               # original Assemini crest
+├── data/                 # official calendar, Comunicato Ufficiale n. 11 of 05/10/2026 (transcribed JSON and original PDF)
+├── docs/                 # published site: page, JS modules, generated data, .ics calendar, manifest, service worker, icons
+├── scripts/              # icon generation (PEP 723 script with its own environment)
+├── src/fip_calendar/     # fip.it reading, comparison with the official calendar, .ics, notices, crests, box scores
+├── tests/                # pytest tests, saved pages in fixtures/, JS tests in js/
+└── .github/workflows/    # scheduled sync, name check and Pages deploy
 ```
 
-`docs/data.json` e `docs/calendario.ics` sono generati: non vanno modificati a mano.
+`docs/data.json`, `docs/boxscores.json` and `docs/calendario.ics` are generated: do not edit them by hand.
 
 ## Testing
 
 ```bash
-uv run pytest        # test Python
+uv run pytest        # Python tests (add --cov for line and branch coverage)
 uv run ruff check .  # lint
-uv run mypy          # type check strict su src/ e tests/
-npm test             # regole dell'avviso di aggiornamento (node --test, nessuna dipendenza)
+uv run mypy          # strict type check on src/ and tests/
+npm test             # page JS rules and views (node --test, no dependencies)
 ```
 
-I test girano sulle pagine di fip.it salvate in `tests/fixtures/`, senza rete. Quando fip.it cambia struttura, salva lì la nuova pagina e riproduci il problema in un test prima di correggere lo scraper.
+Tests run offline against pages saved in `tests/fixtures/` and never read `docs/data.json`, so a FIP correction cannot block the sync. When fip.it changes its layout, save the new page there and reproduce the problem in a test before fixing the scraper.
 
-## Deploy e CI/CD
+## Deployment and CI/CD
 
-Un solo workflow, `.github/workflows/sync-fip.yml`, parte a ogni push su `main`, su richiesta manuale e secondo questo calendario:
+A single workflow, `.github/workflows/sync-fip.yml`, runs on every push to `main`, on manual dispatch and on this schedule:
 
-| Quando | Cron (UTC) |
+| When | Cron (UTC) |
 |---|---|
-| Ogni 4 ore | `17 */4 * * *` |
-| Ogni giorno, ogni ora dalle 17 a mezzanotte ora italiana | `47 15-23 * * *` |
+| Every 4 hours | `17 */4 * * *` |
+| Every day, every hour from 17:00 to midnight Italian time | `47 15-23 * * *` |
 
-Il job esegue i test Python e JavaScript, lancia `fip-calendar`, committa `data.json` e `calendario.ics` se sono cambiati, marca la versione del service worker e pubblica `docs/` su GitHub Pages.
+It has three jobs:
 
-Se fip.it non risponde o la struttura delle pagine è cambiata, il job si ferma senza toccare `data.json` e GitHub invia un'email di notifica. Il log indica cosa non è stato trovato.
+- **sync**: runs the Python and JavaScript tests, runs `fip-calendar`, commits `data.json`, `boxscores.json`, `calendario.ics` and the crests if they changed, stamps the service worker version and uploads `docs/` as the Pages artifact;
+- **deploy**: publishes the artifact on GitHub Pages;
+- **alias-check**: runs `fip-calendar-check-aliases` after the sync. It fails on its own when a team changes its FIP name (for example a new sponsor) and does not hold back the deploy.
 
-## Limiti
+If fip.it does not answer or its page structure has changed, the sync stops without touching `data.json` and GitHub sends a notification email. The log says what was not found.
 
-- fip.it non ha un'API pubblica documentata: lo scraper legge l'HTML delle pagine dei risultati e va aggiornato quando la FIP cambia il layout.
-- La formula mostrata nella pagina (prime 4 ai playoff, nessun playout) è quella della DR2 Sud 2025/26, quando il girone Sud era uno solo. Quella del 2026/27 non è ancora pubblicata.
-- I tabellini di playbasket.it non sono ancora attivi: la tabella dei nomi delle squadre (`PLAYBASKET_TEAM_ALIASES` in `src/fip_calendar/config.py`) si compila dopo il primo tabellino dell'Assemini Black. Finché è vuota, la sincronizzazione non legge playbasket.it.
-- GitHub sospende i workflow programmati dopo 60 giorni senza attività sul repository.
+## Limitations
 
-## Sicurezza
+- fip.it has no documented public API: the scraper reads the HTML of the results pages and has to be updated when FIP changes the layout.
+- The format shown on the page (top 4 to the playoffs, no playout) is that of DR2 Sud 2025/26, when the southern group was a single one. The 2026/27 format is not published yet.
+- FIP does not publish box scores for this league. Player points would come from playbasket.it (user-entered, reused non-commercially with attribution), but that sync is not active yet: the team name table (`PLAYBASKET_TEAM_ALIASES` in `src/fip_calendar/config.py`) gets filled after the first Assemini Black box score. While it is empty the sync does not read playbasket.it.
+- GitHub suspends scheduled workflows after 60 days without activity on the repository.
 
-La pagina non ha login, form né segreti: mostra dati pubblici della FIP. Per segnalare una vulnerabilità, consulta [SECURITY.md](./SECURITY.md).
+## Security
 
-## Licenza
+The page has no login, no forms and no secrets: it shows public FIP data. To report a vulnerability, see [SECURITY.md](./SECURITY.md).
 
-Il codice è rilasciato con licenza MIT, vedi [LICENSE](./LICENSE). Lo stemma dell'A.S.D. Basket Assemini (`docs/logo-assemini.png`, `assets/assemini-logo.jpeg`) e il comunicato ufficiale FIP (`data/11-DR2-calendario-definitivo-Sud-A.pdf`) restano dei rispettivi titolari e non sono coperti dalla licenza.
+## License
 
-## Sostieni il progetto
+The code is released under the MIT License, see [LICENSE](./LICENSE). The A.S.D. Basket Assemini crest (`docs/logo-assemini.png`, `assets/assemini-logo.jpeg`), the club crests copied from fip.it and the official FIP calendar (`data/11-DR2-calendario-definitivo-Sud-A.pdf`) belong to their respective owners and are not covered by the license.
 
-Se questo progetto ti è stato utile, lascia una stella su [GitHub](https://github.com/AndreaBonn/campionato-promozione-26-27): aiuta altri a scoprirlo.
+## Support the project
 
-Il calendario del Basket Assemini Black è gratuito. Se ti è utile e vuoi contribuire, puoi lasciare un'offerta tramite PayPal. L'importo lo scegli tu ed è del tutto facoltativo.
+If you found this project useful, consider giving it a star on [GitHub](https://github.com/AndreaBonn/campionato-promozione-26-27): it helps others discover it.
+
+The Basket Assemini Black calendar is free. If you want to contribute, you can leave a donation through PayPal. The amount is up to you and entirely optional.
 
 <p align="center">
-  <a href="https://paypal.me/AndreaBonacci19"><img src="https://img.shields.io/badge/Dona-PayPal-00457C?logo=paypal&logoColor=white&style=for-the-badge" alt="Dona con PayPal"></a>
+  <a href="https://paypal.me/AndreaBonacci19"><img src="https://img.shields.io/badge/Donate-PayPal-00457C?logo=paypal&logoColor=white&style=for-the-badge" alt="Donate with PayPal"></a>
 </p>

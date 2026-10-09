@@ -5,6 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Basket Assemini Black
 X-WR-TIMEZONE:Europe/Rome
+COLOR:gray
+X-APPLE-CALENDAR-COLOR:#8E8E93
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VTIMEZONE
@@ -26,7 +28,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:assemini-black-gara838@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261017T180000
 DTEND;TZID=Europe/Rome:20261017T200000
 SUMMARY:Basket Assemini Black - Pol. Madas Siliqua
@@ -38,7 +40,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara846@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261024T180000
 DTEND;TZID=Europe/Rome:20261024T200000
 SUMMARY:Basket Assemini Black - Basket Settimo 2023
@@ -50,7 +52,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara850@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261030T203000
 DTEND;TZID=Europe/Rome:20261030T223000
 SUMMARY:Basket Iglesias - Basket Assemini Black
@@ -62,7 +64,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara856@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261107T180000
 DTEND;TZID=Europe/Rome:20261107T200000
 SUMMARY:Basket Assemini Black - Calasetta Basket
@@ -74,7 +76,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara862@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261116T203000
 DTEND;TZID=Europe/Rome:20261116T223000
 SUMMARY:Scuola Basket Carbonia - Basket Assemini Black
@@ -86,7 +88,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara872@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261121T180000
 DTEND;TZID=Europe/Rome:20261121T200000
 SUMMARY:Basket Assemini Black - Sinnai Basket
@@ -98,7 +100,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara874@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261128T190000
 DTEND;TZID=Europe/Rome:20261128T210000
 SUMMARY:Basket Sulcispes - Basket Assemini Black
@@ -110,7 +112,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara884@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261206T183000
 DTEND;TZID=Europe/Rome:20261206T203000
 SUMMARY:Basket Assemini Black - C.G.P. Carloforte
@@ -122,7 +124,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara888@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261212T204500
 DTEND;TZID=Europe/Rome:20261212T224500
 SUMMARY:Cagliari Basket - Basket Assemini Black
@@ -134,7 +136,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara894@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20261219T180000
 DTEND;TZID=Europe/Rome:20261219T200000
 SUMMARY:Basket Assemini Black - Basket Assemini White
@@ -146,7 +148,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara898@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270109T180000
 DTEND;TZID=Europe/Rome:20270109T200000
 SUMMARY:Basket Assemini Black - A.S.D. Beta
@@ -158,7 +160,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara904@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270119T203000
 DTEND;TZID=Europe/Rome:20270119T223000
 SUMMARY:Pol. Madas Siliqua - Basket Assemini Black
@@ -170,7 +172,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara910@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270124T180000
 DTEND;TZID=Europe/Rome:20270124T200000
 SUMMARY:Basket Settimo 2023 - Basket Assemini Black
@@ -183,7 +185,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara916@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270130T180000
 DTEND;TZID=Europe/Rome:20270130T200000
 SUMMARY:Basket Assemini Black - Basket Iglesias
@@ -195,7 +197,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara925@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270207T183000
 DTEND;TZID=Europe/Rome:20270207T203000
 SUMMARY:Calasetta Basket - Basket Assemini Black
@@ -207,7 +209,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara927@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270214T183000
 DTEND;TZID=Europe/Rome:20270214T203000
 SUMMARY:Basket Assemini Black - Scuola Basket Carbonia
@@ -219,7 +221,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara937@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270219T210000
 DTEND;TZID=Europe/Rome:20270219T230000
 SUMMARY:Sinnai Basket - Basket Assemini Black
@@ -231,7 +233,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara947@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270306T190000
 DTEND;TZID=Europe/Rome:20270306T210000
 SUMMARY:C.G.P. Carloforte - Basket Assemini Black
@@ -243,7 +245,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara953@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270313T180000
 DTEND;TZID=Europe/Rome:20270313T200000
 SUMMARY:Basket Assemini Black - Cagliari Basket
@@ -255,7 +257,7 @@ URL:https://andreabonn.github.io/campionato-promozione-26-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:assemini-black-gara960@campionato-promozione-26-27
-DTSTAMP:20261009T110607Z
+DTSTAMP:20261009T111455Z
 DTSTART;TZID=Europe/Rome:20270318T210000
 DTEND;TZID=Europe/Rome:20270318T230000
 SUMMARY:Basket Assemini White - Basket Assemini Black

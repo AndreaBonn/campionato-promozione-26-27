@@ -36,6 +36,9 @@ CALENDAR_HEADER = [
     "METHOD:PUBLISH",
     "X-WR-CALNAME:Basket Assemini Black",
     "X-WR-TIMEZONE:Europe/Rome",
+    # Gray tells this feed apart from the sister CUS Cagliari one; clients treat it as a default
+    "COLOR:gray",
+    "X-APPLE-CALENDAR-COLOR:#8E8E93",
     "REFRESH-INTERVAL;VALUE=DURATION:PT4H",
     "X-PUBLISHED-TTL:PT4H",
 ]

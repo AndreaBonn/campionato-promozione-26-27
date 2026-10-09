@@ -52,6 +52,14 @@ def test_build_ics_declares_rome_timezone_and_refresh_hint() -> None:
     assert ics.endswith("END:VCALENDAR\r\n")
 
 
+def test_build_ics_suggests_gray_calendar_color_before_events() -> None:
+    lines = unfold(build_ics(games=[game()], dtstamp=STAMP, page_url=PAGE_URL))
+    first_event = lines.index("BEGIN:VEVENT")
+
+    assert lines.index("COLOR:gray") < first_event
+    assert lines.index("X-APPLE-CALENDAR-COLOR:#8E8E93") < first_event
+
+
 def test_build_ics_escapes_commas_and_semicolons() -> None:
     lines = unfold(build_ics(games=[game()], dtstamp=STAMP, page_url=PAGE_URL))
 

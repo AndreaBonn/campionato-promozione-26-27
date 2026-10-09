@@ -5,7 +5,6 @@ __pycache__/
 .ruff_cache/
 *.tmp
 docs/status.json
-docs/coverage-badge.json
 .coverage
 coverage.json
 ux-proposte/

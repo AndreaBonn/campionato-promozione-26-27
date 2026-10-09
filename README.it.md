@@ -7,8 +7,8 @@ Pagina web con le 22 partite del Basket Assemini Black nella Divisione Regionale
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Python](https://img.shields.io/badge/python-%3E%3D3.12-3776ab)
 ![Sync](https://github.com/AndreaBonn/campionato-promozione-26-27/actions/workflows/sync-fip.yml/badge.svg)
-![Tests](https://github.com/AndreaBonn/campionato-promozione-26-27/actions/workflows/tests.yml/badge.svg)
-![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fandreabonn.github.io%2Fcampionato-promozione-26-27%2Fcoverage-badge.json)
+[![Tests](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAndreaBonn%2Fcampionato-promozione-26-27%2Fbadges%2Ftests.json)](https://github.com/AndreaBonn/campionato-promozione-26-27/actions/workflows/tests.yml)
+[![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FAndreaBonn%2Fcampionato-promozione-26-27%2Fbadges%2Fcoverage.json)](https://github.com/AndreaBonn/campionato-promozione-26-27/actions/workflows/tests.yml)
 
 La pagina è pubblicata su **https://andreabonn.github.io/campionato-promozione-26-27/** e si può installare sul telefono come app.
 

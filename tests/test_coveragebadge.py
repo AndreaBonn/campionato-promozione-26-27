@@ -21,6 +21,12 @@ def test_coverage_badge_is_a_shields_endpoint_with_rounded_percent() -> None:
     }
 
 
+def test_coverage_badge_color_matches_the_rounded_message() -> None:
+    badge = coverage_badge(percent=79.5)
+
+    assert (badge["message"], badge["color"]) == ("80%", "green")
+
+
 def test_coverage_badge_rounds_down_below_half() -> None:
     assert coverage_badge(percent=79.4)["message"] == "79%"
 

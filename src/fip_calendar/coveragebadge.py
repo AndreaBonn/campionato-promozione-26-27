@@ -22,11 +22,13 @@ def badge_color(percent: float) -> str:
 
 def coverage_badge(percent: float) -> dict[str, Any]:
     """Shields.io endpoint payload for a total line and branch coverage percentage."""
+    # the color follows the number shown, or 79.5 would read "80%" in yellow
+    shown = round(percent)
     return {
         "schemaVersion": 1,
         "label": "coverage",
-        "message": f"{round(percent)}%",
-        "color": badge_color(percent),
+        "message": f"{shown}%",
+        "color": badge_color(shown),
     }
 
 

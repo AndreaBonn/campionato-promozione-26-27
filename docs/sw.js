@@ -20,6 +20,8 @@ const SHELL = [
   "boxscore-rules.js",
   "scorer-rules.js",
   "boxscores.js",
+  "roster.js",
+  "roster-rules.js",
   "team-stats-rules.js",
   "team-stats.js",
   "logo-assemini.png",

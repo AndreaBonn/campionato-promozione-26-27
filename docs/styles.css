@@ -186,6 +186,7 @@ details.sanc ul{margin:4px 0 0;padding-left:18px}
 .scorers-more summary{cursor:pointer;font-weight:600;color:var(--ink);margin:8px 0}
 .team-players th:nth-child(2),.team-players td:nth-child(2){text-align:right}
 .team-players td:first-child,.team-players th:first-child{text-align:left;white-space:normal}
+.team-players.squad th:nth-child(2),.team-players.squad td:nth-child(2){text-align:left}
 .pl-btn{font:inherit;font-weight:600;color:var(--ink);background:none;border:0;padding:0;cursor:pointer;text-align:left}
 .pl-btn::before{content:"▸ "}.pl-btn[aria-expanded=true]::before{content:"▾ "}
 .pl-detail td{text-align:left;white-space:normal;background:var(--bg);font-size:14px}

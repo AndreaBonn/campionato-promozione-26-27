@@ -81,6 +81,7 @@ import {renderStandings,renderRoundTable} from "./tables-view.js";
 import {fmtWhen,nextGame,renderList,renderNext,renderLast,renderForm} from "./games-view.js";
 import {renderScorers,loadBoxscores} from "./boxscores.js";
 import {renderTeamPlayers} from "./team-stats.js";
+import {ROSTER} from "./roster.js";
 const FIP_TEAM="BASKET ASSEMINI BLACK";
 // Weekends with no games in the whole league: [first day with no games, text]
 const S=[
@@ -209,10 +210,14 @@ function applyBoxscores(boxscores){
  const select=$("round-select");
  if(select) setRound(+select.value);
  refresh(); showLast(); renderScorersBox();
- const teamPlayersEl=$("team-players");
- teamPlayersEl.hidden=false;
- teamPlayersEl.innerHTML=renderTeamPlayers(ctx.boxscores,R,FIP_TEAM);
+ renderTeamPlayersBox();
  syncNav();
+}
+// the squad needs no box score: shown as soon as data.json is in, filled in when boxscores.json arrives
+function renderTeamPlayersBox(){
+ const el=$("team-players");
+ el.hidden=false;
+ el.innerHTML=renderTeamPlayers(ctx.boxscores,R,FIP_TEAM,ROSTER);
 }
 const skeleton='<div class="loading"><span class="sr-only">Caricamento dei dati FIP in corso…</span>'+'<div class="skel" aria-hidden="true"><i></i><div><i></i><i></i><i></i></div></div>'.repeat(3)+'</div>';
 async function load(){
@@ -229,7 +234,7 @@ async function load(){
   if(data.fip_url) $("fiplink").href=data.fip_url;
   if(data.updated_at) $("upd").textContent=" (ultima variazione rilevata il "+new Date(data.updated_at).toLocaleString("it-IT",{dateStyle:"long",timeStyle:"short"})+")";
   showNext(); showLast(); refresh();
-  showForm(); renderStandingsBox(data.standings); renderLeague(data.rounds); renderNotices(data.notices);
+  showForm(); renderStandingsBox(data.standings); renderLeague(data.rounds); renderNotices(data.notices); renderTeamPlayersBox();
   syncNav();
  }catch(err){showError(err)}
  finally{clearTimeout(slow)}

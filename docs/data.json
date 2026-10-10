@@ -521,8 +521,8 @@
       "home": "Basket Assemini Black",
       "away": "Basket Sulcispes",
       "is_home": true,
-      "date": "2027-06-30",
-      "time": "18:30",
+      "date": "2027-03-03",
+      "time": "20:30",
       "venue": {
         "name": "Palestra Comunale",
         "address": "Via Cagliari, 239 09032 ASSEMINI (CA)"
@@ -535,7 +535,10 @@
           "address": "Via Cagliari 239, Assemini"
         }
       },
-      "changes": [],
+      "changes": [
+        "date",
+        "time"
+      ],
       "status": "non-designata",
       "status_text": "Gara non ancora designata",
       "referees": [],
@@ -663,6 +666,7 @@
           "status": "designata",
           "score": null,
           "referees": [
+            "LACONI MARCO di VILLASIMIUS (SU)",
             "CARRUS FABIO di SELARGIUS (CA)"
           ],
           "sanctions": []
@@ -1056,7 +1060,7 @@
           "n": 866,
           "home": "CALASETTA BASKET",
           "away": "BASKET IGLESIAS",
-          "date": "2026-11-16",
+          "date": "2026-11-15",
           "time": "19:30",
           "status": "non-designata",
           "score": null,
@@ -1289,8 +1293,8 @@
           "n": 885,
           "home": "SINNAI BASKET",
           "away": "CALASETTA BASKET",
-          "date": "2026-12-11",
-          "time": "21:00",
+          "date": "2026-11-12",
+          "time": "20:30",
           "status": "non-designata",
           "score": null,
           "referees": [],
@@ -1826,8 +1830,8 @@
           "n": 930,
           "home": "BASKET IGLESIAS",
           "away": "CALASETTA BASKET",
-          "date": "2027-02-12",
-          "time": "20:30",
+          "date": "2027-02-15",
+          "time": "19:30",
           "status": "non-designata",
           "score": null,
           "referees": [],
@@ -1992,8 +1996,8 @@
           "n": 944,
           "home": "BASKET ASSEMINI BLACK",
           "away": "BASKET SULCISPES",
-          "date": "2027-06-30",
-          "time": "18:30",
+          "date": "2027-03-03",
+          "time": "20:30",
           "status": "non-designata",
           "score": null,
           "referees": [],
@@ -2302,7 +2306,7 @@
     },
     {
       "position": 9,
-      "team": "SINNAI BASKET",
+      "team": "BASKET SETTIMO 2023",
       "points": 0,
       "played": 0,
       "won": 0,
@@ -2312,7 +2316,7 @@
     },
     {
       "position": 10,
-      "team": "BASKET SETTIMO 2023",
+      "team": "SINNAI BASKET",
       "points": 0,
       "played": 0,
       "won": 0,
@@ -2344,5 +2348,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-09T10:35:05+00:00"
+  "updated_at": "2026-10-10T06:00:54+00:00"
 }

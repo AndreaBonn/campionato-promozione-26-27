@@ -49,9 +49,12 @@
         }
       },
       "changes": [],
-      "status": "non-designata",
-      "status_text": "Gara non ancora designata",
-      "referees": [],
+      "status": "designata",
+      "status_text": "Gara designata: la designazione è visibile",
+      "referees": [
+        "LACONI MARCO di VILLASIMIUS (SU)",
+        "PACINI ALBERTO di CARBONIA (SU)"
+      ],
       "score": null,
       "sanctions": [],
       "fip_opponent": "POL. MADAS SILIQUA"
@@ -493,7 +496,7 @@
       "home": "Sinnai Basket",
       "away": "Basket Assemini Black",
       "is_home": false,
-      "date": "2027-02-19",
+      "date": "2027-02-16",
       "time": "21:00",
       "venue": {
         "name": "Palestra Scuole Elementari",
@@ -507,7 +510,9 @@
           "address": "Via Perra, Sinnai"
         }
       },
-      "changes": [],
+      "changes": [
+        "date"
+      ],
       "status": "non-designata",
       "status_text": "Gara non ancora designata",
       "referees": [],
@@ -736,9 +741,12 @@
           "away": "POL. MADAS SILIQUA",
           "date": "2026-10-17",
           "time": "18:00",
-          "status": "non-designata",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "LACONI MARCO di VILLASIMIUS (SU)",
+            "PACINI ALBERTO di CARBONIA (SU)"
+          ],
           "sanctions": []
         },
         {
@@ -747,7 +755,7 @@
           "away": "CAGLIARI BASKET",
           "date": "2026-10-19",
           "time": "20:30",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -758,7 +766,7 @@
           "away": "A.S.D. BETA",
           "date": "2026-10-18",
           "time": "19:00",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -799,7 +807,7 @@
           "away": "CALASETTA BASKET",
           "date": "2026-10-22",
           "time": "20:30",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -843,7 +851,7 @@
           "away": "A.S.D. BETA",
           "date": "2026-10-23",
           "time": "20:30",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -997,7 +1005,7 @@
           "home": "SINNAI BASKET",
           "away": "A.S.D. BETA",
           "date": "2026-10-28",
-          "time": "20:45",
+          "time": "21:00",
           "status": "non-designata",
           "score": null,
           "referees": [],
@@ -1057,7 +1065,7 @@
           "n": 865,
           "home": "SINNAI BASKET",
           "away": "BASKET SULCISPES",
-          "date": "2026-11-13",
+          "date": "2026-11-11",
           "time": "21:00",
           "status": "non-designata",
           "score": null,
@@ -1157,7 +1165,7 @@
           "n": 873,
           "home": "SINNAI BASKET",
           "away": "BASKET SETTIMO 2023",
-          "date": "2026-11-27",
+          "date": "2026-11-24",
           "time": "21:00",
           "status": "non-designata",
           "score": null,
@@ -1263,7 +1271,7 @@
           "home": "BASKET IGLESIAS",
           "away": "SINNAI BASKET",
           "date": "2026-12-04",
-          "time": "20:30",
+          "time": "20:45",
           "status": "non-designata",
           "score": null,
           "referees": [],
@@ -1644,7 +1652,7 @@
           "n": 914,
           "home": "SINNAI BASKET",
           "away": "CAGLIARI BASKET",
-          "date": "2027-01-22",
+          "date": "2027-01-20",
           "time": "21:00",
           "status": "non-designata",
           "score": null,
@@ -1921,7 +1929,7 @@
           "n": 937,
           "home": "SINNAI BASKET",
           "away": "BASKET ASSEMINI BLACK",
-          "date": "2027-02-19",
+          "date": "2027-02-16",
           "time": "21:00",
           "status": "non-designata",
           "score": null,
@@ -2021,7 +2029,7 @@
           "n": 945,
           "home": "SINNAI BASKET",
           "away": "BASKET IGLESIAS",
-          "date": "2027-03-05",
+          "date": "2027-03-03",
           "time": "21:00",
           "status": "non-designata",
           "score": null,
@@ -2314,16 +2322,6 @@
     },
     {
       "position": 9,
-      "team": "SINNAI BASKET",
-      "points": 0,
-      "played": 0,
-      "won": 0,
-      "lost": 0,
-      "points_for": 0,
-      "points_against": 0
-    },
-    {
-      "position": 10,
       "team": "BASKET SETTIMO 2023",
       "points": 0,
       "played": 0,
@@ -2333,8 +2331,18 @@
       "points_against": 0
     },
     {
+      "position": 10,
+      "team": "SINNAI BASKET",
+      "points": 0,
+      "played": 0,
+      "won": 0,
+      "lost": 0,
+      "points_for": 0,
+      "points_against": 0
+    },
+    {
       "position": 11,
-      "team": "POL. MADAS SILIQUA",
+      "team": "C.G.P. CARLOFORTE",
       "points": 0,
       "played": 0,
       "won": 0,
@@ -2344,7 +2352,7 @@
     },
     {
       "position": 12,
-      "team": "C.G.P. CARLOFORTE",
+      "team": "POL. MADAS SILIQUA",
       "points": 0,
       "played": 0,
       "won": 0,
@@ -2356,5 +2364,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-11T19:44:47+00:00"
+  "updated_at": "2026-10-13T03:12:19+00:00"
 }

@@ -733,7 +733,7 @@
           "status": "designata",
           "score": null,
           "referees": [
-            "CANEPA TOMMASO di QUARTUCCIU (CA)",
+            "BELTRAMINI ROBERTO di CAPOTERRA (CA)",
             "SUSMEL RICCARDO di SELARGIUS (CA)"
           ],
           "sanctions": []
@@ -795,14 +795,11 @@
           "n": 842,
           "home": "SINNAI BASKET",
           "away": "BASKET ASSEMINI WHITE",
-          "date": "2026-10-16",
+          "date": "2026-10-21",
           "time": "21:00",
-          "status": "designata",
+          "status": "designata-nonvisibile",
           "score": null,
-          "referees": [
-            "CARRUS FABIO di SELARGIUS (CA)",
-            "BELTRAMINI ROBERTO di CAPOTERRA (CA)"
-          ],
+          "referees": [],
           "sanctions": []
         }
       ],
@@ -2374,5 +2371,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-14T13:49:26+00:00"
+  "updated_at": "2026-10-15T04:50:28+00:00"
 }

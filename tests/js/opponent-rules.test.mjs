@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { attributeSanction, opponentGames, opponentSanctions, scorersState } from "../../docs/opponent-rules.js";
+import { aliasSide, attributeSanction, opponentGames, opponentSanctions, scorersState } from "../../docs/opponent-rules.js";
 
 const game = (n, date, home, away, score = null, extra = {}) => ({ n, home, away, date, time: "18:00", status: "omologata", score, sanctions: [], ...extra });
 const round = (name, ...games) => ({ round: name, games });
@@ -62,6 +62,15 @@ test("sanction: without an alias, a legal name sharing no distinctive word stays
   // "CENTRO MINIBK P.TORRES" is C.M.B. Porto Torres, but «TORRES» also names SEF Torres
   assert.equal(attributeSanction(PORTO_TORRES_FINE, "SEF TORRES", "C.M.B. PORTO TORRES", LEAGUE), null);
   assert.equal(attributeSanction("soc. TORRES:Ammenda", "SEF TORRES", "C.M.B. PORTO TORRES", LEAGUE), null);
+});
+
+test("sanction alias: a legal name prefix picks its team on either side, other names are left to the heuristic", () => {
+  const aliases = { "C.M.B. PORTO TORRES": ["CENTRO MINIBK P.TORRES"] };
+  const club = "CENTRO MINIBK P.TORRES A. DIL.";
+
+  assert.equal(aliasSide(club, "C.M.B. PORTO TORRES", "SEF TORRES", aliases), "home");
+  assert.equal(aliasSide(club, "SEF TORRES", "C.M.B. PORTO TORRES", aliases), "away");
+  assert.equal(aliasSide("A.S.D. PALL. NUORO", "PALL. NUORO", "C.M.B. PORTO TORRES", aliases), null);
 });
 
 test("sanction: the two Assemini teams share their word, the opponent's own word still decides", () => {

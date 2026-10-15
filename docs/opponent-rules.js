@@ -39,9 +39,10 @@ const normalize = (name) => name.toUpperCase().replace(/[.'’]/g, " ").split(/\
 const tokens = (name) => normalize(name).filter((w) => w.length >= MIN_TOKEN && !STOPWORDS.has(w));
 const clubOf = (text) => /^soc\.\s*([^:]+):/i.exec(text)?.[1] ?? null;
 
-function aliasSide(club, home, away) {
+// aliases is injectable so the rule stays tested while the league's map is empty
+export function aliasSide(club, home, away, aliases = SANCTION_CLUB_ALIASES) {
   const name = normalize(club).join(" ");
-  const named = (team) => (SANCTION_CLUB_ALIASES[team] ?? []).some((a) => name.startsWith(normalize(a).join(" ")));
+  const named = (team) => (aliases[team] ?? []).some((a) => name.startsWith(normalize(a).join(" ")));
   if (named(home)) return "home";
   return named(away) ? "away" : null;
 }

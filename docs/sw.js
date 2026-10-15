@@ -24,6 +24,8 @@ const SHELL = [
   "roster-rules.js",
   "team-stats-rules.js",
   "team-stats.js",
+  "opponent-rules.js",
+  "opponent-view.js",
   "logo-assemini.png",
   "manifest.webmanifest",
   "icons/icon-192.png",

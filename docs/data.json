@@ -819,9 +819,12 @@
           "away": "CALASETTA BASKET",
           "date": "2026-10-22",
           "time": "20:30",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "MONTISCI SALVATORE di SANT'ANDREA FRIUS (SU)",
+            "FRAU DAVIDE di MONSERRATO (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -2376,5 +2379,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-16T22:13:08+00:00"
+  "updated_at": "2026-10-17T12:16:01+00:00"
 }

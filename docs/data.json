@@ -781,8 +781,11 @@
           "away": "A.S.D. BETA",
           "date": "2026-10-18",
           "time": "19:00",
-          "status": "designata",
-          "score": null,
+          "status": "ufficioso",
+          "score": {
+            "home": 64,
+            "away": 57
+          },
           "referees": [
             "ATZENI GIANLUCA di ARBUS (SU)",
             "PACINI ALBERTO di CARBONIA (SU)"
@@ -2389,5 +2392,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-18T12:13:25+00:00"
+  "updated_at": "2026-10-18T18:41:31+00:00"
 }

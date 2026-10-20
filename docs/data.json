@@ -849,9 +849,12 @@
           "away": "SINNAI BASKET",
           "date": "2026-10-25",
           "time": "20:30",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "SADDI NICOLA di QUARTU SANT'ELENA (CA)",
+            "MILIA LUCA di SESTU (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -2404,5 +2407,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-20T04:59:50+00:00"
+  "updated_at": "2026-10-20T13:38:52+00:00"
 }

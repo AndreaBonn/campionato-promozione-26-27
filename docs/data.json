@@ -1058,9 +1058,12 @@
           "away": "A.S.D. BETA",
           "date": "2026-10-28",
           "time": "21:00",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "FARCI DANIELE di CAGLIARI (CA)",
+            "MONTISCI SALVATORE di SANT'ANDREA FRIUS (SU)"
+          ],
           "sanctions": []
         }
       ],
@@ -2416,5 +2419,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-23T05:01:02+00:00"
+  "updated_at": "2026-10-23T13:33:38+00:00"
 }

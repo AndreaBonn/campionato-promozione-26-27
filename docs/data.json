@@ -978,9 +978,11 @@
           "away": "BASKET SULCISPES",
           "date": "2026-10-29",
           "time": "20:30",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "FIORIN GIANMARCO di CABRAS (OR)"
+          ],
           "sanctions": []
         },
         {
@@ -2422,5 +2424,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-23T22:39:30+00:00"
+  "updated_at": "2026-10-24T12:45:36+00:00"
 }

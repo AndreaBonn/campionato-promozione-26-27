@@ -83,13 +83,16 @@
         }
       },
       "changes": [],
-      "status": "designata",
-      "status_text": "Gara designata: la designazione è visibile",
+      "status": "ufficioso",
+      "status_text": "Risultato ufficioso",
       "referees": [
         "CANEPA TOMMASO di QUARTUCCIU (CA)",
         "BELTRAMINI ROBERTO di CAPOTERRA (CA)"
       ],
-      "score": null,
+      "score": {
+        "home": 74,
+        "away": 53
+      },
       "sanctions": [],
       "fip_opponent": "BASKET SETTIMO 2023"
     },
@@ -883,8 +886,11 @@
           "away": "BASKET SETTIMO 2023",
           "date": "2026-10-24",
           "time": "18:00",
-          "status": "designata",
-          "score": null,
+          "status": "ufficioso",
+          "score": {
+            "home": 74,
+            "away": 53
+          },
           "referees": [
             "CANEPA TOMMASO di QUARTUCCIU (CA)",
             "BELTRAMINI ROBERTO di CAPOTERRA (CA)"
@@ -2424,5 +2430,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-24T12:45:36+00:00"
+  "updated_at": "2026-10-24T18:23:07+00:00"
 }

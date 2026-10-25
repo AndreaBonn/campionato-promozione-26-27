@@ -2,7 +2,7 @@
   "boxscores": {
     "835": {
       "round": "A1",
-      "status": "partial",
+      "status": "incomplete",
       "fip_score": {
         "home": 69,
         "away": 59
@@ -850,5 +850,5 @@
       "away": null
     }
   },
-  "updated_at": "2026-10-25T21:30:41+00:00"
+  "updated_at": "2026-10-25T23:34:25+00:00"
 }

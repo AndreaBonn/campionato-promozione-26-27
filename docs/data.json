@@ -117,9 +117,12 @@
         }
       },
       "changes": [],
-      "status": "designata-nonvisibile",
-      "status_text": "Gara designata: la designazione non è ancora visibile",
-      "referees": [],
+      "status": "designata",
+      "status_text": "Gara designata: la designazione è visibile",
+      "referees": [
+        "ATZENI GIANLUCA di ARBUS (SU)",
+        "PACINI ALBERTO di CARBONIA (SU)"
+      ],
       "score": null,
       "sanctions": [],
       "fip_opponent": "BASKET IGLESIAS"
@@ -954,9 +957,12 @@
           "away": "BASKET ASSEMINI BLACK",
           "date": "2026-10-30",
           "time": "20:30",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "ATZENI GIANLUCA di ARBUS (SU)",
+            "PACINI ALBERTO di CARBONIA (SU)"
+          ],
           "sanctions": []
         },
         {
@@ -2434,5 +2440,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-25T04:53:08+00:00"
+  "updated_at": "2026-10-25T13:14:49+00:00"
 }

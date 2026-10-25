@@ -990,6 +990,7 @@
           "status": "designata",
           "score": null,
           "referees": [
+            "ZARA MASSIMO di ORISTANO (OR)",
             "FIORIN GIANMARCO di CABRAS (OR)"
           ],
           "sanctions": []
@@ -2433,5 +2434,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-24T18:51:10+00:00"
+  "updated_at": "2026-10-25T04:53:08+00:00"
 }

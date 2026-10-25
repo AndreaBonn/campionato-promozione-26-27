@@ -1,3 +1,854 @@
 {
-  "boxscores": {}
+  "boxscores": {
+    "835": {
+      "round": "A1",
+      "status": "partial",
+      "fip_score": {
+        "home": 69,
+        "away": 59
+      },
+      "mn": 2,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=1&mn=2",
+      "home": {
+        "team": "Cagliari Basket",
+        "players": []
+      },
+      "away": {
+        "team": "Basket Iglesias",
+        "players": []
+      }
+    },
+    "833": {
+      "round": "A1",
+      "status": "incomplete",
+      "fip_score": {
+        "home": 51,
+        "away": 45
+      },
+      "mn": 1,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=1&mn=1",
+      "home": {
+        "team": "CGP Carloforte",
+        "players": [
+          {
+            "id": "35567",
+            "number": "",
+            "name": "Aralossi Fabio",
+            "role": "play",
+            "age": "'94",
+            "pts": 6
+          },
+          {
+            "id": "192811",
+            "number": "",
+            "name": "Aste Francesco",
+            "role": "ala forte",
+            "age": "'08",
+            "pts": 13
+          },
+          {
+            "id": "18286",
+            "number": "",
+            "name": "Baghino Francesco",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 3
+          },
+          {
+            "id": "216839",
+            "number": "",
+            "name": "Carta Fabio",
+            "role": "",
+            "age": "U17",
+            "pts": null
+          },
+          {
+            "id": "65487",
+            "number": "",
+            "name": "Cireddu Paolo",
+            "role": "guardia",
+            "age": "'00",
+            "pts": 5
+          },
+          {
+            "id": "134539",
+            "number": "",
+            "name": "Dessì Fabio",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 4
+          },
+          {
+            "id": "85790",
+            "number": "",
+            "name": "Ferraro Sebastiano",
+            "role": "play",
+            "age": "'01",
+            "pts": 9
+          },
+          {
+            "id": "192812",
+            "number": "",
+            "name": "Gentile Piero",
+            "role": "play",
+            "age": "'08",
+            "pts": 0
+          },
+          {
+            "id": "192802",
+            "number": "",
+            "name": "Leone Andrea",
+            "role": "",
+            "age": "'08",
+            "pts": 0
+          },
+          {
+            "id": "215878",
+            "number": "",
+            "name": "Napoli Nicolò",
+            "role": "",
+            "age": "U19",
+            "pts": 2
+          },
+          {
+            "id": "196999",
+            "number": "",
+            "name": "Piazzi Daniele",
+            "role": "ala forte",
+            "age": "'08",
+            "pts": 7
+          },
+          {
+            "id": "205571",
+            "number": "",
+            "name": "Rivano Lorenzo",
+            "role": "guardia",
+            "age": "U19",
+            "pts": 2
+          }
+        ]
+      },
+      "away": {
+        "team": "Basket Settimo 2023",
+        "players": []
+      }
+    },
+    "837": {
+      "round": "A2",
+      "status": "partial",
+      "fip_score": {
+        "home": 76,
+        "away": 71
+      },
+      "mn": 1,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=2&mn=1",
+      "home": {
+        "team": "Basket Iglesias",
+        "players": []
+      },
+      "away": {
+        "team": "CGP Carloforte",
+        "players": [
+          {
+            "id": "35567",
+            "number": "",
+            "name": "Aralossi Fabio",
+            "role": "play",
+            "age": "'94",
+            "pts": 2
+          },
+          {
+            "id": "192811",
+            "number": "",
+            "name": "Aste Francesco",
+            "role": "ala forte",
+            "age": "'08",
+            "pts": 6
+          },
+          {
+            "id": "18286",
+            "number": "",
+            "name": "Baghino Francesco",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 15
+          },
+          {
+            "id": "216839",
+            "number": "",
+            "name": "Carta Fabio",
+            "role": "",
+            "age": "U17",
+            "pts": null
+          },
+          {
+            "id": "65487",
+            "number": "",
+            "name": "Cireddu Paolo",
+            "role": "guardia",
+            "age": "'00",
+            "pts": 21
+          },
+          {
+            "id": "134539",
+            "number": "",
+            "name": "Dessì Fabio",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 15
+          },
+          {
+            "id": "85790",
+            "number": "",
+            "name": "Ferraro Sebastiano",
+            "role": "play",
+            "age": "'01",
+            "pts": 9
+          },
+          {
+            "id": "192812",
+            "number": "",
+            "name": "Gentile Piero",
+            "role": "play",
+            "age": "'08",
+            "pts": 1
+          },
+          {
+            "id": "192802",
+            "number": "",
+            "name": "Leone Andrea",
+            "role": "",
+            "age": "'08",
+            "pts": null
+          },
+          {
+            "id": "196999",
+            "number": "",
+            "name": "Piazzi Daniele",
+            "role": "ala forte",
+            "age": "'08",
+            "pts": 2
+          },
+          {
+            "id": "205571",
+            "number": "",
+            "name": "Rivano Lorenzo",
+            "role": "guardia",
+            "age": "U19",
+            "pts": 0
+          }
+        ]
+      }
+    },
+    "838": {
+      "round": "A2",
+      "status": "partial",
+      "fip_score": {
+        "home": 69,
+        "away": 43
+      },
+      "mn": 2,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=2&mn=2",
+      "home": {
+        "team": "Basket Assemini Black",
+        "players": [
+          {
+            "id": "19242",
+            "number": "",
+            "name": "Bonacci Andrea",
+            "role": "ala forte",
+            "age": "'95",
+            "pts": 14
+          },
+          {
+            "id": "173318",
+            "number": "",
+            "name": "Febbo Federico",
+            "role": "play",
+            "age": "'07",
+            "pts": 2
+          },
+          {
+            "id": "156526",
+            "number": "",
+            "name": "Fiori Lorenzo",
+            "role": "centro",
+            "age": "'06",
+            "pts": 0
+          },
+          {
+            "id": "180663",
+            "number": "",
+            "name": "Floris Alessandro",
+            "role": "ala forte",
+            "age": "'07",
+            "pts": 16
+          },
+          {
+            "id": "20242",
+            "number": "",
+            "name": "Loi Matteo",
+            "role": "guardia",
+            "age": "'94",
+            "pts": 22
+          },
+          {
+            "id": "38082",
+            "number": "",
+            "name": "Orrù Alessio",
+            "role": "ala forte",
+            "age": "'99",
+            "pts": 4
+          },
+          {
+            "id": "90984",
+            "number": "",
+            "name": "Pisanu Alessandro",
+            "role": "ala forte",
+            "age": "'86",
+            "pts": 2
+          },
+          {
+            "id": "192427",
+            "number": "",
+            "name": "Sassaro Giaime",
+            "role": "ala piccola",
+            "age": "'05",
+            "pts": 3
+          },
+          {
+            "id": "177464",
+            "number": "",
+            "name": "Zucca Francesco",
+            "role": "guardia",
+            "age": "'04",
+            "pts": 6
+          }
+        ]
+      },
+      "away": {
+        "team": "Madas Siliqua",
+        "players": []
+      }
+    },
+    "840": {
+      "round": "A2",
+      "status": "partial",
+      "fip_score": {
+        "home": 64,
+        "away": 57
+      },
+      "mn": 3,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=2&mn=3",
+      "home": {
+        "team": "Calasetta Basket sq.B",
+        "players": []
+      },
+      "away": {
+        "team": "Beta Pirri",
+        "players": [
+          {
+            "id": "60314",
+            "number": "",
+            "name": "Bertolini Matteo",
+            "role": "ala piccola",
+            "age": "'93",
+            "pts": 6
+          },
+          {
+            "id": "160127",
+            "number": "",
+            "name": "Borra Stefano",
+            "role": "guardia",
+            "age": "'03",
+            "pts": 4
+          },
+          {
+            "id": "219031",
+            "number": "",
+            "name": "Brandanu Diego",
+            "role": "ala forte",
+            "age": "'05",
+            "pts": 9
+          },
+          {
+            "id": "85789",
+            "number": "",
+            "name": "Capurro Francesco",
+            "role": "ala piccola",
+            "age": "'01",
+            "pts": 8
+          },
+          {
+            "id": "226590",
+            "number": "",
+            "name": "Chirico Edoardo",
+            "role": "",
+            "age": "'02",
+            "pts": 7
+          },
+          {
+            "id": "208713",
+            "number": "",
+            "name": "Firinu Francesco",
+            "role": "play",
+            "age": "'05",
+            "pts": 1
+          },
+          {
+            "id": "179721",
+            "number": "",
+            "name": "Marino Emanuele",
+            "role": "guardia",
+            "age": "'99",
+            "pts": 3
+          },
+          {
+            "id": "82909",
+            "number": "",
+            "name": "Mongili Isidoro",
+            "role": "",
+            "age": "'98",
+            "pts": 1
+          },
+          {
+            "id": "26825",
+            "number": "",
+            "name": "Pavarani Riccardo",
+            "role": "ala piccola",
+            "age": "'96",
+            "pts": 5
+          },
+          {
+            "id": "186371",
+            "number": "",
+            "name": "Pitzalis Gabriele",
+            "role": "ala forte",
+            "age": "'97",
+            "pts": 11
+          },
+          {
+            "id": "188720",
+            "number": "",
+            "name": "Serra Alberto",
+            "role": "",
+            "age": "",
+            "pts": 0
+          },
+          {
+            "id": "162170",
+            "number": "",
+            "name": "Sussarellu Davide",
+            "role": "ala piccola",
+            "age": "'05",
+            "pts": 2
+          }
+        ]
+      }
+    },
+    "839": {
+      "round": "A2",
+      "status": "partial",
+      "fip_score": {
+        "home": 60,
+        "away": 80
+      },
+      "mn": 4,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=2&mn=4",
+      "home": {
+        "team": "Scuola Basket Carbonia sq.B",
+        "players": []
+      },
+      "away": {
+        "team": "Cagliari Basket",
+        "players": []
+      }
+    },
+    "842": {
+      "round": "A2",
+      "status": "partial",
+      "fip_score": {
+        "home": 85,
+        "away": 54
+      },
+      "mn": 5,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=2&mn=5",
+      "home": {
+        "team": "Sinnai Basket",
+        "players": [
+          {
+            "id": "83941",
+            "number": "2",
+            "name": "Spada Matteo",
+            "role": "ala piccola",
+            "age": "'00",
+            "pts": 7
+          },
+          {
+            "id": "21499",
+            "number": "3",
+            "name": "Pisu Paolo",
+            "role": "ala piccola",
+            "age": "'88",
+            "pts": 8
+          },
+          {
+            "id": "161619",
+            "number": "6",
+            "name": "Musiu Lorenzo",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 3
+          },
+          {
+            "id": "18714",
+            "number": "8",
+            "name": "Piras Gianmarco",
+            "role": "play",
+            "age": "'94",
+            "pts": 10
+          },
+          {
+            "id": "18652",
+            "number": "13",
+            "name": "Carrucciu Andrea",
+            "role": "play",
+            "age": "'92",
+            "pts": 15
+          },
+          {
+            "id": "26783",
+            "number": "14",
+            "name": "Birocchi Mauro",
+            "role": "ala piccola",
+            "age": "'97",
+            "pts": 4
+          },
+          {
+            "id": "79346",
+            "number": "14",
+            "name": "Serreli Nicola",
+            "role": "guardia",
+            "age": "'98",
+            "pts": 3
+          },
+          {
+            "id": "20550",
+            "number": "20",
+            "name": "Orrù Stefano",
+            "role": "centro",
+            "age": "'72",
+            "pts": 8
+          },
+          {
+            "id": "154158",
+            "number": "23",
+            "name": "Monaci Marco",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 4
+          },
+          {
+            "id": "75073",
+            "number": "31",
+            "name": "Cacciuto Samuele",
+            "role": "",
+            "age": "'99",
+            "pts": 10
+          },
+          {
+            "id": "83940",
+            "number": "35",
+            "name": "Neri Davide",
+            "role": "ala piccola",
+            "age": "'99",
+            "pts": 11
+          },
+          {
+            "id": "155659",
+            "number": "99",
+            "name": "Cocco Federico",
+            "role": "ala piccola",
+            "age": "'03",
+            "pts": 2
+          }
+        ]
+      },
+      "away": {
+        "team": "Basket Assemini White",
+        "players": []
+      }
+    },
+    "843": {
+      "round": "A3",
+      "status": "partial",
+      "fip_score": {
+        "home": 62,
+        "away": 53
+      },
+      "mn": 1,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=3&mn=1",
+      "home": {
+        "team": "Madas Siliqua",
+        "players": []
+      },
+      "away": {
+        "team": "Calasetta Basket sq.B",
+        "players": []
+      }
+    },
+    "847": {
+      "round": "A3",
+      "status": "partial",
+      "fip_score": {
+        "home": 108,
+        "away": 48
+      },
+      "mn": 2,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=3&mn=2",
+      "home": {
+        "team": "Basket Iglesias",
+        "players": []
+      },
+      "away": {
+        "team": "Beta Pirri",
+        "players": []
+      }
+    },
+    "845": {
+      "round": "A3",
+      "status": "partial",
+      "fip_score": {
+        "home": 94,
+        "away": 60
+      },
+      "mn": 3,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=3&mn=3",
+      "home": {
+        "team": "CGP Carloforte",
+        "players": [
+          {
+            "id": "35567",
+            "number": "",
+            "name": "Aralossi Fabio",
+            "role": "play",
+            "age": "'94",
+            "pts": 21
+          },
+          {
+            "id": "192811",
+            "number": "",
+            "name": "Aste Francesco",
+            "role": "ala forte",
+            "age": "'08",
+            "pts": 7
+          },
+          {
+            "id": "18286",
+            "number": "",
+            "name": "Baghino Francesco",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 18
+          },
+          {
+            "id": "216839",
+            "number": "",
+            "name": "Carta Fabio",
+            "role": "",
+            "age": "U17",
+            "pts": 4
+          },
+          {
+            "id": "65487",
+            "number": "",
+            "name": "Cireddu Paolo",
+            "role": "guardia",
+            "age": "'00",
+            "pts": 12
+          },
+          {
+            "id": "215877",
+            "number": "",
+            "name": "Concas Agostino",
+            "role": "",
+            "age": "U19",
+            "pts": 0
+          },
+          {
+            "id": "134539",
+            "number": "",
+            "name": "Dessì Fabio",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 11
+          },
+          {
+            "id": "85790",
+            "number": "",
+            "name": "Ferraro Sebastiano",
+            "role": "play",
+            "age": "'01",
+            "pts": 5
+          },
+          {
+            "id": "192812",
+            "number": "",
+            "name": "Gentile Piero",
+            "role": "play",
+            "age": "'08",
+            "pts": 9
+          },
+          {
+            "id": "192802",
+            "number": "",
+            "name": "Leone Andrea",
+            "role": "",
+            "age": "'08",
+            "pts": 0
+          },
+          {
+            "id": "205571",
+            "number": "",
+            "name": "Rivano Lorenzo",
+            "role": "guardia",
+            "age": "U19",
+            "pts": 5
+          },
+          {
+            "id": "216838",
+            "number": "",
+            "name": "Simeone Gerolamo",
+            "role": "",
+            "age": "U17",
+            "pts": 2
+          }
+        ]
+      },
+      "away": {
+        "team": "Basket Assemini White",
+        "players": []
+      }
+    },
+    "846": {
+      "round": "A3",
+      "status": "partial",
+      "fip_score": {
+        "home": 74,
+        "away": 53
+      },
+      "mn": 4,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=3&mn=4",
+      "home": {
+        "team": "Basket Assemini Black",
+        "players": [
+          {
+            "id": "173318",
+            "number": "",
+            "name": "Febbo Federico",
+            "role": "play",
+            "age": "'07",
+            "pts": 14
+          },
+          {
+            "id": "156526",
+            "number": "",
+            "name": "Fiori Lorenzo",
+            "role": "centro",
+            "age": "'06",
+            "pts": 5
+          },
+          {
+            "id": "180663",
+            "number": "",
+            "name": "Floris Alessandro",
+            "role": "ala forte",
+            "age": "'07",
+            "pts": 16
+          },
+          {
+            "id": "18289",
+            "number": "",
+            "name": "Grosso Salvatore",
+            "role": "ala forte",
+            "age": "'93",
+            "pts": 5
+          },
+          {
+            "id": "20242",
+            "number": "",
+            "name": "Loi Matteo",
+            "role": "guardia",
+            "age": "'94",
+            "pts": 3
+          },
+          {
+            "id": "92278",
+            "number": "",
+            "name": "Manca Federico",
+            "role": "play",
+            "age": "'99",
+            "pts": 2
+          },
+          {
+            "id": "90984",
+            "number": "",
+            "name": "Pisanu Alessandro",
+            "role": "ala forte",
+            "age": "'86",
+            "pts": 0
+          },
+          {
+            "id": "66876",
+            "number": "",
+            "name": "Ruvioli Lorenzo",
+            "role": "centro",
+            "age": "'99",
+            "pts": 5
+          },
+          {
+            "id": "192427",
+            "number": "",
+            "name": "Sassaro Giaime",
+            "role": "ala piccola",
+            "age": "'05",
+            "pts": 12
+          },
+          {
+            "id": "60869",
+            "number": "",
+            "name": "Stara Andrea",
+            "role": "ala piccola",
+            "age": "'97",
+            "pts": 12
+          },
+          {
+            "id": "177464",
+            "number": "",
+            "name": "Zucca Francesco",
+            "role": "guardia",
+            "age": "'04",
+            "pts": 0
+          }
+        ]
+      },
+      "away": {
+        "team": "Basket Settimo 2023",
+        "players": []
+      }
+    },
+    "844": {
+      "round": "A3",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 54,
+        "away": 72
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
+    }
+  },
+  "updated_at": "2026-10-25T21:30:41+00:00"
 }

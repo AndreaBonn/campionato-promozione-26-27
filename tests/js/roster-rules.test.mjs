@@ -60,3 +60,17 @@ test("ROSTER: the 18 players of the squad sheet, every role one of the five know
   assert.ok(ROSTER.every((p) => ROLE_LABELS[p.role]));
   assert.deepEqual(ROSTER.filter((p) => p.role === 5).map((p) => p.name), ["Fiori Lorenzo Ozieri", "Ruvioli Lorenzo", "Bonacci Andrea"]);
 });
+
+test("mergeRoster: the roster birth year reaches both a scorer and a player without box scores", () => {
+  const roster = [{ name: "Grosso Salvatore", role: 4, born: 1993 }, { name: "Manca Federico", role: 1, born: 1999 }];
+  const merged = mergeRoster([stat("Grosso Salvatore", 22)], roster);
+
+  assert.deepEqual(merged.map((p) => p.rosterBorn), [1993, 1999]);
+});
+
+test("ROSTER: birth years, where known, are four-digit years of adult or junior players", () => {
+  const years = ROSTER.filter((p) => p.born !== undefined).map((p) => p.born);
+
+  assert.ok(years.length > 0);
+  assert.ok(years.every((y) => Number.isInteger(y) && y >= 1980 && y <= 2012));
+});

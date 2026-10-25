@@ -16,7 +16,7 @@ const fmtDate = (d) => new Date(d + "T00:00:00").toLocaleDateString("it-IT", { w
 // The name is a button that opens the player's detail row right below (wired in index.html);
 // "opt" columns are hidden on phones (styles.css).
 function summaryRow(p, i, withBoxscore) {
-  const meta = p.rosterRole ? ROLE_LABELS[p.rosterRole] : [p.role, p.age].filter(Boolean).join(", ");
+  const meta = (p.rosterRole ? [ROLE_LABELS[p.rosterRole], p.rosterBorn] : [p.role, p.age]).filter(Boolean).join(", ");
   // a roster player never listed in a box score has nothing to expand
   const label = p.listed ? `<button type="button" class="pl-btn" aria-expanded="false" aria-controls="pl-${i}">${esc(p.name)}</button>` : esc(p.name);
   const name = `${label}${meta ? `<small class="role">${esc(meta)}</small>` : ""}`;
@@ -44,8 +44,8 @@ const WAITING = "Le statistiche dei giocatori saranno disponibili dopo il primo 
 // Before the first box score: the squad by role, or only the explanation without a roster.
 function renderSquad(roster) {
   if (!roster.length) return `${TITLE}<p>${WAITING}</p>`;
-  const rows = roster.map((p) => `<tr><td>${esc(p.name)}</td><td>${ROLE_LABELS[p.role]}</td></tr>`).join("");
-  const table = `<div class="scroll"><table class="team-players squad"><thead><tr><th>Giocatore</th><th>Ruolo</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  const rows = roster.map((p) => `<tr><td>${esc(p.name)}</td><td>${ROLE_LABELS[p.role]}</td><td>${p.born ?? ""}</td></tr>`).join("");
+  const table = `<div class="scroll"><table class="team-players squad"><thead><tr><th>Giocatore</th><th>Ruolo</th><th>Anno</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   return `${TITLE}<p>${WAITING}</p>${table}`;
 }
 

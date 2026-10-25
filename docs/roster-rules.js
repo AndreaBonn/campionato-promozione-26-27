@@ -15,8 +15,8 @@ export function sameName(a, b) {
   return short.size >= MIN_COMMON_WORDS && [...short].every((word) => long.has(word));
 }
 
-const emptyStats = (name, rosterRole) => ({
-  name, rosterRole, points: 0, listed: 0, entered: 0, average: null, homeAverage: null,
+const emptyStats = (name, rosterRole, rosterBorn) => ({
+  name, rosterRole, rosterBorn, points: 0, listed: 0, entered: 0, average: null, homeAverage: null,
   awayAverage: null, best: null, doubleDigit: 0, teamShare: null, winAverage: null, lossAverage: null, last5: [],
 });
 
@@ -26,13 +26,14 @@ export function mergeRoster(players, roster) {
   const claimed = new Set();
   const withRole = players.map((player) => ({ ...player }));
   const missing = [];
-  for (const { name, role } of roster) {
+  for (const { name, role, born } of roster) {
     const found = withRole.find((player) => !claimed.has(player) && sameName(player.name, name));
     if (found) {
       claimed.add(found);
       found.rosterRole = role;
+      found.rosterBorn = born;
     } else {
-      missing.push(emptyStats(name, role));
+      missing.push(emptyStats(name, role, born));
     }
   }
   return [...withRole, ...missing];

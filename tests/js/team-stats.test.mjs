@@ -114,3 +114,20 @@ test("team players: without a roster the empty state is unchanged", () => {
 
   assert.doesNotMatch(html, /<table/);
 });
+
+const ROSTER_BORN = [{ name: "Rossi Mario", role: 3, born: 1995 }, { name: "Bianchi Luca", role: 5 }];
+
+test("team players: the squad table shows the birth year, blank when unknown", () => {
+  const html = renderTeamPlayers({}, [round(1, "2026-10-03")], TEAM, ROSTER_BORN);
+
+  assert.match(html, /<th>Anno<\/th>/);
+  assert.match(html, /<td>Rossi Mario<\/td><td>Ala piccola<\/td><td>1995<\/td>/);
+  assert.match(html, /<td>Bianchi Luca<\/td><td>Centro<\/td><td><\/td>/);
+});
+
+test("team players: the stats table shows role and birth year under a roster player's name", () => {
+  const html = renderTeamPlayers({ 1: boxscore([player("Rossi Mario", 10)]) }, [round(1, "2026-10-03")], TEAM, ROSTER_BORN);
+
+  assert.match(html, /Rossi Mario<\/button><small class="role">Ala piccola, 1995<\/small>/);
+  assert.match(html, /<td>Bianchi Luca<small class="role">Centro<\/small>/);
+});

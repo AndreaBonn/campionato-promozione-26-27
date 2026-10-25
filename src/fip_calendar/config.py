@@ -54,8 +54,7 @@ LOGO_MAX_BYTES = 8_000_000
 LOGO_MAX_SIDE_PX = 128
 
 PLAYBASKET_MATCH_URL = "https://www.playbasket.it/sardegna/match.php"
-# Not verified yet: "DR2" is the league code on playbasket.it/sardegna, the other values are
-# the Serie C ones. Check them on the first Assemini Black box score before filling the aliases
+# Checked 2026-10-25: these values address DR2 Sud A (A2 mn=2 is Assemini Black - Madas Siliqua)
 PLAYBASKET_QUERY = {
     "lt": "2",
     "lr": "SA",
@@ -82,6 +81,19 @@ BOXSCORE_STATUS_PARTIAL: Final[BoxscoreStatus] = "partial"
 BOXSCORE_STATUS_INCOMPLETE: Final[BoxscoreStatus] = "incomplete"
 BOXSCORE_STATUS_UNMATCHED: Final[BoxscoreStatus] = "unmatched"
 
-# Playbasket name -> FIP name. Empty until the first DR2 box score shows how playbasket.it
-# spells the teams: while empty, the sync skips playbasket.it entirely
-PLAYBASKET_TEAM_ALIASES: dict[str, str] = {}
+# Playbasket name -> FIP name, read from the DR2 Sud A pages of rounds A1-A3 (2026-10-25).
+# An empty table makes the sync skip playbasket.it entirely
+PLAYBASKET_TEAM_ALIASES: dict[str, str] = {
+    "Basket Assemini Black": "BASKET ASSEMINI BLACK",
+    "Basket Assemini White": "BASKET ASSEMINI WHITE",
+    "Basket Iglesias": "BASKET IGLESIAS",
+    "Basket Settimo 2023": "BASKET SETTIMO 2023",
+    "Beta Pirri": "A.S.D. BETA",
+    "CGP Carloforte": "C.G.P. CARLOFORTE",
+    "Cagliari Basket": "CAGLIARI BASKET",
+    "Calasetta Basket sq.B": "CALASETTA BASKET",
+    "Madas Siliqua": "POL. MADAS SILIQUA",
+    "Scuola Basket Carbonia sq.B": "SCUOLA BASKET CARBONIA",
+    "Sinnai Basket": "SINNAI BASKET",
+    "Sulcispes S. Antioco": "BASKET SULCISPES",
+}

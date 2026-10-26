@@ -839,16 +839,22 @@
     },
     "844": {
       "round": "A3",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 54,
         "away": 72
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 5,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=3&mn=5",
+      "home": {
+        "team": "Cagliari Basket",
+        "players": []
+      },
+      "away": {
+        "team": "Sinnai Basket",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-10-25T23:34:25+00:00"
+  "updated_at": "2026-10-26T01:45:21+00:00"
 }

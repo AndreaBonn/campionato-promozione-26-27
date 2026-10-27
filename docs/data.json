@@ -977,7 +977,7 @@
           "away": "POL. MADAS SILIQUA",
           "date": "2026-11-01",
           "time": "18:00",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -1013,7 +1013,7 @@
           "away": "CAGLIARI BASKET",
           "date": "2026-11-01",
           "time": "19:00",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -1302,8 +1302,8 @@
           "n": 878,
           "home": "CAGLIARI BASKET",
           "away": "POL. MADAS SILIQUA",
-          "date": "2026-11-29",
-          "time": "20:30",
+          "date": "2026-11-28",
+          "time": "20:45",
           "status": "non-designata",
           "score": null,
           "referees": [],
@@ -2446,5 +2446,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-27T00:06:59+00:00"
+  "updated_at": "2026-10-27T05:14:36+00:00"
 }

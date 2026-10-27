@@ -854,7 +854,19 @@
         "team": "Sinnai Basket",
         "players": []
       }
+    },
+    "848": {
+      "round": "A3",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 58,
+        "away": 59
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
     }
   },
-  "updated_at": "2026-10-26T01:45:21+00:00"
+  "updated_at": "2026-10-27T00:06:59+00:00"
 }

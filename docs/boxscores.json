@@ -870,9 +870,82 @@
       },
       "away": {
         "team": "Sulcispes S. Antioco",
-        "players": []
+        "players": [
+          {
+            "id": "38416",
+            "number": "",
+            "name": "Diana Fabrizio",
+            "role": "play",
+            "age": "'82",
+            "pts": 10
+          },
+          {
+            "id": "79335",
+            "number": "",
+            "name": "Faggiano Matteo",
+            "role": "ala piccola",
+            "age": "'02",
+            "pts": 9
+          },
+          {
+            "id": "231089",
+            "number": "",
+            "name": "Ivaldi Giovanni",
+            "role": "",
+            "age": "",
+            "pts": 10
+          },
+          {
+            "id": "118576",
+            "number": "",
+            "name": "Manicone Luca",
+            "role": "guardia",
+            "age": "'02",
+            "pts": 0
+          },
+          {
+            "id": "21051",
+            "number": "",
+            "name": "Massa Alessandro",
+            "role": "ala piccola",
+            "age": "'96",
+            "pts": 2
+          },
+          {
+            "id": "176511",
+            "number": "",
+            "name": "Petrucci Raffaele",
+            "role": "",
+            "age": "'03",
+            "pts": 10
+          },
+          {
+            "id": "18759",
+            "number": "",
+            "name": "Pirisi Claudio",
+            "role": "ala piccola",
+            "age": "'94",
+            "pts": 2
+          },
+          {
+            "id": "35326",
+            "number": "",
+            "name": "Poggi Fabrizio",
+            "role": "ala forte",
+            "age": "'79",
+            "pts": 2
+          },
+          {
+            "id": "231088",
+            "number": "",
+            "name": "Sbardella Luca",
+            "role": "",
+            "age": "",
+            "pts": 14
+          }
+        ]
       }
     }
   },
-  "updated_at": "2026-10-28T00:02:50+00:00"
+  "updated_at": "2026-10-28T15:12:06+00:00"
 }

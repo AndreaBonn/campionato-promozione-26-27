@@ -852,7 +852,96 @@
       },
       "away": {
         "team": "Sinnai Basket",
-        "players": []
+        "players": [
+          {
+            "id": "83941",
+            "number": "2",
+            "name": "Spada Matteo",
+            "role": "ala piccola",
+            "age": "'00",
+            "pts": 5
+          },
+          {
+            "id": "161619",
+            "number": "6",
+            "name": "Musiu Lorenzo",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 2
+          },
+          {
+            "id": "18714",
+            "number": "8",
+            "name": "Piras Gianmarco",
+            "role": "play",
+            "age": "'94",
+            "pts": 27
+          },
+          {
+            "id": "26783",
+            "number": "14",
+            "name": "Birocchi Mauro",
+            "role": "ala piccola",
+            "age": "'97",
+            "pts": 2
+          },
+          {
+            "id": "79346",
+            "number": "14",
+            "name": "Serreli Nicola",
+            "role": "guardia",
+            "age": "'98",
+            "pts": 0
+          },
+          {
+            "id": "20550",
+            "number": "20",
+            "name": "Orrù Stefano",
+            "role": "centro",
+            "age": "'72",
+            "pts": 6
+          },
+          {
+            "id": "154158",
+            "number": "23",
+            "name": "Monaci Marco",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 7
+          },
+          {
+            "id": "75073",
+            "number": "31",
+            "name": "Cacciuto Samuele",
+            "role": "",
+            "age": "'99",
+            "pts": 9
+          },
+          {
+            "id": "83940",
+            "number": "35",
+            "name": "Neri Davide",
+            "role": "ala piccola",
+            "age": "'99",
+            "pts": 0
+          },
+          {
+            "id": "155659",
+            "number": "99",
+            "name": "Cocco Federico",
+            "role": "ala piccola",
+            "age": "'03",
+            "pts": 5
+          },
+          {
+            "id": "152638",
+            "number": "",
+            "name": "Boi Simone",
+            "role": "guardia",
+            "age": "'04",
+            "pts": 9
+          }
+        ]
       }
     },
     "848": {
@@ -947,5 +1036,5 @@
       }
     }
   },
-  "updated_at": "2026-10-28T15:12:06+00:00"
+  "updated_at": "2026-10-28T20:34:56+00:00"
 }

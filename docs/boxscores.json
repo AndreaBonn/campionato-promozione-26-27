@@ -857,16 +857,22 @@
     },
     "848": {
       "round": "A3",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 58,
         "away": 59
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 6,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=3&mn=6",
+      "home": {
+        "team": "Scuola Basket Carbonia sq.B",
+        "players": []
+      },
+      "away": {
+        "team": "Sulcispes S. Antioco",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-10-27T00:06:59+00:00"
+  "updated_at": "2026-10-28T00:02:50+00:00"
 }

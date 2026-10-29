@@ -135,7 +135,7 @@
     },
     "837": {
       "round": "A2",
-      "status": "partial",
+      "status": "complete",
       "fip_score": {
         "home": 76,
         "away": 71
@@ -144,7 +144,104 @@
       "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=2&mn=1",
       "home": {
         "team": "Basket Iglesias",
-        "players": []
+        "players": [
+          {
+            "id": "107402",
+            "number": "",
+            "name": "Cabras Riccardo",
+            "role": "",
+            "age": "'01",
+            "pts": 0
+          },
+          {
+            "id": "36154",
+            "number": "",
+            "name": "Cipollina Mattia",
+            "role": "ala piccola",
+            "age": "'90",
+            "pts": 6
+          },
+          {
+            "id": "18758",
+            "number": "",
+            "name": "Corvetto Matteo",
+            "role": "",
+            "age": "'89",
+            "pts": 0
+          },
+          {
+            "id": "100143",
+            "number": "",
+            "name": "Era Riccardo",
+            "role": "guardia",
+            "age": "'01",
+            "pts": 3
+          },
+          {
+            "id": "158496",
+            "number": "",
+            "name": "Figus Stefano",
+            "role": "guardia",
+            "age": "'02",
+            "pts": 1
+          },
+          {
+            "id": "109992",
+            "number": "",
+            "name": "Marteddu Daniele",
+            "role": "",
+            "age": "'01",
+            "pts": 18
+          },
+          {
+            "id": "107401",
+            "number": "",
+            "name": "Pascai Davide",
+            "role": "",
+            "age": "",
+            "pts": 0
+          },
+          {
+            "id": "177148",
+            "number": "",
+            "name": "Perciante Alessandro",
+            "role": "guardia",
+            "age": "'06",
+            "pts": 11
+          },
+          {
+            "id": "209824",
+            "number": "",
+            "name": "Perciante Manuel",
+            "role": "",
+            "age": "U19",
+            "pts": null
+          },
+          {
+            "id": "124265",
+            "number": "",
+            "name": "Pittau Enrico",
+            "role": "play",
+            "age": "'00",
+            "pts": 6
+          },
+          {
+            "id": "132517",
+            "number": "",
+            "name": "Secci Fabio",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 9
+          },
+          {
+            "id": "28490",
+            "number": "",
+            "name": "Trincas Francesco Maurizio",
+            "role": "ala piccola",
+            "age": "'93",
+            "pts": 22
+          }
+        ]
       },
       "away": {
         "team": "CGP Carloforte",
@@ -617,7 +714,7 @@
     },
     "845": {
       "round": "A3",
-      "status": "partial",
+      "status": "complete",
       "fip_score": {
         "home": 94,
         "away": 60
@@ -727,7 +824,112 @@
       },
       "away": {
         "team": "Basket Assemini White",
-        "players": []
+        "players": [
+          {
+            "id": "73754",
+            "number": "",
+            "name": "Bruni Davide",
+            "role": "ala forte",
+            "age": "'00",
+            "pts": 0
+          },
+          {
+            "id": "47765",
+            "number": "",
+            "name": "Bruni Francesco",
+            "role": "",
+            "age": "'95",
+            "pts": 0
+          },
+          {
+            "id": "61664",
+            "number": "",
+            "name": "Caccavale Carmine",
+            "role": "",
+            "age": "'88",
+            "pts": 8
+          },
+          {
+            "id": "21048",
+            "number": "",
+            "name": "Corrò Gianluca",
+            "role": "",
+            "age": "'96",
+            "pts": 0
+          },
+          {
+            "id": "18769",
+            "number": "",
+            "name": "Del Rio Francesco",
+            "role": "guardia",
+            "age": "'90",
+            "pts": 3
+          },
+          {
+            "id": "206417",
+            "number": "",
+            "name": "Ecca Matteo",
+            "role": "guardia",
+            "age": "'89",
+            "pts": 4
+          },
+          {
+            "id": "231207",
+            "number": "",
+            "name": "Longoni Alessio",
+            "role": "",
+            "age": "",
+            "pts": 0
+          },
+          {
+            "id": "18910",
+            "number": "",
+            "name": "Mandas Simone",
+            "role": "ala piccola",
+            "age": "'91",
+            "pts": 19
+          },
+          {
+            "id": "231208",
+            "number": "",
+            "name": "Marroccu Andrea",
+            "role": "",
+            "age": "",
+            "pts": 17
+          },
+          {
+            "id": "231205",
+            "number": "",
+            "name": "Origa Giovanni",
+            "role": "",
+            "age": "",
+            "pts": 0
+          },
+          {
+            "id": "231209",
+            "number": "",
+            "name": "Origa Giovanni Andrea",
+            "role": "",
+            "age": "",
+            "pts": 0
+          },
+          {
+            "id": "70575",
+            "number": "",
+            "name": "Proietti Dennis",
+            "role": "guardia",
+            "age": "'00",
+            "pts": 6
+          },
+          {
+            "id": "231206",
+            "number": "",
+            "name": "Puddinu Riccardo",
+            "role": "",
+            "age": "",
+            "pts": 3
+          }
+        ]
       }
     },
     "846": {
@@ -1127,5 +1329,5 @@
       }
     }
   },
-  "updated_at": "2026-10-29T15:17:43+00:00"
+  "updated_at": "2026-10-29T20:38:01+00:00"
 }

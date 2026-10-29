@@ -1008,8 +1008,11 @@
           "away": "BASKET SULCISPES",
           "date": "2026-10-29",
           "time": "20:30",
-          "status": "designata",
-          "score": null,
+          "status": "ufficioso",
+          "score": {
+            "home": 72,
+            "away": 59
+          },
           "referees": [
             "ZARA MASSIMO di ORISTANO (OR)",
             "FIORIN GIANMARCO di CABRAS (OR)"
@@ -2461,5 +2464,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-29T05:57:05+00:00"
+  "updated_at": "2026-10-29T21:13:57+00:00"
 }

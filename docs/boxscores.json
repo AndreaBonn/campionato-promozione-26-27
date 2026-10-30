@@ -1330,16 +1330,22 @@
     },
     "853": {
       "round": "A4",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 72,
         "away": 59
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 1,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=4&mn=1",
+      "home": {
+        "team": "Basket Assemini White",
+        "players": []
+      },
+      "away": {
+        "team": "Sulcispes S. Antioco",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-10-29T21:13:57+00:00"
+  "updated_at": "2026-10-30T00:25:14+00:00"
 }

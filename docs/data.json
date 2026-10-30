@@ -120,7 +120,7 @@
       "status": "designata",
       "status_text": "Gara designata: la designazione è visibile",
       "referees": [
-        "ATZENI GIANLUCA di ARBUS (SU)",
+        "CARRUS FABIO di SELARGIUS (CA)",
         "PACINI ALBERTO di CARBONIA (SU)"
       ],
       "score": null,
@@ -972,7 +972,7 @@
           "status": "designata",
           "score": null,
           "referees": [
-            "ATZENI GIANLUCA di ARBUS (SU)",
+            "CARRUS FABIO di SELARGIUS (CA)",
             "PACINI ALBERTO di CARBONIA (SU)"
           ],
           "sanctions": []
@@ -1100,7 +1100,7 @@
           "away": "A.S.D. BETA",
           "date": "2026-10-28",
           "time": "21:00",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 77,
             "away": 29
@@ -2343,12 +2343,12 @@
     {
       "position": 1,
       "team": "SINNAI BASKET",
-      "points": 4,
-      "played": 2,
-      "won": 2,
+      "points": 6,
+      "played": 3,
+      "won": 3,
       "lost": 0,
-      "points_for": 157,
-      "points_against": 108
+      "points_for": 234,
+      "points_against": 137
     },
     {
       "position": 2,
@@ -2454,15 +2454,15 @@
       "position": 12,
       "team": "A.S.D. BETA",
       "points": 0,
-      "played": 2,
+      "played": 3,
       "won": 0,
-      "lost": 2,
-      "points_for": 105,
-      "points_against": 172
+      "lost": 3,
+      "points_for": 134,
+      "points_against": 249
     }
   ],
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-10-29T21:13:57+00:00"
+  "updated_at": "2026-10-30T05:58:25+00:00"
 }

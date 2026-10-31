@@ -1348,16 +1348,200 @@
     },
     "850": {
       "round": "A4",
-      "status": "unmatched",
+      "status": "complete",
       "fip_score": {
         "home": 50,
         "away": 65
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 2,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=4&mn=2",
+      "home": {
+        "team": "Basket Iglesias",
+        "players": [
+          {
+            "id": "36154",
+            "number": "",
+            "name": "Cipollina Mattia",
+            "role": "ala piccola",
+            "age": "'90",
+            "pts": 11
+          },
+          {
+            "id": "18758",
+            "number": "",
+            "name": "Corvetto Matteo",
+            "role": "",
+            "age": "'89",
+            "pts": 1
+          },
+          {
+            "id": "100143",
+            "number": "",
+            "name": "Era Riccardo",
+            "role": "guardia",
+            "age": "'01",
+            "pts": 0
+          },
+          {
+            "id": "158496",
+            "number": "",
+            "name": "Figus Stefano",
+            "role": "guardia",
+            "age": "'02",
+            "pts": 0
+          },
+          {
+            "id": "107401",
+            "number": "",
+            "name": "Pascai Davide",
+            "role": "",
+            "age": "",
+            "pts": 8
+          },
+          {
+            "id": "177148",
+            "number": "",
+            "name": "Perciante Alessandro",
+            "role": "guardia",
+            "age": "'06",
+            "pts": 7
+          },
+          {
+            "id": "209824",
+            "number": "",
+            "name": "Perciante Manuel",
+            "role": "",
+            "age": "U19",
+            "pts": 3
+          },
+          {
+            "id": "124265",
+            "number": "",
+            "name": "Pittau Enrico",
+            "role": "play",
+            "age": "'00",
+            "pts": 7
+          },
+          {
+            "id": "132517",
+            "number": "",
+            "name": "Secci Fabio",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 0
+          },
+          {
+            "id": "28490",
+            "number": "",
+            "name": "Trincas Francesco Maurizio",
+            "role": "ala piccola",
+            "age": "'93",
+            "pts": 13
+          }
+        ]
+      },
+      "away": {
+        "team": "Basket Assemini Black",
+        "players": [
+          {
+            "id": "19242",
+            "number": "",
+            "name": "Bonacci Andrea",
+            "role": "ala forte",
+            "age": "'95",
+            "pts": 14
+          },
+          {
+            "id": "173318",
+            "number": "",
+            "name": "Febbo Federico",
+            "role": "play",
+            "age": "'07",
+            "pts": 2
+          },
+          {
+            "id": "156526",
+            "number": "",
+            "name": "Fiori Lorenzo",
+            "role": "centro",
+            "age": "'06",
+            "pts": 0
+          },
+          {
+            "id": "180663",
+            "number": "",
+            "name": "Floris Alessandro",
+            "role": "ala forte",
+            "age": "'07",
+            "pts": 11
+          },
+          {
+            "id": "20242",
+            "number": "",
+            "name": "Loi Matteo",
+            "role": "guardia",
+            "age": "'94",
+            "pts": 11
+          },
+          {
+            "id": "92278",
+            "number": "",
+            "name": "Manca Federico",
+            "role": "play",
+            "age": "'99",
+            "pts": 4
+          },
+          {
+            "id": "38082",
+            "number": "",
+            "name": "Orrù Alessio",
+            "role": "ala forte",
+            "age": "'99",
+            "pts": 8
+          },
+          {
+            "id": "90984",
+            "number": "",
+            "name": "Pisanu Alessandro",
+            "role": "ala forte",
+            "age": "'86",
+            "pts": 0
+          },
+          {
+            "id": "66876",
+            "number": "",
+            "name": "Ruvioli Lorenzo",
+            "role": "centro",
+            "age": "'99",
+            "pts": 3
+          },
+          {
+            "id": "192427",
+            "number": "",
+            "name": "Sassaro Giaime",
+            "role": "ala piccola",
+            "age": "'05",
+            "pts": 12
+          },
+          {
+            "id": "60869",
+            "number": "",
+            "name": "Stara Andrea",
+            "role": "ala piccola",
+            "age": "'97",
+            "pts": 0
+          },
+          {
+            "id": "177464",
+            "number": "",
+            "name": "Zucca Francesco",
+            "role": "guardia",
+            "age": "'04",
+            "pts": 0
+          }
+        ]
+      }
     }
   },
-  "updated_at": "2026-10-31T00:06:19+00:00"
+  "updated_at": "2026-10-31T14:36:01+00:00"
 }

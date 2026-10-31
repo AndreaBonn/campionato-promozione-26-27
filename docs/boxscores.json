@@ -339,7 +339,7 @@
     },
     "838": {
       "round": "A2",
-      "status": "partial",
+      "status": "incomplete",
       "fip_score": {
         "home": 69,
         "away": 43
@@ -1543,5 +1543,5 @@
       }
     }
   },
-  "updated_at": "2026-10-31T14:36:01+00:00"
+  "updated_at": "2026-10-31T23:27:22+00:00"
 }

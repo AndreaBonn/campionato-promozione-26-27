@@ -1544,28 +1544,40 @@
     },
     "851": {
       "round": "A4",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 78,
         "away": 56
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 3,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=4&mn=3",
+      "home": {
+        "team": "Basket Settimo 2023",
+        "players": []
+      },
+      "away": {
+        "team": "Madas Siliqua",
+        "players": []
+      }
     },
     "854": {
       "round": "A4",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 48,
         "away": 74
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 4,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=4&mn=4",
+      "home": {
+        "team": "Calasetta Basket sq.B",
+        "players": []
+      },
+      "away": {
+        "team": "Cagliari Basket",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-01T23:55:24+00:00"
+  "updated_at": "2026-11-02T06:20:54+00:00"
 }

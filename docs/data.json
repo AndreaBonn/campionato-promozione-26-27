@@ -960,7 +960,7 @@
           "away": "A.S.D. BETA",
           "date": "2026-11-02",
           "time": "20:30",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 86,
             "away": 54
@@ -1039,7 +1039,7 @@
           "away": "CAGLIARI BASKET",
           "date": "2026-11-01",
           "time": "19:00",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 48,
             "away": 74
@@ -1048,7 +1048,11 @@
             "COCCO ALESSANDRO di QUARTU SANT'ELENA (CA)",
             "SOLINAS RICCARDO di SESTU (CA)"
           ],
-          "sanctions": []
+          "sanctions": [
+            "soc. A.S.D. S.S.D. CALASETTA BASKET:CARLO FONTANA deplorazione per proteste avverso decisioni arbitrali con conseguente espulsione [art. 32,3 RG]",
+            "soc. A.S.D. S.S.D. CALASETTA BASKET:NICOLO' SERRENTI squalifica per 2 gare per comportamento offensivo e minaccioso nei confronti di un giocatore avversario e nei confronti del primo arbitro [art. 33,1/1b RG, art. 33,1/1c RG]",
+            "soc. A.S.D. S.S.D. CALASETTA BASKET:CASULA MARCO inibizione determinata dal 03/11/2026 al 09/11/2026 per comportamento non regolamentare, tenuto dagli spalti, nei confronti degli arbitri [art. 35,1c RG]"
+          ]
         }
       ],
       "pdf_url": "https://backend.fip.it/api/v1/giornata.pdf?regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_andata_ritorno=1&giornata=4"
@@ -1062,9 +1066,12 @@
           "away": "SCUOLA BASKET CARBONIA",
           "date": "2026-11-09",
           "time": "20:30",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "FRAU DAVIDE di MONSERRATO (CA)",
+            "SADDI NICOLA di QUARTU SANT'ELENA (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -2389,12 +2396,12 @@
     {
       "position": 3,
       "team": "CAGLIARI BASKET",
-      "points": 4,
-      "played": 3,
-      "won": 2,
+      "points": 6,
+      "played": 4,
+      "won": 3,
       "lost": 1,
-      "points_for": 203,
-      "points_against": 191
+      "points_for": 277,
+      "points_against": 239
     },
     {
       "position": 4,
@@ -2428,16 +2435,6 @@
     },
     {
       "position": 7,
-      "team": "POL. MADAS SILIQUA",
-      "points": 2,
-      "played": 3,
-      "won": 1,
-      "lost": 2,
-      "points_for": 161,
-      "points_against": 200
-    },
-    {
-      "position": 8,
       "team": "BASKET ASSEMINI WHITE",
       "points": 2,
       "played": 3,
@@ -2447,17 +2444,7 @@
       "points_against": 238
     },
     {
-      "position": 9,
-      "team": "CALASETTA BASKET",
-      "points": 2,
-      "played": 2,
-      "won": 1,
-      "lost": 1,
-      "points_for": 117,
-      "points_against": 119
-    },
-    {
-      "position": 10,
+      "position": 8,
       "team": "BASKET SULCISPES",
       "points": 2,
       "played": 2,
@@ -2467,28 +2454,48 @@
       "points_against": 130
     },
     {
-      "position": 11,
-      "team": "SCUOLA BASKET CARBONIA",
-      "points": 0,
-      "played": 2,
-      "won": 0,
+      "position": 9,
+      "team": "POL. MADAS SILIQUA",
+      "points": 2,
+      "played": 3,
+      "won": 1,
       "lost": 2,
-      "points_for": 118,
-      "points_against": 139
+      "points_for": 161,
+      "points_against": 200
+    },
+    {
+      "position": 10,
+      "team": "SCUOLA BASKET CARBONIA",
+      "points": 2,
+      "played": 3,
+      "won": 1,
+      "lost": 2,
+      "points_for": 204,
+      "points_against": 193
+    },
+    {
+      "position": 11,
+      "team": "CALASETTA BASKET",
+      "points": 2,
+      "played": 3,
+      "won": 1,
+      "lost": 2,
+      "points_for": 165,
+      "points_against": 193
     },
     {
       "position": 12,
       "team": "A.S.D. BETA",
       "points": 0,
-      "played": 3,
+      "played": 4,
       "won": 0,
-      "lost": 3,
-      "points_for": 134,
-      "points_against": 249
+      "lost": 4,
+      "points_for": 188,
+      "points_against": 335
     }
   ],
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-03T12:01:06+00:00"
+  "updated_at": "2026-11-04T12:16:38+00:00"
 }

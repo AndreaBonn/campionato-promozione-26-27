@@ -1,7 +1,7 @@
 /* --brand and --home are the black and orange of the Basket Assemini crest; --ink is the text colour,
    equal to --brand in the light theme and lifted for contrast in the dark one */
-:root{color-scheme:light dark;--bg:#f4f1ed;--card:#fffdfb;--ink:#221c18;--mut:#5f5750;--line:#ddd5cc;--brand:#221c18;--on-brand:#fffdfb;--brand-mut:#d9cec3;--brand-hover:#463a31;--home:#b4470a;--away:#221c18;--chg:#b45309;--chg-bg:#fef3c7;--chg-ink:#78350f;--chg-strong:#451a03;--win:#166534;--loss:#991b1b;--win-ink:#166534;--loss-ink:#991b1b;--me-bg:#fbeadb;--chip-bg:#f6f2ee;--focus:#b4470a;--skel:#e9e3dc;--ok:#16a34a}
-@media(prefers-color-scheme:dark){:root{--bg:#171311;--card:#221c19;--ink:#efe7df;--mut:#b8ab9f;--line:#3b312a;--brand:#3a2c21;--brand-mut:#e6d6c6;--brand-hover:#4d3b2d;--away:#f0a050;--chg-bg:#3b2a10;--chg-ink:#fcd9a8;--chg-strong:#fff1dc;--win-ink:#4ade80;--loss-ink:#f87171;--me-bg:#40301f;--chip-bg:#2a221d;--focus:#f6a35a;--skel:#3b312a;--ok:#4ade80}}
+:root{color-scheme:light dark;--bg:#f4f1ed;--card:#fffdfb;--ink:#221c18;--mut:#5f5750;--line:#ddd5cc;--brand:#221c18;--on-brand:#fffdfb;--brand-mut:#d9cec3;--brand-hover:#463a31;--home:#b4470a;--away:#221c18;--on-away:#fff;--chg:#b45309;--chg-bg:#fef3c7;--chg-ink:#78350f;--chg-strong:#451a03;--win:#166534;--loss:#991b1b;--win-ink:#166534;--loss-ink:#991b1b;--me-bg:#fbeadb;--chip-bg:#f6f2ee;--focus:#b4470a;--skel:#e9e3dc;--ok:#16a34a}
+@media(prefers-color-scheme:dark){:root{--bg:#171311;--card:#221c19;--ink:#efe7df;--mut:#b8ab9f;--line:#3b312a;--brand:#3a2c21;--brand-mut:#e6d6c6;--brand-hover:#4d3b2d;--away:#f0a050;--on-away:#171311;--chg-bg:#3b2a10;--chg-ink:#fcd9a8;--chg-strong:#fff1dc;--win-ink:#4ade80;--loss-ink:#f87171;--me-bg:#40301f;--chip-bg:#2a221d;--focus:#f6a35a;--skel:#3b312a;--ok:#4ade80}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif}
 .wrap{max-width:860px;margin:0 auto;padding:16px 16px 48px}
@@ -106,7 +106,9 @@ h2.tbd{text-transform:none}
 .rnd{font-size:12px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.03em}
 .t{font-size:18px;font-weight:700;line-height:1.25}
 .t em{font-style:normal;color:var(--mut);font-weight:400;padding:0 4px}
-.tag{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--away);padding:1px 8px;border-radius:3px;margin-right:6px;vertical-align:2px}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--on-away);background:var(--away);padding:1px 8px;border-radius:3px;margin-right:6px;vertical-align:2px}
+/* --away turns light orange in dark mode, the other tag backgrounds stay dark */
+.home .tag,.tag.chg,.tag.prov{color:#fff}
 .home .tag{background:var(--home)}
 .tag.chg{background:var(--chg)}
 .tag.prov{background:var(--mut);margin:0 0 0 6px}.tag.prov.alert{background:var(--chg)}

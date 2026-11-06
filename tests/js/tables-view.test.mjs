@@ -111,3 +111,50 @@ test("round table: FIP's printable round linked only from backend.fip.it", () =>
   assert.match(linked, /<a href="https:\/\/backend\.fip\.it\/api\/v1\/giornata\.pdf\?g=1&amp;x=2" target="_blank" rel="noopener">Giornata nel PDF ufficiale FIP<\/a>/);
   assert.doesNotMatch(foreign, /PDF ufficiale/);
 });
+
+const fullRanges = (rows) => new Map(rows.map((r) => [r.team, { best: 1, worst: rows.length }]));
+
+test("standings: with every position still open, no 'Possibile' column and no 'Già deciso' block", () => {
+  const rows = table(12);
+  const html = renderStandings(rows, CUS, LOGOS, fullRanges(rows));
+
+  assert.equal(html, renderStandings(rows, CUS, LOGOS));
+  assert.doesNotMatch(html, /Possibile|Già deciso/);
+});
+
+test("standings: once a range narrows, every row shows its possible positions and the zone row spans the new column", () => {
+  const rows = table(12);
+  const ranges = fullRanges(rows).set("TEAM 1", { best: 1, worst: 1 }).set("TEAM 2", { best: 2, worst: 5 });
+  const html = renderStandings(rows, CUS, LOGOS, ranges);
+
+  assert.match(html, /<th class="poss"><abbr title="Posizioni finali ancora possibili">Poss\.<\/abbr><\/th><\/tr>/);
+  assert.match(html, /<td>\+10<\/td><td class="poss">1ª<\/td><\/tr>/);
+  assert.match(html, /<td class="poss">2ª-5ª<\/td>/);
+  assert.match(html, /<td class="poss">1ª-12ª<\/td>/);
+  assert.match(html, /<tr class="zone-row"><td colspan="10">Zona playoff/);
+});
+
+test("standings: 'Già deciso' reports exact positions only while the 2026/27 format is unpublished", () => {
+  const rows = table(12);
+  const ranges = fullRanges(rows).set("TEAM 1", { best: 1, worst: 1 }).set("TEAM 2", { best: 2, worst: 4 })
+    .set(CUS, { best: 9, worst: 9 }).set("TEAM 12", { best: 12, worst: 12 }).set("TEAM 11", { best: 10, worst: 11 });
+  const html = renderStandings(rows, CUS, LOGOS, ranges);
+  const items = [...html.matchAll(/<li><b>([^<]+)<\/b>: (.+?)<\/li>/g)].map((m) => [m[1], m[2]]);
+
+  assert.deepEqual(items, [
+    ["Matematicamente 1ª", "Team 1."],
+    ["Matematicamente 9ª", '<span class="me">CUS Cagliari</span>.'],
+    ["Matematicamente 12ª", "Team 12."],
+  ]);
+  const block = html.slice(html.indexOf("Già deciso"), html.indexOf("<table"));
+  assert.doesNotMatch(block, /ai playoff|fuori dai playoff|playout/);
+  assert.match(block, /formula 2026\/27, con il Sud diviso in due gironi, non è ancora pubblicata/);
+});
+
+test("standings: on phones the possible positions move under the team name", () => {
+  const rows = table(12);
+  const html = renderStandings(rows, CUS, LOGOS, fullRanges(rows).set("TEAM 1", { best: 1, worst: 2 }));
+
+  assert.match(html, /<span>Team 1<small class="poss-sm">Possibile 1ª-2ª<\/small><\/span>/);
+  assert.doesNotMatch(renderStandings(rows, CUS, LOGOS), /poss-sm/);
+});

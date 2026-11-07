@@ -696,7 +696,7 @@
     },
     "847": {
       "round": "A3",
-      "status": "partial",
+      "status": "incomplete",
       "fip_score": {
         "home": 108,
         "away": 48
@@ -1580,28 +1580,40 @@
     },
     "849": {
       "round": "A4",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 86,
         "away": 54
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 5,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=4&mn=5",
+      "home": {
+        "team": "Scuola Basket Carbonia sq.B",
+        "players": []
+      },
+      "away": {
+        "team": "Beta Pirri",
+        "players": []
+      }
     },
     "857": {
       "round": "A5",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 76,
         "away": 68
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 2,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=5&mn=2",
+      "home": {
+        "team": "Basket Iglesias",
+        "players": []
+      },
+      "away": {
+        "team": "Basket Settimo 2023",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-06T21:05:27+00:00"
+  "updated_at": "2026-11-07T01:14:52+00:00"
 }

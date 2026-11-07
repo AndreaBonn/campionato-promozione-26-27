@@ -134,8 +134,13 @@ export function teamProfile(team, rounds, standings) {
   };
 }
 
-// DR2 Sud 2025/26 format (the 2026/27 one is not published yet): the top 4 to the playoffs, no playout
-export const PLAYOFF_SPOTS = 4;
+// DR2 2026/27 format (data/Formula-DR-2-maschile-26-27.pdf): the top 8 of each group to the playoffs,
+// 9th-12th to a second phase, no playout
+export const PLAYOFF_SPOTS = 8;
+// Round of 16 crosses the groups: 1st of A vs 8th of B, ..., 4th vs 5th. C/F/C: the team ranked
+// 1st-4th plays games 1 and 3 at home.
+const HOME_COURT_SPOTS = 4;
+const OTHER_GROUP = "Girone Sud B";
 
 // The standings table draws a line under the last playoff spot
 export const isStandingsCut = (position) => position === PLAYOFF_SPOTS;
@@ -156,10 +161,16 @@ const standingPoints = (n) => n + (n === 1 ? " punto" : " punti") + " in classif
 function playoffLine({ inside, margin }) {
   const first = `${PLAYOFF_SPOTS + 1}ª`, last = `${PLAYOFF_SPOTS}ª`;
   if (inside) return margin > 0 ? `In zona playoff, con ${standingPoints(margin)} di vantaggio sulla ${first}.` : `In zona playoff, a pari punti con la ${first}.`;
-  return margin < 0 ? `Fuori dalla zona playoff, a ${standingPoints(-margin)} dalla ${last}.` : `Fuori dalla zona playoff, a pari punti con la ${last}.`;
+  return margin < 0 ? `Fuori dalla zona playoff (seconda fase), a ${standingPoints(-margin)} dalla ${last}.` : `Fuori dalla zona playoff (seconda fase), a pari punti con la ${last}.`;
 }
 
-export const zoneLines = (z) => [playoffLine(z.playoff)];
+// "If the season ended today" round-of-16 opponent, by position: the page only knows this group
+function crossoverLine(position) {
+  const court = position <= HOME_COURT_SPOTS ? "con" : "senza";
+  return `Se finisse oggi: ottavi contro la ${PLAYOFF_SPOTS + 1 - position}ª del ${OTHER_GROUP}, ${court} il fattore campo.`;
+}
+
+export const zoneLines = (z) => (z.playoff.inside ? [playoffLine(z.playoff), crossoverLine(z.position)] : [playoffLine(z.playoff)]);
 
 // Crest copied into docs/logos by the sync; anything but a plain file there is ignored
 const LOGO_FILE = /^logos\/[a-z0-9-]+\.png$/;

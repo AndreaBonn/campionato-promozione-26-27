@@ -44,10 +44,10 @@ export function teamInitials(name) {
   return (first + last).toUpperCase();
 }
 
-// Position -> zone for the rows that open a zone, where its label goes (2025/26 format, like the
+// Position -> zone for the rows that open a zone, where its label goes (2026/27 format, like the
 // cut line of the table); no label when every team of the table is in the playoff zone
 export function zoneStarts(total) {
-  return total > PLAYOFF_SPOTS ? new Map([[1, "playoff"]]) : new Map();
+  return total > PLAYOFF_SPOTS ? new Map([[1, "playoff"], [PLAYOFF_SPOTS + 1, "second"]]) : new Map();
 }
 
 // "In casa 2-1 · In trasferta 1-1", a side without games left out

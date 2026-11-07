@@ -64,8 +64,8 @@ test("team initials: first letters of the first and last word", () => {
 });
 
 test("zone starts: the positions where a zone label goes, one per zone", () => {
-  assert.deepEqual(zoneStarts(12), new Map([[1, "playoff"]]));
-  assert.deepEqual(zoneStarts(5), new Map([[1, "playoff"]]));
+  assert.deepEqual(zoneStarts(12), new Map([[1, "playoff"], [9, "second"]]));
+  assert.deepEqual(zoneStarts(9), new Map([[1, "playoff"], [9, "second"]]));
 });
 
 test("split line: home and away records, a side with no games left out", () => {
@@ -80,5 +80,5 @@ test("last played: the latest game with a result, null before the first", () => 
 });
 
 test("zone starts: no label when every team of the table is in the playoff zone", () => {
-  assert.deepEqual(zoneStarts(4), new Map());
+  assert.deepEqual(zoneStarts(8), new Map());
 });

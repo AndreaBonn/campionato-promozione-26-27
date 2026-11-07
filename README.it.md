@@ -170,7 +170,7 @@ Se fip.it non risponde o la struttura delle pagine è cambiata, la sincronizzazi
 ## Limiti
 
 - fip.it non ha un'API pubblica documentata: lo scraper legge l'HTML delle pagine dei risultati e va aggiornato quando la FIP cambia il layout.
-- La formula mostrata nella pagina (prime 4 ai playoff, nessun playout) è quella della DR2 Sud 2025/26, quando il girone Sud era uno solo. Quella del 2026/27 non è ancora pubblicata.
+- La formula 2026/27 (prime 8 di ogni girone ai playoff incrociati con il Girone Sud B, dalla 9ª alla 12ª seconda fase, nessun playout) viene da un comunicato dell'Ufficio Gare che al 7 novembre 2026 la FIP Sardegna non aveva ancora pubblicato sul sito. La pagina conosce solo il Girone Sud A, quindi l'avversaria degli ottavi è indicata per posizione, non per nome.
 - La FIP non pubblica i tabellini di questo campionato. I punti dei giocatori arriverebbero da playbasket.it (inseriti dagli utenti, riusati senza scopo commerciale e con attribuzione), ma quella sincronizzazione non è ancora attiva: la tabella dei nomi delle squadre (`PLAYBASKET_TEAM_ALIASES` in `src/fip_calendar/config.py`) si compila dopo il primo tabellino dell'Assemini Black. Finché è vuota, la sincronizzazione non legge playbasket.it.
 - GitHub sospende i workflow programmati dopo 60 giorni senza attività sul repository.
 

@@ -170,7 +170,7 @@ If fip.it does not answer or its page structure has changed, the sync stops with
 ## Limitations
 
 - fip.it has no documented public API: the scraper reads the HTML of the results pages and has to be updated when FIP changes the layout.
-- The format shown on the page (top 4 to the playoffs, no playout) is that of DR2 Sud 2025/26, when the southern group was a single one. The 2026/27 format is not published yet.
+- The 2026/27 format (top 8 of each group to playoffs crossed with Girone Sud B, 9th to 12th to a second phase, no playout) comes from an Ufficio Gare comunicato that FIP Sardegna had not posted on its site as of 7 November 2026. The page only knows Girone Sud A, so the round-of-16 opponent is given by position, not by name.
 - FIP does not publish box scores for this league. Player points would come from playbasket.it (user-entered, reused non-commercially with attribution), but that sync is not active yet: the team name table (`PLAYBASKET_TEAM_ALIASES` in `src/fip_calendar/config.py`) gets filled after the first Assemini Black box score. While it is empty the sync does not read playbasket.it.
 - GitHub suspends scheduled workflows after 60 days without activity on the repository.
 

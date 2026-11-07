@@ -7,7 +7,10 @@ import { displayTeamName, teamInitials, zoneStarts } from "./view-rules.js";
 import { renderBoxscoreBody } from "./boxscores.js";
 
 const STANDINGS_COLUMNS = 9;
-const ZONE_LABEL = { playoff: `Zona playoff: prime ${PLAYOFF_SPOTS} (formula 2025/26)` };
+const ZONE_LABEL = {
+  playoff: `Zona playoff: prime ${PLAYOFF_SPOTS}`,
+  second: `Seconda fase: dalla ${PLAYOFF_SPOTS + 1}ª in giù`,
+};
 
 export function crestHtml(logos, team, cls = "") {
   const file = logoOf(logos, team);
@@ -19,10 +22,8 @@ const abbr = (short, long) => `<th><abbr title="${long}">${short}</abbr></th>`;
 
 const ordinal = (n) => `${n}ª`;
 const fmtRange = ({ best, worst }) => (best === worst ? ordinal(best) : `${ordinal(best)}-${ordinal(worst)}`);
-// Zones for "Già deciso": none yet. The 2026/27 format is unpublished and DR2 Sud is now split in
-// two groups, so the 2025/26 one (top 4 of a single group, no playout) may not hold: only exact
-// positions are reported. Set to the playoff spots once FIP publishes the format.
-const DECIDED_PLAYOFF_SPOTS = 0;
+// Zones for "Già deciso": 2026/27 format, top 8 to the playoffs, the rest to the second phase
+const DECIDED_PLAYOFF_SPOTS = PLAYOFF_SPOTS;
 const PLAYOUT_SPOTS = 0;
 
 // Final positions still possible (standings-math.js): shown only once one is narrower than 1st-last,
@@ -36,7 +37,7 @@ function zoneWords({ position, playoff, playout }) {
   const words = position === null ? [] : [ordinal(position)];
   if (playoff === true) return [...words, "ai playoff"];
   if (playout === true) return [...words, "ai playout"];
-  if (playoff === false) words.push("fuori dai playoff");
+  if (playoff === false) words.push("alla seconda fase");
   if (playout === false) words.push("salva dai playout");
   return words;
 }
@@ -51,7 +52,7 @@ function decidedBlock(ranges, fipTeam) {
     groups.set(key, [...(groups.get(key) ?? []), f.team === fipTeam ? `<span class="me">${name}</span>` : name]);
   }
   const items = [...groups].map(([words, teams]) => `<li><b>Matematicamente ${words}</b>: ${teams.join(", ")}.</li>`);
-  return `<div class="decided"><h3>Già deciso</h3><ul>${items.join("")}</ul><p class="legend-mini">Vale per ogni esito delle partite ancora da giocare, con i criteri di parità dell'art. 62 del Regolamento Esecutivo Gare FIP. Una parità che dipende dal punteggio di una partita non ancora giocata resta aperta. Solo posizioni esatte: la formula 2026/27, con il Sud diviso in due gironi, non è ancora pubblicata.</p></div>`;
+  return `<div class="decided"><h3>Già deciso</h3><ul>${items.join("")}</ul><p class="legend-mini">Vale per ogni esito delle partite ancora da giocare, con i criteri di parità dell'art. 62 del Regolamento Esecutivo Gare FIP. Una parità che dipende dal punteggio di una partita non ancora giocata resta aperta.</p></div>`;
 }
 
 function standingsRow(r, rows, fipTeam, logos, starts, ranges) {
@@ -77,7 +78,7 @@ export function renderStandings(rows, fipTeam, logos, allRanges = null) {
   const head = `<tr><th>#</th><th>Squadra</th><th>Punti</th><th class="gp"><abbr title="Gare giocate">G</abbr></th>${abbr("V", "Vinte")}${abbr("P", "Perse")}<th class="pfps"><abbr title="Punti fatti">PF</abbr></th><th class="pfps"><abbr title="Punti subiti">PS</abbr></th><th><abbr title="Differenza punti">+/-</abbr></th>${possHead}</tr>`;
   return `<h2>Classifica</h2>${zone}${decided}<div class="scroll"><table class="standings"><thead>${head}</thead><tbody>${body}</tbody></table></div>
  <p class="legend-mini">G giocate · V vinte · P perse · PF punti fatti · PS punti subiti · +/- differenza punti${possLegend}</p>
- <details class="howto"><summary>Come leggere la classifica</summary><p>Classifica ufficiale FIP: conta solo i risultati omologati dal Giudice Sportivo. La linea separa le prime ${PLAYOFF_SPOTS}: nel 2025/26 erano le squadre ammesse ai playoff, la formula 2026/27 non è ancora nota. Le squadre compaiono con la denominazione registrata dalla FIP, che può includere lo sponsor; gli stemmi sono quelli caricati dalle società sul sito FIP, le iniziali stanno al posto di quelli mancanti.</p></details>`;
+ <details class="howto"><summary>Come leggere la classifica</summary><p>Classifica ufficiale FIP: conta solo i risultati omologati dal Giudice Sportivo. La linea separa le prime ${PLAYOFF_SPOTS}, ammesse ai playoff, dalle squadre che giocheranno la seconda fase. Le squadre compaiono con la denominazione registrata dalla FIP, che può includere lo sponsor; gli stemmi sono quelli caricati dalle società sul sito FIP, le iniziali stanno al posto di quelli mancanti.</p></details>`;
 }
 
 const day = (g) =>

@@ -298,7 +298,7 @@ const POINTS = [20, 18, 16, 14, 12, 10, 8, 8, 6, 4, 2, 0];
 test("zone status reads positions, not the order of the rows", () => {
   const shuffled = table(3, POINTS).reverse();
 
-  assert.deepEqual(zoneStatus(shuffled, "CUS CAGLIARI").playoff, { inside: true, margin: 2 });
+  assert.deepEqual(zoneStatus(shuffled, "CUS CAGLIARI").playoff, { inside: true, margin: 8 });
 });
 
 test("zone status is null before FIP ranks any game or for a team not in the table", () => {
@@ -368,30 +368,40 @@ test("FIP Sardegna notice: only a sardegna.fip.it post is listed", () => {
   }
 });
 
-test("zone status inside the playoff spots: margin over the 5th", () => {
-  assert.deepEqual(zoneStatus(table(2, POINTS), "CUS CAGLIARI"), { position: 3, playoff: { inside: true, margin: 4 } });
+test("zone status inside the playoff spots: margin over the 9th", () => {
+  assert.deepEqual(zoneStatus(table(2, POINTS), "CUS CAGLIARI"), { position: 3, playoff: { inside: true, margin: 10 } });
+  assert.deepEqual(zoneStatus(table(7, POINTS), "CUS CAGLIARI"), { position: 8, playoff: { inside: true, margin: 2 } });
 });
 
-test("zone status outside the playoff spots: negative margin to the 4th", () => {
-  assert.deepEqual(zoneStatus(table(6, POINTS), "CUS CAGLIARI"), { position: 7, playoff: { inside: false, margin: -6 } });
+test("zone status outside the playoff spots: negative margin to the 8th", () => {
+  assert.deepEqual(zoneStatus(table(9, POINTS), "CUS CAGLIARI"), { position: 10, playoff: { inside: false, margin: -4 } });
 });
 
 test("zone lines: margins in standings points, singular for one point, ties named", () => {
-  assert.deepEqual(zoneLines({ position: 3, playoff: { inside: true, margin: 4 } }), ["In zona playoff, con 4 punti in classifica di vantaggio sulla 5ª."]);
-  assert.deepEqual(zoneLines({ position: 2, playoff: { inside: true, margin: 1 } }), ["In zona playoff, con 1 punto in classifica di vantaggio sulla 5ª."]);
-  assert.deepEqual(zoneLines({ position: 4, playoff: { inside: true, margin: 0 } }), ["In zona playoff, a pari punti con la 5ª."]);
-  assert.deepEqual(zoneLines({ position: 5, playoff: { inside: false, margin: 0 } }), ["Fuori dalla zona playoff, a pari punti con la 4ª."]);
-  assert.deepEqual(zoneLines({ position: 9, playoff: { inside: false, margin: -6 } }), ["Fuori dalla zona playoff, a 6 punti in classifica dalla 4ª."]);
+  assert.equal(zoneLines({ position: 3, playoff: { inside: true, margin: 4 } })[0], "In zona playoff, con 4 punti in classifica di vantaggio sulla 9ª.");
+  assert.equal(zoneLines({ position: 2, playoff: { inside: true, margin: 1 } })[0], "In zona playoff, con 1 punto in classifica di vantaggio sulla 9ª.");
+  assert.equal(zoneLines({ position: 8, playoff: { inside: true, margin: 0 } })[0], "In zona playoff, a pari punti con la 9ª.");
+  assert.deepEqual(zoneLines({ position: 9, playoff: { inside: false, margin: 0 } }), ["Fuori dalla zona playoff (seconda fase), a pari punti con la 8ª."]);
+  assert.deepEqual(zoneLines({ position: 11, playoff: { inside: false, margin: -6 } }), ["Fuori dalla zona playoff (seconda fase), a 6 punti in classifica dalla 8ª."]);
+});
+
+test("zone lines: inside the playoffs, the round-of-16 opponent from Girone Sud B and the home court", () => {
+  const crossover = (position) => zoneLines({ position, playoff: { inside: true, margin: 2 } })[1];
+
+  assert.equal(crossover(1), "Se finisse oggi: ottavi contro la 8ª del Girone Sud B, con il fattore campo.");
+  assert.equal(crossover(4), "Se finisse oggi: ottavi contro la 5ª del Girone Sud B, con il fattore campo.");
+  assert.equal(crossover(5), "Se finisse oggi: ottavi contro la 4ª del Girone Sud B, senza il fattore campo.");
+  assert.equal(crossover(8), "Se finisse oggi: ottavi contro la 1ª del Girone Sud B, senza il fattore campo.");
 });
 
 test("zone status is null when every team of the table is in the playoff zone", () => {
-  assert.equal(zoneStatus(table(1, POINTS.slice(0, 4)), "CUS CAGLIARI"), null);
-  assert.notEqual(zoneStatus(table(1, POINTS.slice(0, 5)), "CUS CAGLIARI"), null);
+  assert.equal(zoneStatus(table(1, POINTS.slice(0, 8)), "CUS CAGLIARI"), null);
+  assert.notEqual(zoneStatus(table(1, POINTS.slice(0, 9)), "CUS CAGLIARI"), null);
 });
 
 test("standings cut: one line, under the last playoff spot", () => {
   const cuts = (total) => Array.from({ length: total }, (_, i) => i + 1).filter((pos) => isStandingsCut(pos));
 
-  assert.deepEqual(cuts(12), [4]);
-  assert.deepEqual(cuts(13), [4]);
+  assert.deepEqual(cuts(12), [8]);
+  assert.deepEqual(cuts(13), [8]);
 });

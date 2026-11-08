@@ -154,6 +154,27 @@ def test_parse_italian_date_converts_to_iso(text: str, expected: str) -> None:
     assert parse_italian_date(text) == expected
 
 
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        ("15 gennaio 2027", "2027-01-15"),
+        ("15 febbraio 2027", "2027-02-15"),
+        ("15 marzo 2027", "2027-03-15"),
+        ("15 aprile 2027", "2027-04-15"),
+        ("15 maggio 2027", "2027-05-15"),
+        ("15 giugno 2027", "2027-06-15"),
+        ("15 luglio 2027", "2027-07-15"),
+        ("15 agosto 2027", "2027-08-15"),
+        ("15 settembre 2027", "2027-09-15"),
+        ("15 ottobre 2027", "2027-10-15"),
+        ("15 novembre 2027", "2027-11-15"),
+        ("15 dicembre 2027", "2027-12-15"),
+    ],
+)
+def test_parse_italian_date_each_month_returns_expected_iso(text: str, expected: str) -> None:
+    assert parse_italian_date(text) == expected
+
+
 def test_parse_italian_date_unknown_month_raises() -> None:
     with pytest.raises(ParseError):
         parse_italian_date("20 Brumaio 2026")

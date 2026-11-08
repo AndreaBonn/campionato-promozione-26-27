@@ -1613,7 +1613,19 @@
         "team": "Basket Settimo 2023",
         "players": []
       }
+    },
+    "858": {
+      "round": "A5",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 58,
+        "away": 71
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
     }
   },
-  "updated_at": "2026-11-07T23:02:52+00:00"
+  "updated_at": "2026-11-08T19:59:00+00:00"
 }

@@ -1109,8 +1109,11 @@
           "away": "C.G.P. CARLOFORTE",
           "date": "2026-11-08",
           "time": "19:00",
-          "status": "designata",
-          "score": null,
+          "status": "ufficioso",
+          "score": {
+            "home": 58,
+            "away": 71
+          },
           "referees": [
             "FARCI NICOLA di SETTIMO SAN PIETRO (CA)",
             "MONTISCI SALVATORE di SANT'ANDREA FRIUS (SU)"
@@ -2510,5 +2513,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-08T06:14:43+00:00"
+  "updated_at": "2026-11-08T19:59:00+00:00"
 }

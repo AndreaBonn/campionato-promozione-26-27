@@ -140,3 +140,17 @@ def test_app_version_changes_when_a_file_is_renamed(tmp_path: Path) -> None:
     (docs / "index.html").rename(docs / "index2.html")
 
     assert app_version(docs) != before
+
+
+def test_app_version_worker_without_version_tracks_first_line_changes(tmp_path: Path) -> None:
+    docs = make_docs(tmp_path)
+    worker = docs / "sw.js"
+    worker.write_text("self.skipWaiting();\nconst CACHE = 'a';\n")
+    before = app_version(docs)
+
+    worker.write_text("self.clients.claim();\nconst CACHE = 'a';\n")
+    after = app_version(docs)
+
+    assert len(before) == len(after) == 12
+    assert before != after
+    assert app_version(docs) == after

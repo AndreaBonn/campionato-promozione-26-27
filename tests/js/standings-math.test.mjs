@@ -10,6 +10,30 @@ const rounds = (...games) => [{ round: "A1", games }];
 const table = (points) => Object.entries(points).map(([team, pts]) => ({ team, points: pts }));
 const range = (ranges, team) => { const r = ranges.get(team); return [r.best, r.worst]; };
 
+test("equal head-to-head wins and ratios are separated by the overall points ratio", () => {
+  const games = rounds(g("A", "B", 80, 70), g("B", "A", 80, 70), g("A", "C", 90, 60), g("B", "C", 70, 60));
+  const ranges = positionRanges(table({ A: 4, B: 4, C: 0 }), games);
+
+  // Head-to-head: 150/150 each; overall: A 240/210, B 220/210.
+  assert.deepEqual([range(ranges, "A"), range(ranges, "B")], [[1, 1], [2, 2]]);
+});
+
+test("overall ratios equal through four decimals leave the tie open", () => {
+  const games = rounds(g("A", "B", 80, 70), g("B", "A", 80, 70), g("A", "C", 52, 51), g("B", "C", 53, 52));
+  const ranges = positionRanges(table({ A: 4, B: 4, C: 0 }), games);
+
+  // A 202/201 = 1.004975..., B 203/202 = 1.004950...: both truncate to 1.0049.
+  assert.deepEqual([range(ranges, "A"), range(ranges, "B")], [[1, 2], [1, 2]]);
+});
+
+test("zero conceded ranks above equal finite ratios including one point conceded", () => {
+  const games = rounds(g("A", "C", 20, 0), g("B", "C", 20, 1), g("D", "C", 40, 2));
+  const ranges = positionRanges(table({ A: 2, B: 2, D: 2, C: 0 }), games);
+
+  // No head-to-head among A, B and D: A conceded zero, B and D both have ratio 20.
+  assert.deepEqual([range(ranges, "A"), range(ranges, "B"), range(ranges, "D")], [[1, 1], [2, 3], [2, 3]]);
+});
+
 test("a leader no one can reach any more is first whatever happens", () => {
   const ranges = positionRanges(table({ A: 10, B: 6, C: 4, D: 0 }), rounds(todo("B", "C"), todo("A", "D")));
 

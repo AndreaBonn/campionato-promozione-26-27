@@ -228,6 +228,26 @@ def test_main_successful_sync_writes_feed_and_fip_link(
     assert (tmp_path / "calendario.ics").read_bytes().startswith(b"BEGIN:VCALENDAR\r\n")
 
 
+def test_main_unchanged_data_still_rewrites_stale_feed(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    _patch_main_paths(tmp_path, monkeypatch)
+    monkeypatch.setattr(cli, "collect", lambda games: ({}, []))
+    monkeypatch.setattr(cli, "build_data", empty_data)
+    monkeypatch.setattr(cli, "collect_notices", lambda path: [])
+    feed = tmp_path / "calendario.ics"
+    cli.main()
+    data_before = (tmp_path / "data.json").read_text()
+    # a feed written by an older ics.py: same FIP data, different text
+    feed.write_text("BEGIN:VCALENDAR\r\nOLD\r\nEND:VCALENDAR\r\n", newline="")
+
+    cli.main()
+
+    assert (tmp_path / "data.json").read_text() == data_before
+    assert b"OLD" not in feed.read_bytes()
+    assert feed.read_bytes().startswith(b"BEGIN:VCALENDAR\r\n")
+
+
 def test_previous_notices_file_without_notices_returns_empty(tmp_path: Path) -> None:
     target = tmp_path / "data.json"
     target.write_text(json.dumps({"games": []}))
@@ -772,9 +792,16 @@ def test_main_scheduled_game_writes_feed_with_utc_stamp_and_page_url(
 ) -> None:
     _patch_main_paths(tmp_path, monkeypatch)
     game = {
-        "n": 17, "round": "A3", "home": "Assemini Black", "away": "Olimpia Cagliari",
-        "date": "2026-10-18", "time": "19:00", "score": None,
-        "venue": {"name": "Palestra", "address": ""}, "changes": [], "referees": [],
+        "n": 17,
+        "round": "A3",
+        "home": "Assemini Black",
+        "away": "Olimpia Cagliari",
+        "date": "2026-10-18",
+        "time": "19:00",
+        "score": None,
+        "venue": {"name": "Palestra", "address": ""},
+        "changes": [],
+        "referees": [],
     }
     monkeypatch.setattr(cli, "collect", lambda games: ({}, []))
     data = {"games": [game], "rounds": []}

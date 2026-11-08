@@ -1,6 +1,7 @@
 import http.client
 import json
-from datetime import datetime
+import time
+from datetime import date, datetime
 from pathlib import Path
 from urllib.error import URLError
 
@@ -17,6 +18,7 @@ from fip_calendar.config import (
 from fip_calendar.fetch import round_pdf_url, round_url
 from fip_calendar.merge import MergeError
 from fip_calendar.parse import FipMatch, ParseError, parse_standings
+from fip_calendar.playbasket_sync import PlaybasketClient
 
 NOW = "2026-10-01T08:00:00+00:00"
 LATER = "2026-10-01T12:00:00+00:00"
@@ -705,3 +707,119 @@ def test_sync_boxscores_with_team_aliases_reads_playbasket(
 
     assert cli.sync_boxscores(rounds=[], now=datetime.fromisoformat(NOW)) is True
     assert calls == [[]]
+
+
+def test_sync_boxscores_configured_client_uses_real_fetch_and_sleep(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    seen: dict[str, object] = {}
+
+    def record(**kwargs: object) -> dict[str, object]:
+        seen.update(kwargs)
+        return {}
+
+    monkeypatch.setattr(cli, "PLAYBASKET_TEAM_ALIASES", {"Assemini Black": "BASKET ASSEMINI BLACK"})
+    monkeypatch.setattr(cli, "collect_boxscores", record)
+    monkeypatch.setattr(cli, "BOXSCORES_PATH", tmp_path / "boxscores.json")
+
+    changed = cli.sync_boxscores(rounds=[], now=datetime.fromisoformat(NOW))
+
+    assert changed is True
+    client = seen["client"]
+    assert isinstance(client, PlaybasketClient)
+    assert client.fetch is fetch.fetch_playbasket_match
+    assert client.sleep is time.sleep
+
+
+def test_main_source_outage_reuses_notices_and_logos_from_previous_data(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    _patch_main_paths(tmp_path, monkeypatch)
+    notice = {"date": "2026-10-20", "title": "Formula DR2", "link": "https://x/"}
+    url = "https://backend.fip.it/blobs/cus.jpg"
+    entry = {"file": "logos/cus-cagliari.png", "source": url}
+    previous = {"notices": [notice], "logos": {"CUS CAGLIARI": entry}}
+    (tmp_path / "data.json").write_text(json.dumps(previous))
+    (tmp_path / "logos").mkdir()
+    (tmp_path / "logos/cus-cagliari.png").write_bytes(b"png")
+    match = FipMatch(
+        number=69, home="CUS CAGLIARI", away="BASKET S. ORSOLA", date="2026-12-20",
+        time="18:00", venue="", status="", status_text="", referees=(), score=None,
+        home_logo=url,
+    )  # fmt: skip
+    monkeypatch.setattr(cli, "collect", lambda games: ({"R1": [match]}, []))
+    monkeypatch.setattr(cli, "build_data", empty_data)
+
+    def offline(term: str, after: str) -> list[dict[str, object]]:
+        raise URLError("sardegna.fip.it unreachable")
+
+    def logo_offline(url: str) -> bytes:
+        raise URLError("backend.fip.it unreachable")
+
+    monkeypatch.setattr(cli, "fetch_posts", offline)
+    monkeypatch.setattr(cli, "fetch_logo", logo_offline)
+
+    result = cli.main()
+
+    assert result == 0
+    written = json.loads((tmp_path / "data.json").read_text())
+    assert written["notices"] == [notice]
+    assert written["logos"] == {"CUS CAGLIARI": entry}
+
+
+def test_main_scheduled_game_writes_feed_with_utc_stamp_and_page_url(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    _patch_main_paths(tmp_path, monkeypatch)
+    game = {
+        "n": 17, "round": "A3", "home": "Assemini Black", "away": "Olimpia Cagliari",
+        "date": "2026-10-18", "time": "19:00", "score": None,
+        "venue": {"name": "Palestra", "address": ""}, "changes": [], "referees": [],
+    }
+    monkeypatch.setattr(cli, "collect", lambda games: ({}, []))
+    data = {"games": [game], "rounds": []}
+    monkeypatch.setattr(cli, "build_data", lambda calendar, rounds, standings: data)
+    monkeypatch.setattr(cli, "collect_notices", lambda path: [])
+
+    class Clock(datetime):
+        @classmethod
+        def now(cls, tz: object = None) -> "Clock":
+            return cls.fromisoformat(NOW)
+
+    monkeypatch.setattr(cli, "datetime", Clock)
+
+    result = cli.main()
+
+    assert result == 0
+    feed = (tmp_path / "calendario.ics").read_bytes().decode("utf-8")
+    lines = feed.replace("\r\n ", "").split("\r\n")
+    assert lines.count("BEGIN:VEVENT") == 1
+    assert "DTSTART;TZID=Europe/Rome:20261018T190000" in lines
+    assert "DTSTAMP:20261001T080000Z" in lines
+    assert "URL:https://andreabonn.github.io/campionato-promozione-26-27/" in lines
+
+
+@pytest.mark.parametrize(
+    ("utc_time", "expected"),
+    [
+        ("2026-10-03T23:30:00+00:00", date(2026, 10, 4)),
+        ("2026-11-07T23:30:00+00:00", date(2026, 11, 8)),
+    ],
+)
+def test_sync_boxscores_late_utc_uses_next_italian_day(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, utc_time: str, expected: date
+) -> None:
+    seen: dict[str, object] = {}
+
+    def record(**kwargs: object) -> dict[str, object]:
+        seen.update(kwargs)
+        return {}
+
+    monkeypatch.setattr(cli, "PLAYBASKET_TEAM_ALIASES", {"Assemini Black": "BASKET ASSEMINI BLACK"})
+    monkeypatch.setattr(cli, "collect_boxscores", record)
+    monkeypatch.setattr(cli, "BOXSCORES_PATH", tmp_path / "boxscores.json")
+
+    changed = cli.sync_boxscores(rounds=[], now=datetime.fromisoformat(utc_time))
+
+    assert changed is True
+    assert seen["today"] == expected

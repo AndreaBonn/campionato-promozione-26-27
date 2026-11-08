@@ -288,3 +288,48 @@ def test_shrink_logo_transparent_background_counts_as_white_page() -> None:
 
     with Image.open(BytesIO(shrink_logo(out.getvalue()))) as shrunk:
         assert shrunk.size == (100, 120)
+
+
+def test_sync_logos_download_value_error_keeps_old_crest_and_syncs_next_team(
+    tmp_path: Path,
+) -> None:
+    old_bytes = crest()
+    (tmp_path / "cus-cagliari.png").write_bytes(old_bytes)
+    old_entry = {"file": "logos/cus-cagliari.png", "source": CUS_URL}
+    changed_url = "https://backend.fip.it/blobs/cus-new.jpg"
+    downloads: list[str] = []
+
+    def download(url: str) -> bytes:
+        downloads.append(url)
+        if url == changed_url:
+            raise ValueError("invalid download response")
+        return crest()
+
+    logos = sync_logos(
+        sources={"CUS CAGLIARI": changed_url, "POL. DINAMO": DINAMO_URL},
+        previous={"CUS CAGLIARI": old_entry},
+        directory=tmp_path,
+        download=download,
+    )
+
+    assert logos == {
+        "CUS CAGLIARI": old_entry,
+        "POL. DINAMO": {"file": "logos/pol-dinamo.png", "source": DINAMO_URL},
+    }
+    assert (tmp_path / "cus-cagliari.png").read_bytes() == old_bytes
+    assert downloads == [changed_url, DINAMO_URL]
+    with Image.open(tmp_path / "pol-dinamo.png") as logo:
+        assert logo.format == "PNG"
+
+
+def test_shrink_logo_webp_crest_is_accepted_and_converted_to_png() -> None:
+    scan = image_bytes(size=(32, 20), box=(0, 0, 32, 20), fmt="WEBP")
+
+    result = shrink_logo(scan)
+
+    with Image.open(BytesIO(result)) as logo:
+        assert logo.format == "PNG"
+        assert logo.size == (32, 20)
+        pixel = logo.getpixel((16, 10))
+        assert isinstance(pixel, tuple)
+        assert pixel[2] > pixel[0]

@@ -169,6 +169,18 @@ test("activate drops the caches of previous versions and claims open pages", asy
   assert.equal(calls.claimed, 1);
 });
 
+// Cache Storage is per origin, and every GitHub Pages repo of the account shares
+// andreabonn.github.io: another app's caches (the Serie C page uses "cus-basket-*") are not ours.
+test("activate keeps the caches of other apps on the same origin", async () => {
+  const { handlers, storage } = loadWorker({
+    stored: { "cus-basket-1a2b3c": [], "assemini-black-old": [], "assemini-black-dev": [] },
+  });
+
+  await dispatchLifecycle(handlers.activate);
+
+  assert.deepEqual([...storage.keys()].sort(), ["assemini-black-dev", "cus-basket-1a2b3c"]);
+});
+
 // Every module the page runs: <script src> and inline module of index.html, plus their static imports.
 function pageModules() {
   const read = (name) => readFileSync(new URL(`../../docs/${name}`, import.meta.url), "utf8");

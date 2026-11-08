@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { test } from "node:test";
 import vm from "node:vm";
 
@@ -79,6 +79,17 @@ async function dispatchLifecycle(handler, data) {
 }
 
 const offline = () => Promise.reject(new TypeError("Failed to fetch"));
+
+test("every SHELL entry exists in docs so cache.addAll can install offline assets", () => {
+  const declaration = SOURCE.match(/const SHELL = \[([\s\S]*?)\];/);
+  assert.ok(declaration, "the worker declares its offline shell");
+  const entries = [...declaration[1].matchAll(/"([^"]+)"/g)].map((match) => match[1]);
+
+  assert.ok(entries.includes("index.html"));
+  for (const entry of entries) {
+    assert.equal(existsSync(new URL(`../../docs/${entry}`, import.meta.url)), true, `missing SHELL entry: ${entry}`);
+  }
+});
 
 test("online: the network answer is served, revalidated, and cached for offline use", async () => {
   const { handlers, storage, calls } = loadWorker();

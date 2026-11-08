@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { test } from "node:test";
+import { fileURLToPath } from "node:url";
 import vm from "node:vm";
 
-const SOURCE = readFileSync(new URL("../../docs/sw.js", import.meta.url), "utf8");
+const SW_URL = new URL("../../docs/sw.js", import.meta.url);
+const SOURCE = readFileSync(SW_URL, "utf8");
 const ORIGIN = "https://andreabonn.github.io";
 const PAGE = `${ORIGIN}/campionato-promozione-26-27/data.json`;
 
@@ -54,7 +56,7 @@ function loadWorker({ network = () => Promise.resolve(new Response("live")), sto
     },
   };
   worker.self = worker;
-  vm.runInNewContext(SOURCE, worker);
+  vm.runInNewContext(SOURCE, worker, { filename: fileURLToPath(SW_URL) });
   return { handlers, storage, calls };
 }
 

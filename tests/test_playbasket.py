@@ -81,6 +81,33 @@ def test_parse_players_a1_m1_distinguishes_blank_and_zero_points() -> None:
     assert (by_id["195969"].name, by_id["195969"].pts) == ("Garau Vincenzo", 0)
 
 
+def test_parse_players_fixture_preserves_player_metadata() -> None:
+    html = load(name="playbasket-a1-m6.html")
+
+    players = parse_players(html=html, side=0)
+
+    assert players[0] == PbPlayer(
+        id="173425", number="", name="Angius Riccardo", role="play", age="'07", pts=9,
+    )
+
+
+def test_parse_players_explicit_jersey_number_is_preserved() -> None:
+    html = (
+        '<table id="tableStandingsTeam0"><tbody><tr>'
+        '<td class="playerTeamNumber">23</td><td class="sq">'
+        '<a href="profile.php?obj=42">Example Player'
+        '<span class="playerInfos_role">ala</span>'
+        '<span class="playerInfos_age">U19</span></a></td>'
+        '<td class="divisore">12</td></tr></tbody></table>'
+    )
+
+    players = parse_players(html=html, side=0)
+
+    assert players == (
+        PbPlayer(id="42", number="23", name="Example Player", role="ala", age="U19", pts=12),
+    )
+
+
 @pytest.mark.parametrize(
     argnames="name", argvalues=["playbasket-a2-m1-unplayed.html", "playbasket-r1-m1-unplayed.html"]
 )

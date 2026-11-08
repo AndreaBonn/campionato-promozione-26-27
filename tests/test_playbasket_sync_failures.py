@@ -1,11 +1,12 @@
 import logging
 from copy import deepcopy
 from datetime import date
+from http.client import IncompleteRead
 from urllib.error import URLError
 
 import pytest
 
-from fip_calendar.boxscores import BoxscoreEntry, RoundDict
+from fip_calendar.boxscores import BoxscoreEntry, FipScore, RoundDict
 from fip_calendar.config import BoxscoreStatus
 from fip_calendar.playbasket_sync import PlaybasketClient, collect_boxscores
 
@@ -240,6 +241,7 @@ def test_collect_boxscores_corrected_score_retries_frozen_page_and_reuses_parsed
     argvalues=[
         TimeoutError("read timed out"),
         ConnectionResetError("reset"),
+        IncompleteRead(b""),
         UnicodeDecodeError("utf-8", b"\xff", 0, 1, "invalid start byte"),
     ],
 )
@@ -312,4 +314,33 @@ def test_collect_boxscores_failed_round_requests_no_page_for_its_other_games() -
         client=PlaybasketClient(fetch=fetch, sleep=lambda _: None),
     )
     assert result == {}
+    assert calls == [1]
+
+
+@pytest.mark.parametrize(
+    argnames="game_date,saved_score",
+    argvalues=[("2026-10-04", {"home": 62, "away": 55}),
+               ("2026-10-03", {"home": 0, "away": 20})],
+    ids=["exactly-fourteen-days", "expired-corrected-score"],
+)
+def test_collect_boxscores_retryable_partial_stays_identical_after_failed_fetch(
+    game_date: str, saved_score: FipScore,
+) -> None:
+    rounds = [make_round(code="A1", number=1, game_date=game_date)]
+    previous = {"1": saved_entry(code="A1")}
+    previous["1"]["fip_score"] = saved_score
+    original = deepcopy(x=previous)
+    calls: list[int] = []
+
+    def fetch(half: int, round_number: int, mn: int) -> str:
+        calls.append(mn)
+        raise URLError(reason="offline")
+
+    result = collect_boxscores(
+        rounds=rounds, previous=previous, today=TODAY,
+        client=PlaybasketClient(fetch=fetch, sleep=lambda _: None),
+    )
+
+    assert result == original
+    assert previous == original
     assert calls == [1]

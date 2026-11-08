@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from fip_calendar.boxscores import RoundDict
+from fip_calendar.boxscores import BoxscoreEntry, RoundDict
 from fip_calendar.playbasket_sync import PlaybasketClient, collect_boxscores, parse_round
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -109,9 +109,80 @@ def test_collect_boxscores_searches_remaining_pages_when_hint_is_wrong() -> None
     assert fake.calls == [(1, 1, mn) for mn in range(1, 7)]
 
 
+def test_collect_boxscores_expired_complete_entries_stay_identical() -> None:
+    rounds = load_rounds()
+    previous = collect_boxscores(
+        rounds=rounds, previous={}, today=TODAY, client=FixtureClient().client(),
+    )
+    original = deepcopy(x=previous)
+    fake = FixtureClient()
+
+    result = collect_boxscores(
+        rounds=rounds, previous=previous, today=date(2026, 11, 1), client=fake.client(),
+    )
+
+    assert result == original
+    assert previous == original
+    assert fake.calls == []
+
+
+def test_collect_boxscores_return_round_three_stores_correct_half_in_url() -> None:
+    rounds = load_rounds()
+    rounds[0]["round"] = "R3"
+    rounds[0]["games"] = [game for game in rounds[0]["games"] if game["n"] == 6]
+    fake = FixtureClient()
+
+    result = collect_boxscores(rounds=rounds, previous={}, today=TODAY, client=fake.client())
+
+    assert result["6"]["url"] == (
+        "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2"
+        "&lg=1&season=2027&lf=M&gtt=2&gtn=3&mn=6"
+    )
+    assert fake.calls == [(2, 3, mn) for mn in range(1, 7)]
+
+
+def test_collect_boxscores_fixture_player_preserves_all_original_fields() -> None:
+    rounds = load_rounds()
+    rounds[0]["games"] = [game for game in rounds[0]["games"] if game["n"] == 6]
+
+    result = collect_boxscores(
+        rounds=rounds, previous={}, today=TODAY, client=FixtureClient().client(),
+    )
+
+    home = result["6"]["home"]
+    assert home is not None
+    assert home["players"][0] == {
+        "id": "173425", "number": "", "name": "Angius Riccardo",
+        "role": "play", "age": "'07", "pts": 9,
+    }
+
+
 @pytest.mark.parametrize(argnames="code,expected", argvalues=[("A5", (1, 5)), ("R3", (2, 3))])
 def test_parse_round_maps_half_and_number(code: str, expected: tuple[int, int]) -> None:
     assert parse_round(code=code) == expected
+
+
+@pytest.mark.parametrize(
+    argnames="frozen_round,expected_pages",
+    argvalues=[("A1", [2, 3, 4, 5, 6]), ("R3", [1, 2, 3, 4, 5, 6])],
+)
+def test_collect_boxscores_frozen_pages_are_excluded_only_in_their_round(
+    frozen_round: str, expected_pages: list[int],
+) -> None:
+    rounds = load_rounds()
+    saved = collect_boxscores(
+        rounds=rounds, previous={}, today=TODAY, client=FixtureClient().client(),
+    )
+    previous: dict[str, BoxscoreEntry] = {"1": {**saved["1"], "round": frozen_round}}
+    rounds[0]["games"] = [game for game in rounds[0]["games"] if game["n"] == 6]
+    fake = FixtureClient()
+
+    result = collect_boxscores(rounds=rounds, previous=previous, today=TODAY, client=fake.client())
+
+    assert fake.calls == [(1, 1, mn) for mn in expected_pages]
+    assert result["6"]["mn"] == 6
+    assert result["6"]["status"] == "complete"
+    assert result["1"] == previous["1"]
 
 
 def test_collect_boxscores_page_matching_a_later_game_is_not_requested_again() -> None:

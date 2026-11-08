@@ -290,3 +290,20 @@ def test_merge_game_without_sanctions_has_empty_list() -> None:
     game = merge_game(base=BASE, venues=VENUES, match=FIP, fip_team=TEAM)
 
     assert game["sanctions"] == []
+
+
+def test_merge_game_copies_fip_status_text() -> None:
+    match = replace(FIP, status="omologata", status_text="Gara omologata dal giudice sportivo")
+
+    game = merge_game(base=BASE, venues=VENUES, match=match, fip_team=TEAM)
+
+    assert game["status_text"] == "Gara omologata dal giudice sportivo"
+
+
+@pytest.mark.parametrize("round_code", ["A7", "R4"])
+def test_merge_game_keeps_official_round(round_code: str) -> None:
+    base = {**BASE, "round": round_code}
+
+    game = merge_game(base=base, venues=VENUES, match=FIP, fip_team=TEAM)
+
+    assert game["round"] == round_code

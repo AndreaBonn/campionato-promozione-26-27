@@ -78,6 +78,16 @@ function playerStats(appearances, games) {
   };
 }
 
+// playbasket.it gives the birth year as two digits ("'04"): one not after the season's is a 2000s
+// year, the rest are 1900s (no player is over 99 or born after the season starts).
+const TWO_DIGIT_YEAR = /^'(\d{2})$/;
+export function birthYear(age, seasonYear) {
+  const match = TWO_DIGIT_YEAR.exec(age ?? "");
+  if (!match) return null;
+  const yy = Number(match[1]);
+  return yy <= seasonYear % 100 ? 2000 + yy : 1900 + yy;
+}
+
 export function teamPlayerStats(boxscores, rounds, team) {
   const games = rounds.flatMap((round) => round.games)
     .filter((game) => game.home === team || game.away === team);

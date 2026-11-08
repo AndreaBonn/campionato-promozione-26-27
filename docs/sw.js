@@ -27,6 +27,7 @@ const SHELL = [
   "standings-math.js",
   "opponent-rules.js",
   "opponent-view.js",
+  "team-rules.js",
   "logo-assemini.png",
   "manifest.webmanifest",
   "icons/icon-192.png",

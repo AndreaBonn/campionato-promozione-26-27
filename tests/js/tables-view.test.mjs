@@ -19,8 +19,8 @@ const entry = { status: "complete", url: null, home: { players: [{ id: "a", name
 test("standings: a crest when the club uploaded one, its initials otherwise", () => {
   const html = renderStandings(table(12), CUS, LOGOS);
 
-  assert.match(html, /<img class="crest " src="logos\/cus-cagliari\.png"[^>]*><span>CUS Cagliari<\/span>/);
-  assert.match(html, /<span class="initials" aria-hidden="true">T1<\/span><span>Team 1<\/span>/);
+  assert.match(html, /<img class="crest " src="logos\/cus-cagliari\.png"[^>]*><button type="button" class="opp-btn tm-btn" data-opponent="CUS CAGLIARI" aria-haspopup="dialog"><span class="sr-only">Scheda squadra: <\/span>CUS Cagliari<\/button>/);
+  assert.match(html, /<span class="initials" aria-hidden="true">T1<\/span><button type="button" class="opp-btn tm-btn" data-opponent="TEAM 1" aria-haspopup="dialog"><span class="sr-only">Scheda squadra: <\/span>Team 1<\/button>/);
 });
 
 test("standings: points difference signed, PF and PS marked to hide on phones", () => {
@@ -158,7 +158,7 @@ test("standings: on phones the possible positions move under the team name", () 
   const rows = table(12);
   const html = renderStandings(rows, CUS, LOGOS, fullRanges(rows).set("TEAM 1", { best: 1, worst: 2 }));
 
-  assert.match(html, /<span>Team 1<small class="poss-sm">Possibile 1ª-2ª<\/small><\/span>/);
+  assert.match(html, /Team 1 <small class="poss-sm">Possibile 1ª-2ª<\/small><\/button>/);
   assert.doesNotMatch(renderStandings(rows, CUS, LOGOS), /poss-sm/);
 });
 

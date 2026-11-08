@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { teamPlayerStats } from "../../docs/team-stats-rules.js";
+import { teamPlayerStats, birthYear } from "../../docs/team-stats-rules.js";
 
 const TEAM = "CUS CAGLIARI";
 const SCORE = { home: 80, away: 60 };
@@ -198,4 +198,12 @@ test("inputs remain unchanged even when deeply frozen and dates need sorting", (
 
   assert.deepEqual({ boxscores, rounds }, before);
   assert.deepEqual([result.players[0].points, result.players[0].average], [12, 6]);
+});
+
+test("birth year: two digits read as 2000s up to the season's year, 1900s above, null when missing", () => {
+  assert.equal(birthYear("'04", 2026), 2004);
+  assert.equal(birthYear("'26", 2026), 2026);
+  assert.equal(birthYear("'27", 2026), 1927);
+  assert.equal(birthYear("", 2026), null);
+  assert.equal(birthYear(undefined, 2026), null);
 });

@@ -40,13 +40,46 @@ test("standings: before the first round only a sentence, no table", () => {
 });
 
 test("crest: nothing for a team without a plain logos/ file", () => {
+  assert.equal(crestHtml(LOGOS, CUS), '<img class="crest " src="logos/cus-cagliari.png" alt="" width="28" height="28" loading="lazy">');
   assert.equal(crestHtml({ X: { file: "https://evil.example/x.png" } }, "X"), "");
 });
 
 test("round table: the winner in bold, team names in title case", () => {
-  const html = renderRoundTable({ games: [fipGame(1, "POL. DINAMO", "BASKET ANTONIANUM", { score: { home: 66, away: 69 } })] }, CUS, {});
+  const html = renderRoundTable({ games: [
+    fipGame(1, "POL. DINAMO", "BASKET ANTONIANUM", { score: { home: 66, away: 69 } }),
+    fipGame(2, "BASKET ALFA", "BASKET BETA", { score: { home: 80, away: 61 } }),
+  ] }, CUS, {});
 
   assert.match(html, /<td>Pol\. Dinamo - <b>Basket Antonianum<\/b><\/td>/);
+  assert.match(html, /<td><b>Basket Alfa<\/b> - Basket Beta<\/td>/);
+});
+
+test("round table: games appear by date and time even when supplied newest first", () => {
+  const games = [
+    fipGame(3, "E", "F", { date: "2026-10-04", time: "10:00", score: null }),
+    fipGame(2, "C", "D", { time: "20:00", score: null }),
+    fipGame(1, "A", "B", { time: "18:00", score: null }),
+  ];
+
+  const html = renderRoundTable({ games }, CUS, {});
+
+  assert.deepEqual([...html.matchAll(/<td>([A-F] - [A-F])<\/td>/g)].map((m) => m[1]), ["A - B", "C - D", "E - F"]);
+});
+
+test("round table: our team is highlighted away as well as at home", () => {
+  const games = [fipGame(1, "A", CUS), fipGame(2, CUS, "B"), fipGame(3, "C", "D")];
+
+  const html = renderRoundTable({ games }, CUS, {});
+
+  assert.deepEqual([...html.matchAll(/<tr class="(me|)"><td>/g)].map((m) => m[1]), ["me", "me", ""]);
+});
+
+test("standings: the team's playoff margin appears above the table", () => {
+  const rows = table(12).map((r) => ({ ...r, points: r.position <= 8 ? 6 : 2 }));
+
+  const html = renderStandings(rows, CUS, LOGOS);
+
+  assert.match(html, /<h2>Classifica<\/h2><ul class="zone"><li>Fuori dalla zona playoff \(seconda fase\), a 4 punti in classifica dalla 8ª\.<\/li><\/ul>/);
 });
 
 test("round table: referees and box score sit in a closed row opened by the result cell", () => {
@@ -115,6 +148,32 @@ test("round table: FIP's printable round linked only from backend.fip.it", () =>
 });
 
 const fullRanges = (rows) => new Map(rows.map((r) => [r.team, { best: 1, worst: rows.length }]));
+
+test("standings: a narrowed range across the playoff boundary has no decided outcome", () => {
+  const rows = table(12);
+  const ranges = fullRanges(rows).set(CUS, { best: 7, worst: 10 });
+
+  const html = renderStandings(rows, CUS, LOGOS, ranges);
+  const decided = renderStandings(rows, CUS, LOGOS, fullRanges(rows).set(CUS, { best: 7, worst: 8 }));
+
+  assert.match(html, /<td class="poss">7ª-10ª<\/td>/);
+  assert.doesNotMatch(html, /Già deciso|class="decided"/);
+  assert.match(decided, /<h3>Già deciso<\/h3>/);
+  assert.match(decided, /Matematicamente ai playoff/);
+});
+
+test("standings: a team missing from the ranges keeps an empty possible-position cell", () => {
+  const rows = table(12);
+  const ranges = fullRanges(rows).set("TEAM 1", { best: 1, worst: 2 });
+  ranges.delete(CUS);
+
+  const html = renderStandings(rows, CUS, LOGOS, ranges);
+  const ourRow = html.match(/<tr class="me ">.*?<\/tr>/)[0];
+
+  assert.match(html, /<td class="poss">1ª-2ª<\/td>/);
+  assert.match(ourRow, /CUS Cagliari<\/button>/);
+  assert.match(ourRow, /<td class="poss"><\/td><\/tr>/);
+});
 
 test("standings: with every position still open, no 'Possibile' column and no 'Già deciso' block", () => {
   const rows = table(12);

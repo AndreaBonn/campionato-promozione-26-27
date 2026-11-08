@@ -203,3 +203,32 @@ def test_merge_notices_sorts_all_sources_newest_first() -> None:
 
 def test_merge_notices_no_sources_returns_empty() -> None:
     assert merge_notices() == []
+
+
+def test_select_notices_comunicato_requires_league_even_when_naming_assemini() -> None:
+    posts = [
+        post("Giudice sportivo: Assemini Under 17", slug="assemini-u17"),
+        post("Giudice sportivo: Assemini DR2", slug="assemini-dr2"),
+    ]
+
+    notices = select_notices(posts=posts, since=SINCE, kind=KIND_COMUNICATO)
+
+    assert notices == [{
+        "date": "2026-10-20",
+        "title": "Giudice sportivo: Assemini DR2",
+        "link": "https://sardegna.fip.it/assemini-dr2/",
+        "kind": "comunicato",
+    }]
+
+
+def test_select_notices_comunicato_accepts_spaced_dr_2_wording() -> None:
+    posts = [post("Giudice sportivo: DR 2", slug="dr-2")]
+
+    notices = select_notices(posts=posts, since=SINCE, kind=KIND_COMUNICATO)
+
+    assert notices == [{
+        "date": "2026-10-20",
+        "title": "Giudice sportivo: DR 2",
+        "link": "https://sardegna.fip.it/dr-2/",
+        "kind": "comunicato",
+    }]

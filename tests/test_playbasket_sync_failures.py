@@ -319,15 +319,17 @@ def test_collect_boxscores_failed_round_requests_no_page_for_its_other_games() -
 
 @pytest.mark.parametrize(
     argnames="game_date,saved_score",
-    argvalues=[("2026-10-04", {"home": 62, "away": 55}),
-               ("2026-10-03", {"home": 0, "away": 20})],
+    argvalues=[("2026-10-04", {"home": 62, "away": 55}), ("2026-10-03", {"home": 0, "away": 20})],
     ids=["exactly-fourteen-days", "expired-corrected-score"],
 )
+@pytest.mark.parametrize(argnames="status", argvalues=["partial", "unmatched"])
 def test_collect_boxscores_retryable_partial_stays_identical_after_failed_fetch(
-    game_date: str, saved_score: FipScore,
+    game_date: str,
+    saved_score: FipScore,
+    status: BoxscoreStatus,
 ) -> None:
     rounds = [make_round(code="A1", number=1, game_date=game_date)]
-    previous = {"1": saved_entry(code="A1")}
+    previous = {"1": saved_entry(code="A1", status=status)}
     previous["1"]["fip_score"] = saved_score
     original = deepcopy(x=previous)
     calls: list[int] = []
@@ -337,7 +339,9 @@ def test_collect_boxscores_retryable_partial_stays_identical_after_failed_fetch(
         raise URLError(reason="offline")
 
     result = collect_boxscores(
-        rounds=rounds, previous=previous, today=TODAY,
+        rounds=rounds,
+        previous=previous,
+        today=TODAY,
         client=PlaybasketClient(fetch=fetch, sleep=lambda _: None),
     )
 

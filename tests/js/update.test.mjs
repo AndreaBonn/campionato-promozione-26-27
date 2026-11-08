@@ -26,13 +26,13 @@ function element() {
   return { hidden: true, disabled: false, textContent: "", onclick: null };
 }
 
-function makeBrowser({ controlled, waiting = null }) {
+function makeBrowser({ controlled, waiting = null, installing = null }) {
   const calls = { reload: 0, update: 0 };
   const containerListeners = [];
   const documentListeners = [];
   const registrationListeners = [];
   const registration = {
-    installing: null,
+    installing,
     waiting,
     update: async () => calls.update++,
     addEventListener: (type, handler) => type === "updatefound" && registrationListeners.push(handler),
@@ -189,4 +189,66 @@ test("quick app switches do not ask the server again", async () => {
   browser.comeToForeground();
 
   assert.equal(browser.calls.update, 1);
+});
+
+test("the server is checked again after ten minutes, but not before", async (t) => {
+  let now = 1_000_000;
+  t.mock.method(Date, "now", () => now);
+  const browser = await openPage({ controlled: true });
+  assert.equal(browser.calls.update, 1);
+
+  now = 1_599_999;
+  browser.goToBackground();
+  browser.comeToForeground();
+  assert.equal(browser.calls.update, 1);
+
+  now = 1_600_000;
+  browser.goToBackground();
+  browser.comeToForeground();
+
+  assert.equal(browser.calls.update, 2);
+});
+
+test("Aggiorna hides the notice if the waiting worker has already left", async () => {
+  const worker = new FakeWorker();
+  const browser = await openPage({ controlled: true, waiting: worker });
+  assert.equal(browser.notice.hidden, false);
+  browser.registration.waiting = null;
+
+  browser.apply.onclick();
+
+  assert.equal(browser.notice.hidden, true);
+  assert.equal(browser.apply.disabled, false);
+  assert.deepEqual(worker.messages, []);
+  assert.equal(browser.calls.reload, 0);
+});
+
+test("a worker already installing at registration is announced when installed", async () => {
+  const worker = new FakeWorker();
+  const browser = await openPage({ controlled: true, installing: worker });
+  assert.equal(browser.notice.hidden, true);
+  browser.registration.waiting = worker;
+  browser.registration.installing = null;
+
+  worker.setState("installed");
+
+  assert.equal(browser.notice.hidden, false);
+});
+
+test("a hidden visibility change neither announces a waiting release nor checks the server", async (t) => {
+  let now = 1_000_000;
+  t.mock.method(Date, "now", () => now);
+  const browser = await openPage({ controlled: true });
+  browser.registration.waiting = new FakeWorker();
+  now = 1_600_000;
+
+  browser.goToBackground();
+
+  assert.equal(browser.notice.hidden, true);
+  assert.equal(browser.calls.update, 1);
+
+  browser.comeToForeground();
+
+  assert.equal(browser.notice.hidden, false);
+  assert.equal(browser.calls.update, 2);
 });

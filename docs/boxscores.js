@@ -80,7 +80,7 @@ export function renderScorers(boxscores, rounds, fipTeam, only = null) {
     ? `<details class="scorers-more"><summary>Mostra tutti</summary>${scorersTable(rest, fipTeam)}</details>`
     : "";
   const n = incompleteCount(boxscores);
-  const note = `<details class="howto"><summary>Come si calcola</summary><p>Punti dai tabellini inseriti dagli utenti di playbasket.it. Le partite contano solo se il giocatore è entrato in campo (punti indicati, anche 0).${n ? ` ${n} tabellini incompleti.` : ""}</p></details>`;
+  const note = `<details class="howto"><summary>Come si calcola</summary><p>Punti dai tabellini inseriti dagli utenti di playbasket.it. Le partite contano solo se il giocatore è entrato in campo (punti indicati, anche 0).${n ? ` ${n} ${n === 1 ? "tabellino incompleto" : "tabellini incompleti"}.` : ""}</p></details>`;
   return `<h2>Classifica marcatori</h2>${scorersFilter(all, fipTeam, only)}${scorersTable(top, fipTeam)}${more}${note}`;
 }
 

@@ -60,6 +60,15 @@ test("scorers: the note counts the incomplete box scores, and is silent when the
   assert.doesNotMatch(renderScorers(complete, rounds, CUS), /incompleti/);
 });
 
+test("scorers: a single incomplete box score is counted in the singular", () => {
+  const rounds = [{ round: "A1", games: [game(1), game(2, "X", "Y")] }];
+
+  const html = renderScorers({ 1: entry({ status: "partial" }), 2: entry() }, rounds, CUS);
+
+  assert.match(html, / 1 tabellino incompleto\./);
+  assert.doesNotMatch(html, /tabellini incompleti/);
+});
+
 test("scorers: a game frozen without any matched page is not counted as an incomplete box score", () => {
   const rounds = [{ round: "A1", games: [game(1), game(2, "X", "Y")] }];
   const boxscores = {

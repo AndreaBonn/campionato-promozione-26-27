@@ -17,6 +17,11 @@ const entry = (status, overrides = {}) => ({
   ...overrides,
 });
 
+test("box score: a home side without an away side has no view", () => {
+  assert.equal(boxscoreView(entry("partial", { away: null }), fipGame), null);
+  assert.deepEqual(boxscoreView(entry("partial"), fipGame).home.players, [player("173425", 9)]);
+});
+
 test("complete box score: team names come from the FIP game, cells as published", () => {
   const view = boxscoreView(entry("complete"), fipGame);
 

@@ -7,6 +7,18 @@ const round = (n, date, home, away) => ({ round: "A" + n, games: [{ n, home, awa
 const side = (...players) => ({ team: "ignored, the FIP name wins", players });
 const player = (id, name, pts) => ({ id, number: "", name, role: "", age: "", pts });
 
+test("scorers: a home side without an away side is skipped while matched games count", () => {
+  const rounds = [round(1, "2026-10-03", "TEAM A", "TEAM B"), round(2, "2026-10-10", "TEAM A", "TEAM C")];
+  const boxscores = {
+    1: { home: side(player("p1", "Ambra", 15)), away: null },
+    2: { home: side(player("p1", "Ambra", 5)), away: side() },
+  };
+
+  assert.deepEqual(scorers(boxscores, rounds), [
+    { id: "p1", name: "Ambra", team: "TEAM A", points: 5, played: 1, average: 5 },
+  ]);
+});
+
 test("scorers: points desc, ties broken by average then by name, a never-entered player ranks last", () => {
   const rounds = [
     round(1, "2026-10-03", "TEAM A", "TEAM B"),

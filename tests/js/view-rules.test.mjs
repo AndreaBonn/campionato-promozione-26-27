@@ -15,6 +15,11 @@ const NOW = new Date("2026-10-08T12:00:00Z");
 const ago = (ms) => new Date(NOW.getTime() - ms).toISOString();
 const MIN = 60e3, HOUR = 60 * MIN, DAY = 24 * HOUR;
 
+test("relative age: exactly twenty-four hours reads yesterday", () => {
+  assert.equal(relativeAge(ago(DAY - 1), NOW), "23 ore fa");
+  assert.equal(relativeAge(ago(DAY), NOW), "ieri");
+});
+
 test("countdown: two days or more read «tra N giorni»", () => {
   assert.deepEqual(countdownText(3, "18:00"), { lead: "tra", main: "3 giorni", sub: "" });
   assert.deepEqual(countdownText(2, "18:00"), { lead: "tra", main: "2 giorni", sub: "" });

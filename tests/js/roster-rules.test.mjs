@@ -18,6 +18,14 @@ test("mergeRoster: two matching roster names cannot claim the same box score pla
   ]);
 });
 
+test("mergeRoster: an empty row has the full player stats shape", () => {
+  assert.deepEqual(mergeRoster([], [{ name: "Lorenzo Fiori", role: 4, born: 1990 }]), [{
+    name: "Lorenzo Fiori", rosterRole: 4, rosterBorn: 1990, points: 0, listed: 0, entered: 0,
+    average: null, homeAverage: null, awayAverage: null, best: null, doubleDigit: 0,
+    teamShare: null, winAverage: null, lossAverage: null, last5: [],
+  }]);
+});
+
 test("sameName: word order, case and accents do not matter", () => {
   assert.equal(sameName("Manca Federico", "FEDERICO MANCA"), true);
   assert.equal(sameName("Orrù Alessio", "Alessio Orru"), true);

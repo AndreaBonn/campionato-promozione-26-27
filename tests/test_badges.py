@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from fip_calendar import badges
 from fip_calendar.badges import (
     ResultCounts,
@@ -166,3 +168,43 @@ def test_main_with_one_report_missing_says_error(tmp_path: Path) -> None:
 
     tests = json.loads((out / "tests.json").read_text(encoding="utf-8"))
     assert tests["message"] == "error"
+
+
+@pytest.mark.parametrize(
+    ("percent", "color", "message"),
+    [
+        (90, "brightgreen", "90%"),
+        (80, "green", "80%"),
+        (70, "yellow", "70%"),
+        (60, "orange", "60%"),
+        (59.99, "red", "59%"),
+    ],
+)
+def test_badge_for_coverage_thresholds_use_inclusive_color_bands(
+    percent: float, color: str, message: str
+) -> None:
+    badge = badge_for_coverage(percent)
+
+    assert badge == {
+        "schemaVersion": 1, "label": "coverage", "message": message, "color": color
+    }
+
+
+@pytest.mark.parametrize(
+    "content",
+    ["{", "{}", '{"totals": {}}', '{"totals": null}', '{"totals": {"percent_covered": "bad"}}'],
+)
+def test_read_coverage_unusable_report_returns_none_with_valid_report_control(
+    tmp_path: Path, content: str
+) -> None:
+    invalid = write(tmp_path / "invalid.json", content)
+    valid = write(tmp_path / "valid.json", '{"totals": {"percent_covered": 81.5}}')
+
+    assert read_coverage(invalid) is None
+    assert read_coverage(valid) == 81.5
+
+
+def test_tests_badge_only_skipped_is_not_an_error() -> None:
+    badge = badge_for_tests(ResultCounts(passed=0, failed=0, skipped=3))
+
+    assert badge["message"] == "0 passed, 3 skipped"

@@ -377,6 +377,10 @@ test("zone status outside the playoff spots: negative margin to the 8th", () => 
   assert.deepEqual(zoneStatus(table(9, POINTS), "CUS CAGLIARI"), { position: 10, playoff: { inside: false, margin: -4 } });
 });
 
+test("zone status: ninth place is outside the eight playoff spots", () => {
+  assert.deepEqual(zoneStatus(table(8, POINTS), "CUS CAGLIARI"), { position: 9, playoff: { inside: false, margin: -2 } });
+});
+
 test("zone lines: margins in standings points, singular for one point, ties named", () => {
   assert.equal(zoneLines({ position: 3, playoff: { inside: true, margin: 4 } })[0], "In zona playoff, con 4 punti in classifica di vantaggio sulla 9ª.");
   assert.equal(zoneLines({ position: 2, playoff: { inside: true, margin: 1 } })[0], "In zona playoff, con 1 punto in classifica di vantaggio sulla 9ª.");

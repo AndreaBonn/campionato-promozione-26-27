@@ -34,6 +34,21 @@ test("zero conceded ranks above equal finite ratios including one point conceded
   assert.deepEqual([range(ranges, "A"), range(ranges, "B"), range(ranges, "D")], [[1, 1], [2, 3], [2, 3]]);
 });
 
+test("bound fallback excludes teams certainly below from the worst position", () => {
+  const ranges = positionRanges(table({ A: 10, B: 6, C: 6, D: 0 }), rounds(todo("B", "C")), { maxEnumerated: 0 });
+
+  assert.deepEqual([range(ranges, "B"), range(ranges, "C")], [[2, 3], [2, 3]]);
+});
+
+test("decidedFacts: exact positions have no zone facts when the zones fill the league", () => {
+  const ranges = new Map([["A", { best: 1, worst: 1 }], ["B", { best: 2, worst: 2 }]]);
+
+  assert.deepEqual(decidedFacts(ranges, { playoff: 1, playout: 1 }), [
+    { team: "A", position: 1, playoff: null, playout: null },
+    { team: "B", position: 2, playoff: null, playout: null },
+  ]);
+});
+
 test("a leader no one can reach any more is first whatever happens", () => {
   const ranges = positionRanges(table({ A: 10, B: 6, C: 4, D: 0 }), rounds(todo("B", "C"), todo("A", "D")));
 

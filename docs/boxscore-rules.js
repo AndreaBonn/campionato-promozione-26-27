@@ -17,7 +17,7 @@ const teamRows = (team, fipTeam) => ({
 });
 
 // View of one game's box score, or null when there is nothing to show: no matched page
-// (status "unmatched") or no entry at all. fipGame carries the FIP home/away names (rounds[].games[]).
+// (status "unmatched", or "incomplete" frozen without players) or no entry at all. fipGame carries the FIP home/away names (rounds[].games[]).
 export function boxscoreView(entry, fipGame) {
   if (!entry || !entry.home || !entry.away) return null;
   return {

@@ -137,16 +137,24 @@ def test_match_round_empty_pages_reports_no_candidate() -> None:
         ((62, 54), date(2026, 10, 17), "partial"),
         ((61, 54), date(2026, 10, 18), "incomplete"),
         (None, date(2026, 10, 7), "unmatched"),
-        (None, date(2026, 10, 18), "unmatched"),
+        (None, date(2026, 10, 17), "unmatched"),
+        (None, date(2026, 10, 18), "incomplete"),
     ],
 )
 def test_classify_totals_and_retry_boundary_return_status(
-    totals: tuple[int, int] | None, today: date, expected: str,
+    totals: tuple[int, int] | None,
+    today: date,
+    expected: str,
 ) -> None:
-    assert classify(
-        totals=totals, fip_score={"home": 62, "away": 55},
-        game_date=date(2026, 10, 3), today=today,
-    ) == expected
+    assert (
+        classify(
+            totals=totals,
+            fip_score={"home": 62, "away": 55},
+            game_date=date(2026, 10, 3),
+            today=today,
+        )
+        == expected
+    )
 
 
 @pytest.mark.parametrize(
@@ -168,16 +176,33 @@ def test_classify_totals_and_retry_boundary_return_status(
     ],
 )
 def test_select_pending_state_rules_preserve_inputs(
-    case: tuple[BoxscoreStatus | None, int, bool, bool], expected: list[int],
+    case: tuple[BoxscoreStatus | None, int, bool, bool],
+    expected: list[int],
 ) -> None:
     status, day, changed, played = case
-    rounds: list[RoundDict] = [{"round": "A1", "games": [
-        {**game(), "date": "2026-10-03", "score": game()["score"] if played else None},
-    ]}]
-    previous: dict[str, BoxscoreEntry] = {} if status is None else {"6": {
-        "round": "A1", "status": status, "fip_score": {"home": 0 if changed else 62, "away": 55},
-        "mn": 6, "url": "saved", "home": None, "away": None,
-    }}
+    rounds: list[RoundDict] = [
+        {
+            "round": "A1",
+            "games": [
+                {**game(), "date": "2026-10-03", "score": game()["score"] if played else None},
+            ],
+        }
+    ]
+    previous: dict[str, BoxscoreEntry] = (
+        {}
+        if status is None
+        else {
+            "6": {
+                "round": "A1",
+                "status": status,
+                "fip_score": {"home": 0 if changed else 62, "away": 55},
+                "mn": 6,
+                "url": "saved",
+                "home": None,
+                "away": None,
+            }
+        }
+    )
     original = deepcopy(x=(rounds, previous))
     pending = select_pending(rounds=rounds, previous=previous, today=date(2026, 10, day))
     assert [item.game["n"] for item in pending] == expected
@@ -188,11 +213,16 @@ def test_select_pending_prioritizes_expiring_games_then_natural_round_order() ->
     rounds: list[RoundDict] = [
         {"round": code, "games": [{**game(number=n), "date": game_date}]}
         for code, n, game_date in [
-            ("A2", 1, "2026-09-30"), ("A10", 2, "2026-09-20"),
-            ("R1", 3, "2026-10-17"), ("R2", 4, "2026-10-04"),
+            ("A2", 1, "2026-09-30"),
+            ("A10", 2, "2026-09-20"),
+            ("R1", 3, "2026-10-17"),
+            ("R2", 4, "2026-10-04"),
         ]
     ]
     pending = select_pending(rounds=rounds, previous={}, today=date(2026, 10, 18))
     assert [(item.round, item.game["n"]) for item in pending] == [
-        ("R2", 4), ("R1", 3), ("A2", 1), ("A10", 2),
+        ("R2", 4),
+        ("R1", 3),
+        ("A2", 1),
+        ("A10", 2),
     ]

@@ -4,8 +4,8 @@ from fip_calendar import boxscores, cli
 
 # The playbasket.it pages in fixtures/ are Serie C 2026/27 games (copied from the sister
 # project campionato-serie-c-26-27): the matching logic is tested against them with the alias
-# table of that league, while config.PLAYBASKET_TEAM_ALIASES stays empty until the first DR2
-# box score.
+# table of that league; config.PLAYBASKET_TEAM_ALIASES holds the DR2 Sud A names and is
+# checked against the live standings by the alias-check job, not by these tests.
 FIXTURE_TEAM_ALIASES: dict[str, str] = {
     "CMB Porto Torres": "C.M.B. PORTO TORRES",
     "Aurea Sassari": "FISIOKONS AUREA SASSARI",

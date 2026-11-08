@@ -185,9 +185,7 @@ def test_badge_for_coverage_thresholds_use_inclusive_color_bands(
 ) -> None:
     badge = badge_for_coverage(percent)
 
-    assert badge == {
-        "schemaVersion": 1, "label": "coverage", "message": message, "color": color
-    }
+    assert badge == {"schemaVersion": 1, "label": "coverage", "message": message, "color": color}
 
 
 @pytest.mark.parametrize(
@@ -204,7 +202,9 @@ def test_read_coverage_unusable_report_returns_none_with_valid_report_control(
     assert read_coverage(valid) == 81.5
 
 
-def test_tests_badge_only_skipped_is_not_an_error() -> None:
+def test_tests_badge_only_skipped_keeps_counts_but_turns_red() -> None:
+    # a run that executed no test is not a green run, even if nothing failed
     badge = badge_for_tests(ResultCounts(passed=0, failed=0, skipped=3))
 
     assert badge["message"] == "0 passed, 3 skipped"
+    assert badge["color"] == "red"

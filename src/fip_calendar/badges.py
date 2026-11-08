@@ -72,7 +72,8 @@ def badge_for_tests(counts: ResultCounts | None) -> dict[str, Any]:
         parts.insert(0, f"{counts.failed} failed")
     if counts.skipped:
         parts.append(f"{counts.skipped} skipped")
-    color = "red" if counts.failed else "brightgreen"
+    # a run that executed no test (all skipped) is red even with nothing failed
+    color = "red" if counts.failed or not counts.passed else "brightgreen"
     return _badge(label="tests", message=", ".join(parts), color=color)
 
 

@@ -199,3 +199,43 @@ def test_build_ics_leaves_out_games_without_a_date() -> None:
     assert "UID:assemini-black-gara838@campionato-promozione-26-27" in ics
     assert "gara834" not in ics
     assert "20270630" not in ics
+
+
+def test_build_ics_rome_timezone_matches_eu_dst_rules() -> None:
+    expected = [
+        "BEGIN:VTIMEZONE",
+        "TZID:Europe/Rome",
+        "BEGIN:DAYLIGHT",
+        "TZOFFSETFROM:+0100",
+        "TZOFFSETTO:+0200",
+        "TZNAME:CEST",
+        "DTSTART:19700329T020000",
+        "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU",
+        "END:DAYLIGHT",
+        "BEGIN:STANDARD",
+        "TZOFFSETFROM:+0200",
+        "TZOFFSETTO:+0100",
+        "TZNAME:CET",
+        "DTSTART:19701025T030000",
+        "RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU",
+        "END:STANDARD",
+        "END:VTIMEZONE",
+    ]
+
+    lines = unfold(build_ics(games=[], dtstamp=STAMP, page_url=PAGE_URL))
+
+    start = lines.index("BEGIN:VTIMEZONE")
+    end = lines.index("END:VTIMEZONE") + 1
+    assert lines[start:end] == expected
+
+
+def test_build_ics_each_event_links_to_supplied_page_url() -> None:
+    games = [game(), game(n=18, round="A4")]
+    page_url = "https://example.org/updated-calendar/"
+
+    lines = unfold(build_ics(games=games, dtstamp=STAMP, page_url=page_url))
+
+    events = "\n".join(lines).split("BEGIN:VEVENT\n")[1:]
+    assert len(events) == 2
+    for event in events:
+        assert f"URL:{page_url}" in event.split("END:VEVENT", 1)[0].splitlines()

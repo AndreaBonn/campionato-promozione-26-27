@@ -157,3 +157,74 @@ test("card: a game with FIP's placeholder date reads «da definire», in the hea
   assert.match(html, /<td><span class="d">da definire<\/span>/);
   assert.doesNotMatch(html, /giu/);
 });
+
+test("card: a team with only losses has no empty widest-win item", () => {
+  const rounds = [{ round: "A1", games: [game(1, "2026-10-04", TEAM, "SEF TORRES", { home: 50, away: 70 })] }];
+
+  const html = renderOpponent(TEAM, full({ rounds }));
+
+  assert.match(html, /<li>Sconfitta più larga: 50-70 con SEF Torres \(1ª and\.\)<\/li>/);
+  assert.doesNotMatch(html, /<li>null<\/li>/);
+});
+
+test("card: a ban is served after enough later results", () => {
+  const rounds = [...SEASON, { round: "A4", games: [game(5, "2026-10-25", TEAM, "PALL. NUORO", { home: 70, away: 60 })] }];
+
+  const html = renderOpponent(TEAM, full({ rounds }));
+
+  assert.match(html, /<li>Mario Rossi: 2 gare di squalifica \(1ª and\.\), scontata<\/li>/);
+});
+
+test("card: a team absent from the standings has an explicit heading", () => {
+  const html = renderOpponent("POL. DINAMO", ctx());
+
+  assert.match(html, /<h2 id="opp-title">Pol\. Dinamo<\/h2><p>Non ancora in classifica<\/p>/);
+});
+
+test("card: exactly five remaining games need no collapsed block", () => {
+  const rounds = Array.from({ length: 5 }, (_, i) => ({ round: `A${i + 1}`, games: [game(i + 1, `2026-10-0${i + 1}`, TEAM, `T${i}`, null, { status: "" })] }));
+
+  const html = renderOpponent(TEAM, full({ rounds }));
+
+  assert.equal((html.match(/<table class="opp-next"/g) ?? []).length, 1);
+  assert.equal((html.match(/<td><span class="d">/g) ?? []).length, 5);
+  assert.doesNotMatch(html, /Le altre/);
+});
+
+test("card: consecutive wins are described as a streak", () => {
+  const rounds = [
+    { round: "A1", games: [game(1, "2026-10-04", TEAM, "SEF TORRES", { home: 70, away: 60 })] },
+    { round: "A2", games: [game(2, "2026-10-11", "PALL. NUORO", TEAM, { home: 50, away: 80 })] },
+  ];
+
+  const html = renderOpponent(TEAM, full({ rounds }));
+
+  assert.match(html, /<li>Serie in corso: 2 vittorie di fila<\/li>/);
+});
+
+test("card: a narrowed range crossing the playoff boundary has no settled zone", () => {
+  const ranges = new Map(Array.from({ length: 12 }, (_, i) => [i === 0 ? TEAM : `T${i}`, { best: 7, worst: 10 }]));
+
+  const html = renderOpponent(TEAM, full({ ranges }));
+
+  assert.match(html, /<p class="opp-range">Posizione finale possibile: fra la 7ª e la 10ª<\/p>/);
+});
+
+test("card: a balanced scoring margin has no plus sign", () => {
+  const rounds = [
+    { round: "A1", games: [game(1, "2026-10-04", TEAM, "SEF TORRES", { home: 70, away: 60 })] },
+    { round: "A2", games: [game(2, "2026-10-11", TEAM, "PALL. NUORO", { home: 50, away: 60 })] },
+  ];
+
+  const html = renderOpponent(TEAM, full({ rounds }));
+
+  assert.match(html, /<li>Scarto medio: 0,0 punti a partita<\/li>/);
+});
+
+test("card: the team's crest appears in the header", () => {
+  const logos = { [TEAM]: { file: "logos/olimpia.png", source: "https://backend.fip.it/olimpia.png" } };
+
+  const html = renderOpponent(TEAM, full({ logos }));
+
+  assert.match(html, /<header class="opp-head"><img class="crest " src="logos\/olimpia.png" alt="" width="28" height="28" loading="lazy"><div><h2 id="opp-title">Olimpia Cagliari<\/h2>/);
+});

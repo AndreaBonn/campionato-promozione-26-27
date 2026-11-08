@@ -58,6 +58,17 @@ test("card: round on top, game number at the bottom, a moved game tagged «Spost
   assert.match(html, /<div class="meta">Gara n\. 17, arbitri non ancora designati<\/div>/);
 });
 
+test("card: a venue name from FIP is displayed as text, including angle brackets", () => {
+  const m = game(1, "2026-10-18", {
+    venue: { name: 'Palestra <Nord> & "Sud"', address: "Via Roma 1" },
+  });
+
+  const html = renderCard(m, context([m]));
+
+  assert.match(html, /<div class="v"><strong>Palestra &lt;Nord&gt; &amp; &quot;Sud&quot;<\/strong>, Via Roma 1<\/div>/);
+  assert.doesNotMatch(html, /<Nord>/);
+});
+
 test("card: the CUS box score opens inside a played game's card, none before it exists", () => {
   const m = played(6, "2026-10-03", 55, 62);
   const boxscores = { 6: { status: "complete", url: null, home: { players: [{ id: "a", name: "Rossi", pts: 15 }] }, away: { players: [] } } };
@@ -103,6 +114,18 @@ test("form strip: «Ultima» for one game, no zero split for a side not played y
   assert.doesNotMatch(html, /In casa/);
 });
 
+test("form strip: points scored and conceded have distinct Italian averages", () => {
+  const games = [
+    played(1, "2026-10-03", 81, 60),
+    played(2, "2026-10-05", 70, 50, { is_home: false }),
+  ];
+
+  const html = renderForm(formSummary(games));
+
+  assert.match(html, /<span><b>65,5<\/b> punti fatti a partita<\/span>/);
+  assert.match(html, /<span><b>65,0<\/b> subiti<\/span>/);
+});
+
 test("list: the hero hint only when the next game matches the home/away filter", () => {
   const ctx = context([game(2, "2026-10-11", { is_home: false })]);
 
@@ -131,7 +154,7 @@ test("list: games without a date come last, under «Data da definire», without 
   assert.deepEqual(gamesIn(html), [2, 3, 1]);
   const tbd = html.slice(html.indexOf('<h2 class="tbd">Data da definire</h2>'));
   assert.match(tbd, /Gara n\. 1/);
-  assert.match(tbd, /da definire/);
+  assert.match(tbd, /<div class="d tbd"><span>data<\/span><b>\?<\/b><i>da definire<\/i><\/div>/);
   assert.doesNotMatch(tbd, /giugno/);
   assert.doesNotMatch(tbd, /Calendario/);
   assert.match(html.slice(0, html.indexOf('<h2 class="tbd">Data da definire</h2>')), /Calendario/);

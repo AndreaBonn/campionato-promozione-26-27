@@ -66,6 +66,21 @@ test("team players: best game named, or a sentence when the player never scored"
   assert.match(html, />Neri<\/button>.*?<p>Miglior partita: nessuna partita con punti a referto\.<\/p>/);
 });
 
+test("team players: detail separates scoring averages in wins and losses", () => {
+  const loss = { home: 70, away: 90 };
+  const rounds = [round(1, "2026-10-03"), round(2, "2026-10-10"), round(3, "2026-10-17")];
+  rounds[1].games[0].score = loss;
+  const boxscores = {
+    1: boxscore([player("Rossi", 12)]),
+    2: { ...boxscore([player("Rossi", 3)]), fip_score: loss },
+    3: boxscore([player("Rossi", 9)]),
+  };
+
+  const html = renderTeamPlayers(boxscores, rounds, TEAM);
+
+  assert.match(html, /<p>Media nelle vittorie: 10,5 · Media nelle sconfitte: 3,0\.<\/p>/);
+});
+
 test("team players: a dash for an average with no game behind it, no role line when none is published", () => {
   const html = renderTeamPlayers({ 1: boxscore([{ id: "Rossi", name: "Rossi", role: "", age: "", pts: 9 }]) },
     [round(1, "2026-10-03")], TEAM);
@@ -101,9 +116,10 @@ test("team players: with a roster and no box score yet the section lists the squ
 });
 
 test("team players: with a roster, a player without box score appears after the scorers, no detail row", () => {
-  const html = renderTeamPlayers({ 1: boxscore([player("Rossi Mario", 10)]) }, [round(1, "2026-10-03")], TEAM, ROSTER);
+  const html = renderTeamPlayers({ 1: boxscore([player("Rossi Mario", 10)]) }, [round(1, "2026-10-03")], TEAM, [ROSTER[1], ROSTER[0]]);
 
   assert.match(html, /<button[^>]*>Rossi Mario<\/button><small class="role">Ala piccola<\/small>/);
+  assert.deepEqual([...html.matchAll(/<tr><td>(?:<button[^>]*>)?([^<]+)/g)].map((m) => m[1]), ["Rossi Mario", "Bianchi Luca"]);
   // never in a box score: unknown, not "0 points in 0 games"
   assert.match(html, /<td>Bianchi Luca<small class="role">Centro<\/small><\/td><td>-<\/td><td>-<\/td><td class="opt">-<\/td><td class="opt">-<\/td><td>-<\/td><td class="opt">-<\/td><td class="opt">-<\/td>/);
   assert.equal((html.match(/class="pl-detail"/g) ?? []).length, 1);
@@ -111,8 +127,11 @@ test("team players: with a roster, a player without box score appears after the 
 
 test("team players: without a roster the empty state is unchanged", () => {
   const html = renderTeamPlayers({}, [round(1, "2026-10-03")], TEAM);
+  const withRoster = renderTeamPlayers({}, [round(1, "2026-10-03")], TEAM, ROSTER);
 
+  assert.equal(html, "<h2>Giocatori dell'Assemini Black</h2><p>Le statistiche dei giocatori saranno disponibili dopo il primo tabellino dell'Assemini Black.</p>");
   assert.doesNotMatch(html, /<table/);
+  assert.match(withRoster, /<table class="team-players squad">/);
 });
 
 const ROSTER_BORN = [{ name: "Rossi Mario", role: 3, born: 1995 }, { name: "Bianchi Luca", role: 5 }];

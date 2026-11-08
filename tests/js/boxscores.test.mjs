@@ -120,6 +120,18 @@ test("scorers filtered on a team: only its players, with their rank in the whole
   assert.match(html, /data-scorers="" aria-pressed="false">Tutto il girone/);
 });
 
+test("scorers: without a filter the whole league chip is pressed and teams are alphabetical", () => {
+  const rounds = [{ round: "A1", games: [game(1, "ZETA BASKET", "ALFA BASKET")] }];
+  const boxscores = { 1: entry({ away: side(player("a1", "Bianchi", 5)) }) };
+
+  const html = renderScorers(boxscores, rounds, CUS);
+  const options = [...html.matchAll(/<option value="([^"]*)">([^<]+)<\/option>/g)].map((m) => [m[1], m[2]]);
+
+  assert.match(html, /data-scorers="" aria-pressed="true">Tutto il girone<\/button>/);
+  assert.match(html, /data-scorers="CUS CAGLIARI" aria-pressed="false">Solo Assemini Black<\/button>/);
+  assert.deepEqual(options, [["", "Per squadra"], ["ALFA BASKET", "Alfa Basket"], ["ZETA BASKET", "Zeta Basket"]]);
+});
+
 test("scorers filtered on CUS: the «Solo Assemini Black» chip is pressed, no «Mostra tutti» even past 20 rows", () => {
   const { boxscores, rounds } = manyScorers(25);
   const html = renderScorers(boxscores, rounds, CUS, CUS);
@@ -137,26 +149,32 @@ afterEach(() => {
 });
 const stubFetch = (respond) => {
   const warnings = [];
-  globalThis.fetch = async () => respond();
+  const requests = [];
+  globalThis.fetch = async (url, options) => {
+    requests.push({ url, options });
+    return respond();
+  };
   console.warn = (...args) => warnings.push(args.join(" "));
-  return warnings;
+  return { warnings, requests };
 };
 
 test("load box scores: the parsed dict reaches the page, an empty one when the key is missing", async () => {
   const applied = [];
-  stubFetch(() => new Response(JSON.stringify({ boxscores: { 1: entry() } })));
+  const first = stubFetch(() => new Response(JSON.stringify({ boxscores: { 1: entry() } })));
   assert.equal(await loadBoxscores((b) => applied.push(b)), true);
-  stubFetch(() => new Response("{}"));
+  const empty = stubFetch(() => new Response("{}"));
   assert.equal(await loadBoxscores((b) => applied.push(b)), true);
 
   assert.deepEqual(applied, [{ 1: entry() }, {}]);
+  assert.deepEqual(first.requests, [{ url: "boxscores.json", options: { cache: "no-cache" } }]);
+  assert.deepEqual(empty.requests, [{ url: "boxscores.json", options: { cache: "no-cache" } }]);
 });
 
 test("load box scores: an HTTP error or a network failure leaves the page untouched, logs why and returns false", async () => {
   const applied = [];
-  const httpWarnings = stubFetch(() => new Response("missing", { status: 404 }));
+  const { warnings: httpWarnings } = stubFetch(() => new Response("missing", { status: 404 }));
   assert.equal(await loadBoxscores((b) => applied.push(b)), false);
-  const networkWarnings = stubFetch(() => { throw new TypeError("offline"); });
+  const { warnings: networkWarnings } = stubFetch(() => { throw new TypeError("offline"); });
   assert.equal(await loadBoxscores((b) => applied.push(b)), false);
 
   assert.deepEqual(applied, []);

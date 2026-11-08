@@ -17,6 +17,19 @@ const PORTO_TORRES_FINE = "soc. CENTRO MINIBK P.TORRES A. DIL.:Ammenda di Euro 2
 const NUORO_FINE = "soc. A.S.D. PALL. NUORO:Ammenda di Euro 250.00 ritardato riconoscimento del Medico di Servizio [art. 38,1b RG - art. 34 comma 4 R.E. gare]";
 const CARBONIA_FINE = "soc. A.S.D. SCUOLA BASKET CARBONIA:Ammenda di Euro 125.00 per mancata designazione del dirigente accompagnatore [art. 38,1f RG]";
 
+test("opponent sanctions: unsorted games yield own and unattributed sanctions oldest first", () => {
+  const unknown = "giocatore ROSSI MARIO:squalifica per 1 gara";
+  const rounds = [
+    round("A2", game(8, "2026-10-11", "SEF TORRES", "PALL. NUORO", null, { sanctions: [NUORO_FINE, unknown] })),
+    round("A1", game(3, "2026-10-04", "PALL. NUORO", "SEF TORRES", null, { sanctions: [NUORO_FINE, unknown] })),
+  ];
+
+  assert.deepEqual(opponentSanctions("PALL. NUORO", rounds), {
+    own: [{ round: "A1", n: 3, text: NUORO_FINE }, { round: "A2", n: 8, text: NUORO_FINE }],
+    unattributed: [{ round: "A1", n: 3, text: unknown }, { round: "A2", n: 8, text: unknown }],
+  });
+});
+
 test("opponent games: one row per played game, oriented on the team, oldest first", () => {
   const rounds = [
     round("A2", game(8, "2026-10-11", "OLIMPIA CAGLIARI", "SEF TORRES", { home: 58, away: 71 })),

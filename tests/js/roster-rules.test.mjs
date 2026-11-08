@@ -6,6 +6,18 @@ import { ROSTER } from "../../docs/roster.js";
 
 const stat = (name, points = 10) => ({ id: name, name, role: "play", age: "'07", points, listed: 1 });
 
+test("mergeRoster: two matching roster names cannot claim the same box score player", () => {
+  const merged = mergeRoster([stat("Fiori Lorenzo Ozieri")], [
+    { name: "Lorenzo Fiori", role: 4, born: 1990 },
+    { name: "Lorenzo Fiori Ozieri", role: 5, born: 1991 },
+  ]);
+
+  assert.deepEqual(merged.map((p) => [p.name, p.listed, p.rosterRole, p.rosterBorn]), [
+    ["Fiori Lorenzo Ozieri", 1, 4, 1990],
+    ["Lorenzo Fiori Ozieri", 0, 5, 1991],
+  ]);
+});
+
 test("sameName: word order, case and accents do not matter", () => {
   assert.equal(sameName("Manca Federico", "FEDERICO MANCA"), true);
   assert.equal(sameName("Orrù Alessio", "Alessio Orru"), true);

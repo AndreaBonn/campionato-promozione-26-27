@@ -12,6 +12,26 @@ const STANDINGS = [
   { position: 9, team: "PALL. NUORO", played: 2 },
 ];
 
+test("remaining: opponent position is unknown until FIP has ranked a game", () => {
+  const rounds = [round("A1", game(1, "2026-10-04", TEAM, "SEF TORRES"))];
+
+  assert.equal(remainingGames(TEAM, rounds, [{ team: "SEF TORRES", position: 1, played: 0 }])[0].opponentPosition, null);
+  assert.equal(remainingGames(TEAM, rounds, STANDINGS)[0].opponentPosition, 1);
+});
+
+test("performance: widest loss uses absolute margin and equal margins keep the earliest game", () => {
+  const rounds = [
+    round("A4", game(4, "2026-10-25", TEAM, "D", { home: 50, away: 70 })),
+    round("A1", game(1, "2026-10-04", TEAM, "A", { home: 60, away: 65 })),
+    round("A3", game(3, "2026-10-18", "C", TEAM, { home: 80, away: 60 })),
+    round("A2", game(2, "2026-10-11", TEAM, "B", { home: 70, away: 80 })),
+  ];
+
+  const p = performance(TEAM, rounds);
+
+  assert.deepEqual([p.biggestLoss.n, p.biggestLoss.own, p.biggestLoss.their], [3, 60, 80]);
+});
+
 test("remaining: games without a result, oldest first, oriented on the team, opponent's position", () => {
   const rounds = [
     round("A1", game(1, "2026-10-04", TEAM, "PALL. NUORO", { home: 70, away: 60 })),

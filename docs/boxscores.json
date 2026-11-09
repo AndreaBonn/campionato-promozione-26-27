@@ -1148,7 +1148,7 @@
     },
     "848": {
       "round": "A3",
-      "status": "partial",
+      "status": "incomplete",
       "fip_score": {
         "home": 58,
         "away": 59
@@ -1616,7 +1616,7 @@
     },
     "858": {
       "round": "A5",
-      "status": "partial",
+      "status": "complete",
       "fip_score": {
         "home": 58,
         "away": 71
@@ -1625,11 +1625,181 @@
       "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=5&mn=4",
       "home": {
         "team": "Sulcispes S. Antioco",
-        "players": []
+        "players": [
+          {
+            "id": "80864",
+            "number": "",
+            "name": "Caddeo Lorenzo",
+            "role": "",
+            "age": "'98",
+            "pts": null
+          },
+          {
+            "id": "86590",
+            "number": "",
+            "name": "Caddeo Philippe",
+            "role": "",
+            "age": "'98",
+            "pts": 0
+          },
+          {
+            "id": "38416",
+            "number": "",
+            "name": "Diana Fabrizio",
+            "role": "play",
+            "age": "'82",
+            "pts": 8
+          },
+          {
+            "id": "79335",
+            "number": "",
+            "name": "Faggiano Matteo",
+            "role": "ala piccola",
+            "age": "'02",
+            "pts": 23
+          },
+          {
+            "id": "231089",
+            "number": "",
+            "name": "Ivaldi Giovanni",
+            "role": "",
+            "age": "",
+            "pts": 4
+          },
+          {
+            "id": "118576",
+            "number": "",
+            "name": "Manicone Luca",
+            "role": "guardia",
+            "age": "'02",
+            "pts": 0
+          },
+          {
+            "id": "21051",
+            "number": "",
+            "name": "Massa Alessandro",
+            "role": "ala piccola",
+            "age": "'96",
+            "pts": 0
+          },
+          {
+            "id": "176511",
+            "number": "",
+            "name": "Petrucci Raffaele",
+            "role": "",
+            "age": "'03",
+            "pts": 9
+          },
+          {
+            "id": "18759",
+            "number": "",
+            "name": "Pirisi Claudio",
+            "role": "ala piccola",
+            "age": "'94",
+            "pts": 0
+          },
+          {
+            "id": "35326",
+            "number": "",
+            "name": "Poggi Fabrizio",
+            "role": "ala forte",
+            "age": "'79",
+            "pts": 2
+          },
+          {
+            "id": "231088",
+            "number": "",
+            "name": "Sbardella Luca",
+            "role": "",
+            "age": "",
+            "pts": 12
+          }
+        ]
       },
       "away": {
         "team": "CGP Carloforte",
-        "players": []
+        "players": [
+          {
+            "id": "35567",
+            "number": "",
+            "name": "Aralossi Fabio",
+            "role": "play",
+            "age": "'94",
+            "pts": 21
+          },
+          {
+            "id": "18286",
+            "number": "",
+            "name": "Baghino Francesco",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 13
+          },
+          {
+            "id": "216839",
+            "number": "",
+            "name": "Carta Fabio",
+            "role": "",
+            "age": "U17",
+            "pts": null
+          },
+          {
+            "id": "65487",
+            "number": "",
+            "name": "Cireddu Paolo",
+            "role": "guardia",
+            "age": "'00",
+            "pts": 12
+          },
+          {
+            "id": "85790",
+            "number": "",
+            "name": "Ferraro Sebastiano",
+            "role": "play",
+            "age": "'01",
+            "pts": 11
+          },
+          {
+            "id": "192802",
+            "number": "",
+            "name": "Leone Andrea",
+            "role": "",
+            "age": "'08",
+            "pts": null
+          },
+          {
+            "id": "215878",
+            "number": "",
+            "name": "Napoli Nicolò",
+            "role": "",
+            "age": "U19",
+            "pts": 0
+          },
+          {
+            "id": "18285",
+            "number": "",
+            "name": "Rivano Alessandro",
+            "role": "centro",
+            "age": "'84",
+            "pts": 6
+          },
+          {
+            "id": "205571",
+            "number": "",
+            "name": "Rivano Lorenzo",
+            "role": "guardia",
+            "age": "U19",
+            "pts": 8
+          },
+          {
+            "id": "216838",
+            "number": "",
+            "name": "Simeone Gerolamo",
+            "role": "",
+            "age": "U17",
+            "pts": 0
+          }
+        ]
       }
     },
     "859": {
@@ -1651,5 +1821,5 @@
       }
     }
   },
-  "updated_at": "2026-11-09T00:03:04+00:00"
+  "updated_at": "2026-11-09T23:52:46+00:00"
 }

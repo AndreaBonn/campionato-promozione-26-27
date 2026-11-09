@@ -1041,7 +1041,7 @@
     },
     "844": {
       "round": "A3",
-      "status": "partial",
+      "status": "incomplete",
       "fip_score": {
         "home": 54,
         "away": 72
@@ -1616,16 +1616,40 @@
     },
     "858": {
       "round": "A5",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 58,
         "away": 71
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 4,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=5&mn=4",
+      "home": {
+        "team": "Sulcispes S. Antioco",
+        "players": []
+      },
+      "away": {
+        "team": "CGP Carloforte",
+        "players": []
+      }
+    },
+    "859": {
+      "round": "A5",
+      "status": "partial",
+      "fip_score": {
+        "home": 58,
+        "away": 61
+      },
+      "mn": 5,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=5&mn=5",
+      "home": {
+        "team": "Cagliari Basket",
+        "players": []
+      },
+      "away": {
+        "team": "Basket Assemini White",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-08T19:59:00+00:00"
+  "updated_at": "2026-11-09T00:03:04+00:00"
 }

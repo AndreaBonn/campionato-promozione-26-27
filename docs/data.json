@@ -1166,9 +1166,11 @@
           "away": "A.S.D. BETA",
           "date": "2026-11-14",
           "time": "19:30",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "SUSMEL RICCARDO di SELARGIUS (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -1202,9 +1204,12 @@
           "away": "CAGLIARI BASKET",
           "date": "2026-11-14",
           "time": "19:00",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "COCCO MATTIA di QUARTU SANT'ELENA (CA)",
+            "BELTRAMINI ROBERTO di CAPOTERRA (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -2516,5 +2521,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-09T06:47:45+00:00"
+  "updated_at": "2026-11-09T18:54:05+00:00"
 }

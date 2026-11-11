@@ -1221,8 +1221,11 @@
           "away": "BASKET SULCISPES",
           "date": "2026-11-11",
           "time": "21:00",
-          "status": "designata",
-          "score": null,
+          "status": "ufficioso",
+          "score": {
+            "home": 67,
+            "away": 27
+          },
           "referees": [
             "CARRUS FABIO di SELARGIUS (CA)",
             "FRAU DAVIDE di MONSERRATO (CA)"
@@ -2527,5 +2530,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-11T16:17:41+00:00"
+  "updated_at": "2026-11-11T22:18:09+00:00"
 }

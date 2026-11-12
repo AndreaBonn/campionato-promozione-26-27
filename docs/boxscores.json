@@ -1822,16 +1822,22 @@
     },
     "865": {
       "round": "A6",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 67,
         "away": 27
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 1,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=6&mn=1",
+      "home": {
+        "team": "Sinnai Basket",
+        "players": []
+      },
+      "away": {
+        "team": "Sulcispes S. Antioco",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-12T03:23:55+00:00"
+  "updated_at": "2026-11-12T16:52:59+00:00"
 }

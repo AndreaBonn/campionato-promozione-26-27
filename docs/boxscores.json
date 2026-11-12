@@ -1837,7 +1837,31 @@
         "team": "Sulcispes S. Antioco",
         "players": []
       }
+    },
+    "863": {
+      "round": "A6",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 70,
+        "away": 64
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
+    },
+    "885": {
+      "round": "A10",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 92,
+        "away": 33
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
     }
   },
-  "updated_at": "2026-11-12T16:52:59+00:00"
+  "updated_at": "2026-11-12T21:56:24+00:00"
 }

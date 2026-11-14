@@ -1840,28 +1840,40 @@
     },
     "863": {
       "round": "A6",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 70,
         "away": 64
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 2,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=6&mn=2",
+      "home": {
+        "team": "Basket Assemini White",
+        "players": []
+      },
+      "away": {
+        "team": "Madas Siliqua",
+        "players": []
+      }
     },
     "885": {
       "round": "A10",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 92,
         "away": 33
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 1,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=10&mn=1",
+      "home": {
+        "team": "Sinnai Basket",
+        "players": []
+      },
+      "away": {
+        "team": "Calasetta Basket sq.B",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-13T01:11:19+00:00"
+  "updated_at": "2026-11-14T01:49:09+00:00"
 }

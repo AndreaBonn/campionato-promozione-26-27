@@ -1281,9 +1281,12 @@
           "away": "A.S.D. BETA",
           "date": "2026-11-19",
           "time": "21:00",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "MURRU ANDREA SALVATORE di CAGLIARI (CA)",
+            "FARCI DANIELE di CAGLIARI (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -2534,5 +2537,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-14T06:38:48+00:00"
+  "updated_at": "2026-11-14T15:11:04+00:00"
 }

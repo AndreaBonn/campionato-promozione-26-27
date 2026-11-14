@@ -1873,7 +1873,19 @@
         "team": "Calasetta Basket sq.B",
         "players": []
       }
+    },
+    "864": {
+      "round": "A6",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 61,
+        "away": 55
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
     }
   },
-  "updated_at": "2026-11-14T01:49:09+00:00"
+  "updated_at": "2026-11-14T20:06:42+00:00"
 }

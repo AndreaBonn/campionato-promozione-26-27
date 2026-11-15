@@ -1876,16 +1876,119 @@
     },
     "864": {
       "round": "A6",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 61,
         "away": 55
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 4,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=6&mn=4",
+      "home": {
+        "team": "CGP Carloforte",
+        "players": [
+          {
+            "id": "35567",
+            "number": "",
+            "name": "Aralossi Fabio",
+            "role": "play",
+            "age": "'94",
+            "pts": 4
+          },
+          {
+            "id": "192811",
+            "number": "",
+            "name": "Aste Francesco",
+            "role": "ala forte",
+            "age": "'08",
+            "pts": 13
+          },
+          {
+            "id": "18286",
+            "number": "",
+            "name": "Baghino Francesco",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 13
+          },
+          {
+            "id": "216839",
+            "number": "",
+            "name": "Carta Fabio",
+            "role": "",
+            "age": "U17",
+            "pts": 0
+          },
+          {
+            "id": "65487",
+            "number": "",
+            "name": "Cireddu Paolo",
+            "role": "guardia",
+            "age": "'00",
+            "pts": 14
+          },
+          {
+            "id": "134539",
+            "number": "",
+            "name": "Dessì Fabio",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 4
+          },
+          {
+            "id": "85790",
+            "number": "",
+            "name": "Ferraro Sebastiano",
+            "role": "play",
+            "age": "'01",
+            "pts": 8
+          },
+          {
+            "id": "192812",
+            "number": "",
+            "name": "Gentile Piero",
+            "role": "play",
+            "age": "'08",
+            "pts": 0
+          },
+          {
+            "id": "192802",
+            "number": "",
+            "name": "Leone Andrea",
+            "role": "",
+            "age": "'08",
+            "pts": null
+          },
+          {
+            "id": "215878",
+            "number": "",
+            "name": "Napoli Nicolò",
+            "role": "",
+            "age": "U19",
+            "pts": 0
+          },
+          {
+            "id": "205571",
+            "number": "",
+            "name": "Rivano Lorenzo",
+            "role": "guardia",
+            "age": "U19",
+            "pts": 5
+          },
+          {
+            "id": "216838",
+            "number": "",
+            "name": "Simeone Gerolamo",
+            "role": "",
+            "age": "U17",
+            "pts": null
+          }
+        ]
+      },
+      "away": {
+        "team": "Cagliari Basket",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-14T20:06:42+00:00"
+  "updated_at": "2026-11-15T00:19:48+00:00"
 }

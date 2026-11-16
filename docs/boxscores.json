@@ -1544,7 +1544,7 @@
     },
     "851": {
       "round": "A4",
-      "status": "partial",
+      "status": "incomplete",
       "fip_score": {
         "home": 78,
         "away": 56
@@ -1562,7 +1562,7 @@
     },
     "854": {
       "round": "A4",
-      "status": "partial",
+      "status": "incomplete",
       "fip_score": {
         "home": 48,
         "away": 74
@@ -2169,16 +2169,22 @@
     },
     "866": {
       "round": "A6",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 87,
         "away": 66
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 5,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=6&mn=5",
+      "home": {
+        "team": "Calasetta Basket sq.B",
+        "players": []
+      },
+      "away": {
+        "team": "Basket Iglesias",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-15T20:36:24+00:00"
+  "updated_at": "2026-11-16T00:24:37+00:00"
 }

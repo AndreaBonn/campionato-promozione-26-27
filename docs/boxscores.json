@@ -1822,7 +1822,7 @@
     },
     "865": {
       "round": "A6",
-      "status": "partial",
+      "status": "complete",
       "fip_score": {
         "home": 67,
         "away": 27
@@ -1932,7 +1932,80 @@
       },
       "away": {
         "team": "Sulcispes S. Antioco",
-        "players": []
+        "players": [
+          {
+            "id": "86590",
+            "number": "",
+            "name": "Caddeo Philippe",
+            "role": "",
+            "age": "'98",
+            "pts": 3
+          },
+          {
+            "id": "38416",
+            "number": "",
+            "name": "Diana Fabrizio",
+            "role": "play",
+            "age": "'82",
+            "pts": 4
+          },
+          {
+            "id": "79335",
+            "number": "",
+            "name": "Faggiano Matteo",
+            "role": "ala piccola",
+            "age": "'02",
+            "pts": 6
+          },
+          {
+            "id": "118576",
+            "number": "",
+            "name": "Manicone Luca",
+            "role": "guardia",
+            "age": "'02",
+            "pts": 0
+          },
+          {
+            "id": "176511",
+            "number": "",
+            "name": "Petrucci Raffaele",
+            "role": "",
+            "age": "'03",
+            "pts": 6
+          },
+          {
+            "id": "18759",
+            "number": "",
+            "name": "Pirisi Claudio",
+            "role": "ala piccola",
+            "age": "'94",
+            "pts": 0
+          },
+          {
+            "id": "35326",
+            "number": "",
+            "name": "Poggi Fabrizio",
+            "role": "ala forte",
+            "age": "'79",
+            "pts": 0
+          },
+          {
+            "id": "231088",
+            "number": "",
+            "name": "Sbardella Luca",
+            "role": "",
+            "age": "",
+            "pts": 8
+          },
+          {
+            "id": "19611",
+            "number": "",
+            "name": "Scodina Alessio",
+            "role": "ala forte",
+            "age": "'85",
+            "pts": 0
+          }
+        ]
       }
     },
     "863": {
@@ -2054,7 +2127,7 @@
     },
     "864": {
       "round": "A6",
-      "status": "partial",
+      "status": "complete",
       "fip_score": {
         "home": 61,
         "away": 55
@@ -2164,7 +2237,88 @@
       },
       "away": {
         "team": "Cagliari Basket",
-        "players": []
+        "players": [
+          {
+            "id": "15405",
+            "number": "",
+            "name": "Biggio Roberto",
+            "role": "centro",
+            "age": "'82",
+            "pts": 3
+          },
+          {
+            "id": "208715",
+            "number": "",
+            "name": "Borriello Alessandro",
+            "role": "",
+            "age": "'05",
+            "pts": null
+          },
+          {
+            "id": "35479",
+            "number": "",
+            "name": "Dessi Alessio",
+            "role": "play",
+            "age": "'74",
+            "pts": 0
+          },
+          {
+            "id": "18425",
+            "number": "",
+            "name": "Frau Nicola",
+            "role": "guardia",
+            "age": "'89",
+            "pts": 4
+          },
+          {
+            "id": "31003",
+            "number": "",
+            "name": "Pinna Giovanni",
+            "role": "centro",
+            "age": "'71",
+            "pts": 3
+          },
+          {
+            "id": "28403",
+            "number": "",
+            "name": "Pisu Mattia",
+            "role": "ala forte",
+            "age": "'76",
+            "pts": 9
+          },
+          {
+            "id": "65333",
+            "number": "",
+            "name": "Rappa Giulio",
+            "role": "play",
+            "age": "'97",
+            "pts": 6
+          },
+          {
+            "id": "146968",
+            "number": "",
+            "name": "Sechi Emilio",
+            "role": "ala piccola",
+            "age": "'03",
+            "pts": 14
+          },
+          {
+            "id": "127009",
+            "number": "",
+            "name": "Sotgiu Tommaso",
+            "role": "guardia",
+            "age": "'01",
+            "pts": 16
+          },
+          {
+            "id": "59319",
+            "number": "",
+            "name": "Speziale Davide",
+            "role": "ala piccola",
+            "age": "'99",
+            "pts": 0
+          }
+        ]
       }
     },
     "866": {
@@ -2186,5 +2340,5 @@
       }
     }
   },
-  "updated_at": "2026-11-16T00:24:37+00:00"
+  "updated_at": "2026-11-16T18:39:54+00:00"
 }

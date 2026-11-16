@@ -182,13 +182,16 @@
         }
       },
       "changes": [],
-      "status": "designata",
-      "status_text": "Gara designata: la designazione è visibile",
+      "status": "ufficioso",
+      "status_text": "Risultato ufficioso",
       "referees": [
         "COCCO MATTIA di QUARTU SANT'ELENA (CA)",
         "BELTRAMINI ROBERTO di CAPOTERRA (CA)"
       ],
-      "score": null,
+      "score": {
+        "home": 57,
+        "away": 75
+      },
       "sanctions": [],
       "fip_opponent": "SCUOLA BASKET CARBONIA"
     },
@@ -1177,8 +1180,11 @@
           "away": "BASKET ASSEMINI BLACK",
           "date": "2026-11-16",
           "time": "20:30",
-          "status": "designata",
-          "score": null,
+          "status": "ufficioso",
+          "score": {
+            "home": 57,
+            "away": 75
+          },
           "referees": [
             "COCCO MATTIA di QUARTU SANT'ELENA (CA)",
             "BELTRAMINI ROBERTO di CAPOTERRA (CA)"
@@ -2543,5 +2549,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-15T20:36:24+00:00"
+  "updated_at": "2026-11-16T23:51:39+00:00"
 }

@@ -2341,16 +2341,22 @@
     },
     "862": {
       "round": "A6",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 57,
         "away": 75
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 6,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=6&mn=6",
+      "home": {
+        "team": "Scuola Basket Carbonia sq.B",
+        "players": []
+      },
+      "away": {
+        "team": "Basket Assemini Black",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-16T23:51:39+00:00"
+  "updated_at": "2026-11-17T23:11:07+00:00"
 }

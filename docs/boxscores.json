@@ -2356,7 +2356,19 @@
         "team": "Basket Assemini Black",
         "players": []
       }
+    },
+    "869": {
+      "round": "A7",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 67,
+        "away": 59
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
     }
   },
-  "updated_at": "2026-11-17T23:11:07+00:00"
+  "updated_at": "2026-11-19T22:46:47+00:00"
 }

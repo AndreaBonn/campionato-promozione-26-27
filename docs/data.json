@@ -154,9 +154,12 @@
         "date",
         "time"
       ],
-      "status": "designata-nonvisibile",
-      "status_text": "Gara designata: la designazione non è ancora visibile",
-      "referees": [],
+      "status": "designata",
+      "status_text": "Gara designata: la designazione è visibile",
+      "referees": [
+        "SADDI NICOLA di QUARTU SANT'ELENA (CA)",
+        "COCCO ALESSANDRO di QUARTU SANT'ELENA (CA)"
+      ],
       "score": null,
       "sanctions": [],
       "fip_opponent": "CALASETTA BASKET"
@@ -1087,9 +1090,12 @@
           "away": "CALASETTA BASKET",
           "date": "2026-11-25",
           "time": "20:00",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "SADDI NICOLA di QUARTU SANT'ELENA (CA)",
+            "COCCO ALESSANDRO di QUARTU SANT'ELENA (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -2573,5 +2579,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-20T07:28:01+00:00"
+  "updated_at": "2026-11-20T17:01:18+00:00"
 }

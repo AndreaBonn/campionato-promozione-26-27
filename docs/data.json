@@ -1323,14 +1323,11 @@
           "n": 870,
           "home": "CAGLIARI BASKET",
           "away": "BASKET SULCISPES",
-          "date": "2026-11-22",
+          "date": "2027-06-30",
           "time": "20:30",
-          "status": "designata",
+          "status": "designata-nonvisibile",
           "score": null,
-          "referees": [
-            "SEU CLAUDIA di QUARTUCCIU (CA)",
-            "SOLINAS RICCARDO di SESTU (CA)"
-          ],
+          "referees": [],
           "sanctions": []
         },
         {
@@ -1420,9 +1417,12 @@
           "away": "BASKET IGLESIAS",
           "date": "2026-11-26",
           "time": "20:30",
-          "status": "designata-nonvisibile",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "MONTISCI SALVATORE di SANT'ANDREA FRIUS (SU)",
+            "FARCI DANIELE di CAGLIARI (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -2579,5 +2579,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-20T17:01:18+00:00"
+  "updated_at": "2026-11-21T12:46:39+00:00"
 }

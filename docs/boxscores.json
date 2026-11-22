@@ -2571,7 +2571,7 @@
     },
     "868": {
       "round": "A7",
-      "status": "partial",
+      "status": "complete",
       "fip_score": {
         "home": 53,
         "away": 86
@@ -2580,11 +2580,189 @@
       "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=7&mn=2",
       "home": {
         "team": "Madas Siliqua",
-        "players": []
+        "players": [
+          {
+            "id": "231481",
+            "number": "",
+            "name": "Castelli",
+            "role": "",
+            "age": "",
+            "pts": 5
+          },
+          {
+            "id": "205870",
+            "number": "",
+            "name": "Cerullo Fabio",
+            "role": "",
+            "age": "",
+            "pts": 0
+          },
+          {
+            "id": "205871",
+            "number": "",
+            "name": "Filigheddu Simone",
+            "role": "",
+            "age": "",
+            "pts": 2
+          },
+          {
+            "id": "59140",
+            "number": "",
+            "name": "Ghiani Alessio",
+            "role": "ala forte",
+            "age": "'99",
+            "pts": 3
+          },
+          {
+            "id": "184297",
+            "number": "",
+            "name": "Grussu Fabio",
+            "role": "",
+            "age": "",
+            "pts": 6
+          },
+          {
+            "id": "231480",
+            "number": "",
+            "name": "Iacopini Diego",
+            "role": "",
+            "age": "",
+            "pts": 1
+          },
+          {
+            "id": "197706",
+            "number": "",
+            "name": "Iacopini Samuele",
+            "role": "",
+            "age": "",
+            "pts": 9
+          },
+          {
+            "id": "43684",
+            "number": "",
+            "name": "Orrù Gioele",
+            "role": "guardia",
+            "age": "'97",
+            "pts": 4
+          },
+          {
+            "id": "231479",
+            "number": "",
+            "name": "Perra Matteo",
+            "role": "",
+            "age": "",
+            "pts": 1
+          },
+          {
+            "id": "196087",
+            "number": "",
+            "name": "Porcu Riccardo",
+            "role": "",
+            "age": "",
+            "pts": 6
+          },
+          {
+            "id": "205872",
+            "number": "",
+            "name": "Rilla Marco",
+            "role": "",
+            "age": "'08",
+            "pts": 8
+          },
+          {
+            "id": "173140",
+            "number": "",
+            "name": "Zuddas Matteo",
+            "role": "ala piccola",
+            "age": "'05",
+            "pts": 8
+          }
+        ]
       },
       "away": {
         "team": "CGP Carloforte",
-        "players": []
+        "players": [
+          {
+            "id": "35567",
+            "number": "",
+            "name": "Aralossi Fabio",
+            "role": "play",
+            "age": "'94",
+            "pts": 12
+          },
+          {
+            "id": "192811",
+            "number": "",
+            "name": "Aste Francesco",
+            "role": "ala forte",
+            "age": "'08",
+            "pts": 3
+          },
+          {
+            "id": "18286",
+            "number": "",
+            "name": "Baghino Francesco",
+            "role": "guardia",
+            "age": "'96",
+            "pts": 26
+          },
+          {
+            "id": "216839",
+            "number": "",
+            "name": "Carta Fabio",
+            "role": "",
+            "age": "U17",
+            "pts": 0
+          },
+          {
+            "id": "65487",
+            "number": "",
+            "name": "Cireddu Paolo",
+            "role": "guardia",
+            "age": "'00",
+            "pts": 10
+          },
+          {
+            "id": "134539",
+            "number": "",
+            "name": "Dessì Fabio",
+            "role": "ala piccola",
+            "age": "'04",
+            "pts": 10
+          },
+          {
+            "id": "85790",
+            "number": "",
+            "name": "Ferraro Sebastiano",
+            "role": "play",
+            "age": "'01",
+            "pts": 7
+          },
+          {
+            "id": "192802",
+            "number": "",
+            "name": "Leone Andrea",
+            "role": "",
+            "age": "'08",
+            "pts": 0
+          },
+          {
+            "id": "233813",
+            "number": "",
+            "name": "Porcu A.",
+            "role": "",
+            "age": "",
+            "pts": 6
+          },
+          {
+            "id": "205571",
+            "number": "",
+            "name": "Rivano Lorenzo",
+            "role": "guardia",
+            "age": "U19",
+            "pts": 12
+          }
+        ]
       }
     },
     "872": {
@@ -2604,7 +2782,19 @@
         "team": "Sinnai Basket",
         "players": []
       }
+    },
+    "871": {
+      "round": "A7",
+      "status": "unmatched",
+      "fip_score": {
+        "home": 68,
+        "away": 61
+      },
+      "mn": null,
+      "url": null,
+      "home": null,
+      "away": null
     }
   },
-  "updated_at": "2026-11-22T01:36:25+00:00"
+  "updated_at": "2026-11-22T21:17:43+00:00"
 }

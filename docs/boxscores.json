@@ -2571,28 +2571,40 @@
     },
     "868": {
       "round": "A7",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 53,
         "away": 86
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 2,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=7&mn=2",
+      "home": {
+        "team": "Madas Siliqua",
+        "players": []
+      },
+      "away": {
+        "team": "CGP Carloforte",
+        "players": []
+      }
     },
     "872": {
       "round": "A7",
-      "status": "unmatched",
+      "status": "partial",
       "fip_score": {
         "home": 86,
         "away": 95
       },
-      "mn": null,
-      "url": null,
-      "home": null,
-      "away": null
+      "mn": 3,
+      "url": "https://www.playbasket.it/sardegna/match.php?lt=2&lr=SA&lp=CA&lc=DR2&lg=1&season=2027&lf=M&gtt=1&gtn=7&mn=3",
+      "home": {
+        "team": "Basket Assemini Black",
+        "players": []
+      },
+      "away": {
+        "team": "Sinnai Basket",
+        "players": []
+      }
     }
   },
-  "updated_at": "2026-11-21T21:11:18+00:00"
+  "updated_at": "2026-11-22T01:36:25+00:00"
 }

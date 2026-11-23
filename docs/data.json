@@ -1407,9 +1407,11 @@
           "away": "A.S.D. BETA",
           "date": "2026-11-28",
           "time": "19:00",
-          "status": "non-designata",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "COCCO MATTIA di QUARTU SANT'ELENA (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -1443,9 +1445,12 @@
           "away": "POL. MADAS SILIQUA",
           "date": "2026-11-28",
           "time": "20:45",
-          "status": "non-designata",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "CARRUS FABIO di SELARGIUS (CA)",
+            "SCHIRRU SABRINA di CAGLIARI (CA)"
+          ],
           "sanctions": []
         }
       ],
@@ -2591,5 +2596,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-22T21:17:43+00:00"
+  "updated_at": "2026-11-23T14:51:18+00:00"
 }

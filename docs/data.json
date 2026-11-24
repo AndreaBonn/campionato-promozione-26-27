@@ -1283,8 +1283,11 @@
           "away": "SCUOLA BASKET CARBONIA",
           "date": "2026-11-23",
           "time": "20:30",
-          "status": "designata",
-          "score": null,
+          "status": "ufficioso",
+          "score": {
+            "home": 70,
+            "away": 58
+          },
           "referees": [
             "ZARA MASSIMO di ORISTANO (OR)",
             "FIORIN GIANMARCO di CABRAS (OR)"
@@ -2596,5 +2599,5 @@
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-23T14:51:18+00:00"
+  "updated_at": "2026-11-24T02:36:51+00:00"
 }

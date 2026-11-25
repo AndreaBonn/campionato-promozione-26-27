@@ -219,8 +219,8 @@
         }
       },
       "changes": [],
-      "status": "ufficioso",
-      "status_text": "Risultato ufficioso",
+      "status": "omologata",
+      "status_text": "",
       "referees": [
         "SOLINAS RICCARDO di SESTU (CA)",
         "SEU CLAUDIA di QUARTUCCIU (CA)"
@@ -256,9 +256,11 @@
         "date",
         "time"
       ],
-      "status": "non-designata",
-      "status_text": "Gara non ancora designata",
-      "referees": [],
+      "status": "designata",
+      "status_text": "Gara designata: la designazione è visibile",
+      "referees": [
+        "PACINI ALBERTO di CARBONIA (SU)"
+      ],
       "score": null,
       "sanctions": [],
       "fip_opponent": "BASKET SULCISPES"
@@ -1283,7 +1285,7 @@
           "away": "SCUOLA BASKET CARBONIA",
           "date": "2026-11-23",
           "time": "20:30",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 70,
             "away": 58
@@ -1300,7 +1302,7 @@
           "away": "C.G.P. CARLOFORTE",
           "date": "2026-11-21",
           "time": "18:00",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 53,
             "away": 86
@@ -1317,7 +1319,7 @@
           "away": "A.S.D. BETA",
           "date": "2026-11-19",
           "time": "21:00",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 67,
             "away": 59
@@ -1345,7 +1347,7 @@
           "away": "BASKET SETTIMO 2023",
           "date": "2026-11-22",
           "time": "19:00",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 68,
             "away": 61
@@ -1362,7 +1364,7 @@
           "away": "SINNAI BASKET",
           "date": "2026-11-21",
           "time": "18:00",
-          "status": "ufficioso",
+          "status": "omologata",
           "score": {
             "home": 86,
             "away": 95
@@ -1402,9 +1404,11 @@
           "away": "BASKET ASSEMINI BLACK",
           "date": "2026-11-28",
           "time": "19:00",
-          "status": "non-designata",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "PACINI ALBERTO di CARBONIA (SU)"
+          ],
           "sanctions": []
         },
         {
@@ -1427,9 +1431,11 @@
           "away": "CALASETTA BASKET",
           "date": "2026-11-30",
           "time": "20:30",
-          "status": "non-designata",
+          "status": "designata",
           "score": null,
-          "referees": [],
+          "referees": [
+            "FARCI DANIELE di CAGLIARI (CA)"
+          ],
           "sanctions": []
         },
         {
@@ -1441,6 +1447,7 @@
           "status": "designata",
           "score": null,
           "referees": [
+            "CANEPA TOMMASO di QUARTUCCIU (CA)",
             "FARCI DANIELE di CAGLIARI (CA)"
           ],
           "sanctions": []
@@ -1471,7 +1478,7 @@
           "away": "BASKET SULCISPES",
           "date": "2026-12-04",
           "time": "20:45",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -1504,7 +1511,7 @@
           "away": "SINNAI BASKET",
           "date": "2026-12-04",
           "time": "20:45",
-          "status": "non-designata",
+          "status": "designata-nonvisibile",
           "score": null,
           "referees": [],
           "sanctions": []
@@ -2481,45 +2488,55 @@
     {
       "position": 1,
       "team": "SINNAI BASKET",
-      "points": 10,
-      "played": 5,
-      "won": 5,
+      "points": 12,
+      "played": 6,
+      "won": 6,
       "lost": 0,
-      "points_for": 393,
-      "points_against": 197
+      "points_for": 488,
+      "points_against": 283
     },
     {
       "position": 2,
-      "team": "BASKET ASSEMINI BLACK",
-      "points": 8,
-      "played": 4,
-      "won": 4,
-      "lost": 0,
-      "points_for": 283,
-      "points_against": 203
+      "team": "C.G.P. CARLOFORTE",
+      "points": 10,
+      "played": 6,
+      "won": 5,
+      "lost": 1,
+      "points_for": 434,
+      "points_against": 347
     },
     {
       "position": 3,
-      "team": "C.G.P. CARLOFORTE",
+      "team": "BASKET ASSEMINI BLACK",
       "points": 8,
       "played": 5,
       "won": 4,
       "lost": 1,
-      "points_for": 348,
-      "points_against": 294
+      "points_for": 369,
+      "points_against": 298
     },
     {
       "position": 4,
-      "team": "BASKET ASSEMINI WHITE",
-      "points": 6,
-      "played": 5,
-      "won": 3,
-      "lost": 2,
-      "points_for": 317,
-      "points_against": 360
+      "team": "BASKET IGLESIAS",
+      "points": 8,
+      "played": 7,
+      "won": 4,
+      "lost": 3,
+      "points_for": 505,
+      "points_against": 466
     },
     {
       "position": 5,
+      "team": "BASKET ASSEMINI WHITE",
+      "points": 8,
+      "played": 6,
+      "won": 4,
+      "lost": 2,
+      "points_for": 384,
+      "points_against": 419
+    },
+    {
+      "position": 6,
       "team": "CAGLIARI BASKET",
       "points": 6,
       "played": 6,
@@ -2529,34 +2546,24 @@
       "points_against": 361
     },
     {
-      "position": 6,
-      "team": "BASKET IGLESIAS",
+      "position": 7,
+      "team": "CALASETTA BASKET",
       "points": 6,
       "played": 6,
       "won": 3,
       "lost": 3,
-      "points_for": 435,
-      "points_against": 408
-    },
-    {
-      "position": 7,
-      "team": "CALASETTA BASKET",
-      "points": 4,
-      "played": 5,
-      "won": 2,
-      "lost": 3,
-      "points_for": 285,
-      "points_against": 351
+      "points_for": 353,
+      "points_against": 412
     },
     {
       "position": 8,
       "team": "BASKET SETTIMO 2023",
       "points": 2,
-      "played": 4,
+      "played": 5,
       "won": 1,
-      "lost": 3,
-      "points_for": 244,
-      "points_against": 257
+      "lost": 4,
+      "points_for": 305,
+      "points_against": 325
     },
     {
       "position": 9,
@@ -2572,35 +2579,35 @@
       "position": 10,
       "team": "SCUOLA BASKET CARBONIA",
       "points": 2,
-      "played": 4,
+      "played": 5,
       "won": 1,
-      "lost": 3,
-      "points_for": 261,
-      "points_against": 268
+      "lost": 4,
+      "points_for": 319,
+      "points_against": 338
     },
     {
       "position": 11,
       "team": "POL. MADAS SILIQUA",
       "points": 2,
-      "played": 4,
+      "played": 5,
       "won": 1,
-      "lost": 3,
-      "points_for": 225,
-      "points_against": 270
+      "lost": 4,
+      "points_for": 278,
+      "points_against": 356
     },
     {
       "position": 12,
       "team": "A.S.D. BETA",
       "points": 0,
-      "played": 4,
+      "played": 5,
       "won": 0,
-      "lost": 4,
-      "points_for": 188,
-      "points_against": 335
+      "lost": 5,
+      "points_for": 247,
+      "points_against": 402
     }
   ],
   "notices": [],
   "logos": {},
   "fip_url": "https://fip.it/risultati/?group=campionati-regionali&regione_codice=SA&comitato_codice=RSA&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=85793&codice_ar=1&giornata=1",
-  "updated_at": "2026-11-25T00:08:41+00:00"
+  "updated_at": "2026-11-25T14:32:01+00:00"
 }
